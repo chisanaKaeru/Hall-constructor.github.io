@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/button.css">
+  <link rel="stylesheet" href="style/card-list.css">
+  <link rel="stylesheet" href="style/card-input.css">
+  <link rel="stylesheet" href="style/card.css">
+  <link rel="stylesheet" href="style/popup.css">
+  <link rel="stylesheet" href="style/button.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="icon" type="image/x-icon" href="/image/polyefir-agro.ico">
+  <script src="javascript/main.js"></script>
+  <title>Конструктор доильного зала</title>
+</head>
+<body class="slider">
+  <div class="caption_text animate__animated animate__fadeInDown">Дополнительное оборудование</div>
+
+  <div class="card_center">
+    <div class="card_select animate__animated animate__backInDown">
+      <div class="card_img_select" style="background-image: url(https://www.travelwisconsin.com/uploads/blog/e2/e2ccbd6f-1070-4272-889b-cc7720bd664d-farm-scene-with-cows.jpg);" id="img_water_heater"><button class="button_popup_open" onclick="togglePopup()"><img src="image/expand-window.png"></button></div>
+        <div class="card_body_select">
+          <div class="title_text_select">Водонагреватели</div>
+          <select class="select_all" id="water_heater" onchange="dataWaterHeater()">
+            <option value="1">150Л</option>
+            <option value="2">300Л</option>
+            <option value="3">450Л</option>
+          </select>
+          <div class="background_text_select">Конс трукция данной установки позволяет осуществлять поэтапное расширение функциональных возможностей, начиная от простейшего варианта, обеспечивающего только автоматическое додаивание и снятие доильных стаканов, до вариантов с АСУТП и системой компьютерного управления стадом.</div>
+        </div>
+    </div>
+  </div>
+
+  <div class="card_center">
+    <div class="card_select animate__animated animate__backInDown">
+      <div class="card_img_select" style="background-image: url(https://www.travelwisconsin.com/uploads/blog/e2/e2ccbd6f-1070-4272-889b-cc7720bd664d-farm-scene-with-cows.jpg);" id="img_compressor"><button class="button_popup_open" onclick="togglePopup()"><img src="image/expand-window.png"></button></div>
+        <div class="card_body_select">
+          <div class="title_text_select">Компрессор</div>
+          <select class="select_all" id="compressor" onchange="dataCompressor()">
+            <option value="1">Маслянный</option>
+            <option value="2">Безмаслянный</option>
+          </select>
+          <div class="background_text_select">Конс трукция данной установки позволяет осуществлять поэтапное расширение функциональных возможностей, начиная от простейшего варианта, обеспечивающего только автоматическое додаивание и снятие доильных стаканов, до вариантов с АСУТП и системой компьютерного управления стадом.</div>
+        </div>
+    </div>
+  </div>
+
+  <div class="card_center">
+    <div class="card_input animate__animated animate__backInDown">
+      <div class="card_img_input" style="background-image: url(https://www.travelwisconsin.com/uploads/blog/e2/e2ccbd6f-1070-4272-889b-cc7720bd664d-farm-scene-with-cows.jpg);"><button class="button_popup_open" onclick="togglePopup()"><img src="image/expand-window.png"></button></div>
+        <div class="card_body_input">
+          <div class="title_text_input">Дренажный насос</div>
+          <div class="background_text_input">Конс трукция данной установки позволяет осуществлять поэтапное расширение функциональных возможностей, начиная от простейшего варианта, обеспечивающего только автоматическое додаивание и снятие доильных стаканов, до вариантов с АСУТП и системой компьютерного управления стадом.</div>
+          <input type="text" placeholder="Кол-во дренажных насосов" class="input_text">
+        </div>
+    </div>
+  </div>
+
+  <div class="card_center">
+
+  <div class="card sub animate__animated animate__backInDown">
+    <div class="card_img" style="background-image: url(https://www.travelwisconsin.com/uploads/blog/e2/e2ccbd6f-1070-4272-889b-cc7720bd664d-farm-scene-with-cows.jpg);"><button class="button_popup_open" onclick="togglePopup()"><img src="image/expand-window.png"></button></div>
+    <div class="card_body">
+      <p class="title_text">Молочный насос</p>
+      <p class="background_text">Конструкция данной установки позволяет осуществлять поэтапное расширение функциональных возможностей, начиная от простейшего варианта, обеспечивающего только автоматическое додаивание и снятие доильных стаканов, до вариантов с АСУТП и системой компьютерного управления стадом.</p>
+      <a href="#" class="button_card">Выбрать</a>
+    </div>
+  </div>
+
+  <div class="card sup animate__animated animate__backInDown">
+    <div class="card_img" style="background-image: url(https://www.travelwisconsin.com/uploads/blog/e2/e2ccbd6f-1070-4272-889b-cc7720bd664d-farm-scene-with-cows.jpg);"><button class="button_popup_open" onclick="togglePopup()"><img src="image/expand-window.png"></button></div>
+    <div class="card_body">
+      <p class="title_text">Осушитель</p>
+      <p class="background_text">Конструкция данной установки позволяет осуществлять поэтапное расширение функциональных возможностей, начиная от простейшего варианта, обеспечивающего только автоматическое додаивание и снятие доильных стаканов, до вариантов с АСУТП и системой компьютерного управления стадом.</p>
+      <a href="#" class="button_card">Выбрать</a>
+    </div>
+  </div>
+
+</div>
+
+
+<div class="card_center">
+
+  <div class="card sub animate__animated animate__backInDown">
+    <div class="card_img" style="background-image: url(https://www.travelwisconsin.com/uploads/blog/e2/e2ccbd6f-1070-4272-889b-cc7720bd664d-farm-scene-with-cows.jpg);"><button class="button_popup_open" onclick="togglePopup()"><img src="image/expand-window.png"></button></div>
+    <div class="card_body">
+      <p class="title_text mini_title_text">Пункт распределительный</p>
+      <p class="background_text mini_margin_background_text">Конструкция данной установки позволяет осуществлять поэтапное расширение функциональных возможностей, начиная от простейшего варианта, обеспечивающего только автоматическое додаивание и снятие доильных стаканов, до вариантов с АСУТП и системой компьютерного управления стадом.</p>
+      <a href="#" class="button_card">Выбрать</a>
+    </div>
+  </div>
+
+  <div class="card sup animate__animated animate__backInDown">
+    <div class="card_img" style="background-image: url(https://www.travelwisconsin.com/uploads/blog/e2/e2ccbd6f-1070-4272-889b-cc7720bd664d-farm-scene-with-cows.jpg);"><button class="button_popup_open" onclick="togglePopup()"><img src="image/expand-window.png"></button></div>
+    <div class="card_body">
+      <p class="title_text">ЗИП</p>
+      <p class="background_text">Конструкция данной установки позволяет осуществлять поэтапное расширение функциональных возможностей, начиная от простейшего варианта, обеспечивающего только автоматическое додаивание и снятие доильных стаканов, до вариантов с АСУТП и системой компьютерного управления стадом.</p>
+      <a href="#" class="button_card">Выбрать</a>
+    </div>
+  </div>
+
+</div>
+
+<div class="card_center">
+  <div class="card sub animate__animated animate__backInDown">
+    <div class="card_img" style="background-image: url(https://www.travelwisconsin.com/uploads/blog/e2/e2ccbd6f-1070-4272-889b-cc7720bd664d-farm-scene-with-cows.jpg);"><button class="button_popup_open" onclick="togglePopup()"><img src="image/expand-window.png"></button></div>
+    <div class="card_body">
+      <p class="title_text">Монтажный комплект</p>
+      <p class="background_text">Конструкция данной установки позволяет осуществлять поэтапное расширение функциональных возможностей, начиная от простейшего варианта, обеспечивающего только автоматическое додаивание и снятие доильных стаканов, до вариантов с АСУТП и системой компьютерного управления стадом.</p>
+      <a href="#" class="button_card">Выбрать</a>
+    </div>
+  </div>
+</div>
+
+<div class="button_application_form_margin">
+  <a href="application-form.html" class="button_card button_application_form">Оставить заявку</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+.card_form{
+  position: relative;
+  width: 500px;
+  height: 750px;
+  background-color: #3082B4;
+  margin: auto;
+  margin-top: 25px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.25);
+  border-radius: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+input{
+  position: relative;
+  width: 275px;
+  height: 40px;
+  border: 2px solid #58AADC;
+  border-radius: 8px;
+  color: #000000;
+  padding: 12px 10px;
+  font-size: 16px;
+  margin: auto;
+  display: block;
+}
+
+input:focus{
+  outline: none;
+  border: 2px solid #80D2FF;
+}
+
+.button_margin_form{
+  position: absolute;
+  width: 250px;
+  margin: auto;
+}
+
+.caption_text_form{
+  text-align: center;
+  font-family: 'Inter';
+  font-style: normal;
+  font-size: 24px;
+  letter-spacing: 0.15em;
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.50);
+  padding: 25px;
+}
+
+.title_text_form{
+  font-size: 24px;
+  margin-bottom: 5px;
+  font-family: arial;
+  font-style: normal;
+  color: #ffffff;
+  margin-left: 20px;
+  position: absolute;
+  top: 30%;
+}
+
+li{
+  position: relative;
+  width: 325px;
+  height: 50px;
+  background-color: #58AADC;
+  filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.25));
+  list-style-type: none;
+  border-radius: 12px;
+  margin: auto;
+  margin-bottom: 25px;
+}
+
+.li_text_form{
+  position: relative;
+  top: 10%;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 39px;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+  text-align: center;
+}

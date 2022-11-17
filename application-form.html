@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/application-form.css">
+  <link rel="stylesheet" href="style/button.css">
+  <link rel="icon" type="image/x-icon" href="/image/polyefir-agro.ico">
+  <script src="javascript/main.js"></script>
+  <title>Конструктор доильного зала</title>
+</head>
+<body class="slider" onload="readData(), dataSee()">
+  <div class="caption_text animate__animated animate__fadeInDown">Форма подача заявки на конструктор фермы</div>
+  <div class="card_center">
+  <div class="card_form animate__animated animate__fadeInDown">
+    <div class="caption_text_form">Ваши выбраные детали</div>
+    <br>
+    <ul id="list_form" onload="readData()">
+      <li>
+        <div class="li_text_form">Доильный зал: Карусель</div>
+      </li>
+    </ul>
+    <br>
+    <input type="text" placeholder="Введите наименование фермы">
+    <br>
+    <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Введите номер телефона">
+    <br>
+    <input type="email" placeholder="Введите почту">
+    <br>
+    <button class="button_card button_margin_form">Отправить</button>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+.button_card{
+  display: block;
+  width: 175px;
+  height: 40;
+  background: #3082B4;
+  border-radius: 12px;
+  border: 2px solid #58AADC;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px 0;
+  text-decoration: none;
+  outline: none;
+}
+
+.button_card:hover{
+  border: 2px solid #80D2FF;
+}
+
+.button_card_off{
+  display: block;
+  width: 175px;
+  height: 40;
+  background: #1C6EA0;
+  border-radius: 12px;
+  border: 2px solid #4496C8;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px 0;
+  text-decoration: none;
+  cursor: default;
+}
+
+.background_text, .button_card, .button_card_off{
+  position: relative;
+  font-family: arial;
+  font-style: normal;
+  color: #ffffff;
+}
+
+.button_application_form{
+  width: 250px;
+  margin: auto;
+}
+
+.button_application_form_margin{
+  width: 300px;
+  height: 100px;
+  margin: auto;
+}

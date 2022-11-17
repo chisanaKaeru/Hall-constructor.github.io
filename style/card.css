@@ -1,0 +1,108 @@
+.card{
+  position: relative;
+  background: #3082B4;
+  width: 300px;
+  height: 485px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.25);
+  border-radius: 14px;
+  margin: 50px 20px 0px;
+}
+
+.card_img{
+  height: 175px;
+  width: 100%;
+  background-size: cover;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  margin-bottom: 5px;
+}
+
+.button_popup_open{
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  border: 0px;
+  border-radius: 8px;
+  top: 5px;
+  right: 5px;
+  display: flex;
+  cursor: pointer;
+}
+
+.button_popup_open:hover{
+  background-color: rgb(210, 210, 210) ;
+}
+
+img{
+  width: 26px;
+  margin: auto;
+}
+
+.button_popup_open_Off{
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  border: 0px;
+  border-radius: 8px;
+  top: 5px;
+  right: 5px;
+  display: flex;
+}
+
+.card_body{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.title_text{
+  font-size: 24px;
+  margin-bottom: 5px;
+  position: relative;
+  color: #ffffff;
+}
+
+.background_text{
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+#milkingParlor1, #milkingParlor2, #milkingParlor3, #milkingParlor4, #milkingParlor5{
+  display: none;
+}
+
+.sub{
+  position: relative;
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+
+.sup{
+  position: relative;
+  margin-bottom: 25px;
+  margin-top: 50px;
+}
+
+@media (max-width:679px) {
+
+  .sub{
+    position: relative;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  .sup{
+    position: relative;
+    margin-bottom: 25px;
+    margin-top: 25px;
+  }
+
+}
+
+.mini_title_text{
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.mini_margin_background_text{
+  margin-bottom: 15px;
+}
