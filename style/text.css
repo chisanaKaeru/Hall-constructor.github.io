@@ -1,0 +1,28 @@
+.caption_text{
+  text-align: center;
+  font-size: 32px;
+  letter-spacing: 0.15em;
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.50);
+  padding: 45px;
+}
+
+.title_text{
+  font-size: 24px;
+}
+
+.background_text{
+  font-size: 16px;
+}
+
+.mini_title_text{
+  font-size: 20px;
+}
+
+.mini_title_text, .title_text, .background_text{
+  color: #ffffff;
+  font-family: arial;
+  letter-spacing: 0.5px;
+}
+
+

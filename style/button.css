@@ -1,27 +1,32 @@
-.button_card{
+.button{
   display: block;
   width: 175px;
-  height: 40;
-  background: #3082B4;
+  padding: 10px 0px;
+  background: rgba(48, 130, 180, 0.85);
   border-radius: 12px;
-  border: 2px solid #58AADC;
+  border: 3px solid transparent;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   text-align: center;
-  padding: 10px 0;
   text-decoration: none;
   outline: none;
+  border: 3px solid #3ea2d8;
 }
 
-.button_card:hover{
-  border: 2px solid #80D2FF;
+.button:hover{
+  transition: 0.2s;
+  border: 3px solid #80d3ff;
 }
 
-.button_card_off{
+.button:not(:hover){
+  transition: 0.5s;
+}
+
+.button_off{
   display: block;
   width: 175px;
   height: 40;
-  background: #1C6EA0;
+  background: rgb(28, 110, 160, 0.85);
   border-radius: 12px;
   border: 2px solid #4496C8;
   letter-spacing: 0.25em;
@@ -32,20 +37,16 @@
   cursor: default;
 }
 
-.background_text, .button_card, .button_card_off{
+.background_text, .button, .button_off{
   position: relative;
   font-family: arial;
   font-style: normal;
   color: #ffffff;
 }
 
-.button_application_form{
+.button_optional_equipment{
+  position: absolute;
+  right: 40px;
+  top: 45px;
   width: 250px;
-  margin: auto;
-}
-
-.button_application_form_margin{
-  width: 300px;
-  height: 100px;
-  margin: auto;
 }

@@ -7,16 +7,17 @@ function addPit() {
   let liPit = document.createElement("li");
   liPit.setAttribute("class", "animate__animated animate__fadeInDown");
 
+  let textPit = document.createElement("div");
+  textPit.setAttribute("class", "li_text");
   let textDivPit = document.createTextNode(pit + " Яма");
+  textPit.appendChild(textDivPit);
+
   let optionTextPlaceholdePit = document.createTextNode("Количество мест");
   let optionTextOnePit = document.createTextNode("Одна строна");
   let optionTextTwoPit = document.createTextNode("Две строны");
 
-  let textPit = document.createElement("div");
-  textPit.setAttribute("class", "li_text_seat");
-  textPit.appendChild(textDivPit);
-
   let selectPit = document.createElement("select");
+  selectPit.setAttribute("class", "select_seat")
   selectPit.setAttribute("id", "option_pit" + pit);
   selectPit.setAttribute("onchange", "selectDataPit(this)");
   let optionPlaceholderPit = document.createElement("option");
@@ -81,7 +82,11 @@ function addPump() {
   let liPump = document.createElement("li");
   liPump.setAttribute("class", "animate__animated animate__fadeInDown");
 
+  let textPump = document.createElement("div");
+  textPump.setAttribute("class", "li_text");
   let textDivPump = document.createTextNode(pump + " Насос");
+  textPump.appendChild(textDivPump);
+
   let optionTextPlaceholdePump = document.createTextNode("Выберите мощность насоса");
   let optionTextOnePump = document.createTextNode("800 л/мин - 2,2 кВт");
   let optionTextTwoPump = document.createTextNode("1600 л/мин - 4 кВт");
@@ -91,9 +96,6 @@ function addPump() {
   let optionTextSixPump = document.createTextNode("4200 л/мин - 11 кВт");
   let optionTextSevenPump = document.createTextNode("6600 л/мин - 15 кВт");
 
-  let textPump = document.createElement("div");
-  textPump.setAttribute("class", "li_text_pump");
-  textPump.appendChild(textDivPump);
   let selectPump = document.createElement("select");
   selectPump.setAttribute("class", "select_pump");
   selectPump.setAttribute("id", "option_pump" + pump);
@@ -136,52 +138,6 @@ function deletePump() {
   }
 }
 
-function selectDataPump(item) {
-  var id = item.id
-  let value = document.getElementById(id).value;
-}
-
-function valuePump() {
-  let value = document.getElementById("pump").value;
-  if (value == 1) {
-    document.getElementById("img_pump").setAttribute("style", "background-image: url(https://www.travelwisconsin.com/uploads/blog/e2/e2ccbd6f-1070-4272-889b-cc7720bd664d-farm-scene-with-cows.jpg);");
-  } else if (value == 2) {
-    document.getElementById("img_pump").setAttribute("style", "background-image: url(http://www.rosphoto.com/images/u/articles/1510/7_5.jpg);");
-  } else if (value == 3){
-    document.getElementById("img_pump").setAttribute("style", "background-image: url(https://www.interfax.ru/ftproot/photos/photostory/2022/04/29/week/week7_1100.jpg);");
-  }
-}
-
-function valueWaterHeater() {
-  let value = document.getElementById("water_heater").value;
-  if (value == 1) {
-    document.getElementById("img_water_heater").setAttribute("style", "background-image: url(https://www.travelwisconsin.com/uploads/blog/e2/e2ccbd6f-1070-4272-889b-cc7720bd664d-farm-scene-with-cows.jpg);");
-  } else if (value == 2) {
-    document.getElementById("img_water_heater").setAttribute("style", "background-image: url(http://www.rosphoto.com/images/u/articles/1510/7_5.jpg);");
-  } else if (value == 3){
-    document.getElementById("img_water_heater").setAttribute("style", "background-image: url(https://www.interfax.ru/ftproot/photos/photostory/2022/04/29/week/week7_1100.jpg);");
-  }
-}
-
-function valueCompressor() {
-  let value = document.getElementById("compressor").value;
-  if (value == 1) {
-    document.getElementById("img_compressor").setAttribute("style", "background-image: url(https://www.travelwisconsin.com/uploads/blog/e2/e2ccbd6f-1070-4272-889b-cc7720bd664d-farm-scene-with-cows.jpg);");
-  } else if (value == 2) {
-    document.getElementById("img_compressor").setAttribute("style", "background-image: url(http://www.rosphoto.com/images/u/articles/1510/7_5.jpg);");
-  }
-}
-
-function clearLocalStorage() {
-  localStorage.clear();
-}
-
-let data = [];
-
-function getData(item) {
-  localStorage.setItem(item, item);
-}
-
 function inputDataSystem(item) {
   var id = item.id
   if (document.getElementById(id).value <= 0) {
@@ -195,16 +151,36 @@ function inputDataSystem(item) {
   return valueSystem;
 }
 
-function addData(){
-  data.push(valueSystem);
-}
-
-function dataSee() {
-  for (i = 0; i < data.length; i++) {
-    alert(data[i]);
+function changePump() {
+  let value = document.getElementById("pump").value;
+  if (value == 1) {
+    document.getElementById("img_pump").setAttribute("style", "background-image: url(image/vacuum-pump.jpg);");
+  } else if (value == 2) {
+    document.getElementById("img_pump").setAttribute("style", "background-image: url(image/vacuum-pump.jpg);");
+  } else if (value == 3){
+    document.getElementById("img_pump").setAttribute("style", "background-image: url(image/vacuum-pump.jpg);");
   }
 }
 
+function changeWaterHeater() {
+  let value = document.getElementById("water_heater").value;
+  if (value == 1) {
+    document.getElementById("img_water_heater").setAttribute("style", "background-image: url(https://www.travelwisconsin.com/uploads/blog/e2/e2ccbd6f-1070-4272-889b-cc7720bd664d-farm-scene-with-cows.jpg);");
+  } else if (value == 2) {
+    document.getElementById("img_water_heater").setAttribute("style", "background-image: url(http://www.rosphoto.com/images/u/articles/1510/7_5.jpg);");
+  } else if (value == 3){
+    document.getElementById("img_water_heater").setAttribute("style", "background-image: url(https://www.interfax.ru/ftproot/photos/photostory/2022/04/29/week/week7_1100.jpg);");
+  }
+}
+
+function changeCompressor() {
+  let value = document.getElementById("compressor").value;
+  if (value == 1) {
+    document.getElementById("img_compressor").setAttribute("style", "background-image: url(https://www.travelwisconsin.com/uploads/blog/e2/e2ccbd6f-1070-4272-889b-cc7720bd664d-farm-scene-with-cows.jpg);");
+  } else if (value == 2) {
+    document.getElementById("img_compressor").setAttribute("style", "background-image: url(http://www.rosphoto.com/images/u/articles/1510/7_5.jpg);");
+  }
+}
 
 function readData(){
   let list_form = document.getElementById("list_form");
@@ -216,3 +192,13 @@ function readData(){
   liForm.append(textForm);
   list_form.appendChild(liForm);
 }
+/*
+function selectDataPump(item) {
+  var id = item.id
+  let value = document.getElementById(id).value;
+}
+
+function clearLocalStorage() {
+  localStorage.clear();
+}
+*/

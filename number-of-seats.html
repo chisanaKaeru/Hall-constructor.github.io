@@ -5,24 +5,27 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style/style.css">
-  <link rel="stylesheet" href="style/list-seats.css">
+  <link rel="stylesheet" href="style/text.css">
+  <link rel="stylesheet" href="style/list.css">
   <link rel="stylesheet" href="style/button.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <link rel="icon" type="image/x-icon" href="/image/polyefir-agro.ico">
   <script src="javascript/main.js"></script>
   <title>Конструктор доильного зала</title>
 </head>
-  <body class="slider">
+  <body class="slide_show">
     <div class="caption_text animate__animated animate__fadeInDown">Добавьте места для своей фермы</div>
-    <div class="card_center_seat">
-      <div class="card_list_seat animate__animated animate__fadeInDown">
-        <div class="title_text_seat">Количество мест</div>
-        <img src="image/button_add.png" class="add_pit" onclick="addPit()">
-        <img src="image/button_delete.png" class="delete_pit" onclick="deletePit()">
+    <div class="center_list">
+      <div class="card_list animate__animated animate__fadeInDown">
+        <div class="title_text_list">Количество мест</div>
+        <div class="button_list">
+          <img src="image/button/button_add.png" class="button_add" onclick="addPit()">
+          <img src="image/button/button_delete.png" class="button_delete" onclick="deletePit()">
+        </div>
       </div>
       <ul id="list_pit">
       </ul>
-      <a href="vacuum-pump.html" class="button_card align_button animate__animated animate__fadeInDown">Дальше</a>
+      <a href="vacuum-pump.html" class="button align_button animate__animated animate__fadeInDown">Дальше</a>
     </div>
 
 </body>

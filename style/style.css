@@ -8,7 +8,7 @@
   user-select: none;
 }
 
-.card_center{
+.center{
   position: relative;
   display: flex;
   justify-content: center;
@@ -17,17 +17,7 @@
   margin: auto;
 }
 
-.caption_text{
-  text-align: center;
-  font-size: 32px;
-  letter-spacing: 0.15em;
-  color: rgba(255, 255, 255, 0.95);
-  text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.50);
-  padding: 75px;
-  margin-bottom: -50px;
-}
-
-.slider{
+.slide_show{
   position: relative;
   width: 100%;
   height: 100vh;
@@ -37,23 +27,23 @@
   backface-visibility: hidden;
   background-attachment: fixed;
   animation: slide 36s linear infinite;
-  background-image: url('/image/cow1.jpg');
+  background-image: url('/image/background/cow1.jpg');
 }
 
 @keyframes slide{
   0%, 100%{
-    background-image: url('/image/cow1.jpg');
+    background-image: url('/image/background/cow1.jpg');
   }
   20%{
-    background-image: url('/image/cow2.jpg');
+    background-image: url('/image/background/cow2.jpg');
   }
   40%{
-    background-image: url('/image/cow3.jpg');
+    background-image: url('/image/background/cow3.jpg');
   }
   60%{
-    background-image: url('/image/cow4.jpg');
+    background-image: url('/image/background/cow4.jpg');
   }
   80%{
-    background-image: url('/image/cow5.jpg');
+    background-image: url('/image/background/cow5.jpg');
   }
 }

@@ -1,0 +1,137 @@
+.center_list{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  flex-direction: column;
+}
+
+.card_list{
+  display: flex;
+  flex-direction: row;
+  width: 700px;
+  height: 85px;
+  background: rgba(48, 130, 180, 0.85);
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.25);
+  border-radius: 14px;
+  border: none;
+  padding: 20px;
+  padding-left: 45px;
+  margin: 15px;
+}
+
+.title_text_list{
+  position: relative;
+  font-family: arial;
+  color: #ffffff;
+  font-size: 26px;
+  height: 35px;
+  text-align: center;
+  line-height: 40px;
+}
+
+.button_list{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100px;
+  right: 20px;
+}
+
+.button_add, .button_delete{
+  justify-content: end;
+  border-radius: 100%;
+  outline: none;
+  border: none;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.button_add{
+  background-color: #42FF00;
+}
+
+.button_delete{
+  background-color: #FF6767;
+}
+
+li{
+  display: flex;
+  border: none;
+  justify-content: space-around;
+  padding: 20px;
+  font-family: arial;
+  padding-left: 10px;
+  margin: 25px;
+  width: 625px;
+  height: 85px;
+  background-color: rgb(88, 170, 220, 0.85);
+  filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.25));
+  list-style-type: none;
+  border-radius: 12px;
+}
+
+.li_text{
+  position: relative;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 39px;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+  margin: auto 0  ;
+}
+
+.select_seat{
+  position: relative;
+  background-color: #ffffff;
+  border: 3px solid #4496C8;
+  color: #000000;
+  font-size: 24px;
+  width: 225px;
+  height: 45px;
+  border-radius: 8px;
+  padding: 5px;
+  cursor: pointer;
+  margin: auto 0;
+}
+
+input[type=number]{
+  position: relative;
+  width: 175px;
+  height: 45px;
+  border: 3px solid #4496C8;
+  border-radius: 8px;
+  color: #000000;
+  padding: 12px 10px;
+  font-size: 24px;
+  margin: auto 0;
+}
+
+.select_seat:focus, input:focus{
+  outline: none;
+}
+
+.select_pump{
+  background-color: #ffffff;
+  border: 3px solid #4496C8;
+  color: #000000;
+  font-size: 24px;
+  width: 400px;
+  height: 45px;
+  border-radius: 8px;
+  padding: 5px;
+  cursor: pointer;
+  position: relative;
+}
+
+.select_pump:focus{
+  outline: none;
+}
+
+.align_button{
+  position: absolute;
+  right: 260px;
+}

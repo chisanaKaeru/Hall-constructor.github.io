@@ -5,52 +5,42 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style/style.css">
-  <link rel="stylesheet" href="style/card-list.css">
-  <link rel="stylesheet" href="style/list-pumps.css">
+  <link rel="stylesheet" href="style/text.css">
+  <link rel="stylesheet" href="style/card-choice.css">
+  <link rel="stylesheet" href="style/list.css">
   <link rel="stylesheet" href="style/popup.css">
   <link rel="stylesheet" href="style/button.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <link rel="icon" type="image/x-icon" href="/image/polyefir-agro.ico">
   <script src="javascript/main.js"></script>
-  <script src="javascript/popup.js"></script>
   <title>Конструктор доильного зала</title>
 </head>
-<body class="slider">
+<body class="slide_show">
   <div class="caption_text animate__animated animate__fadeInDown">Вакуумный насос</div>
-
-  <div class="card_center">
+  <div class="center">
     <div class="card_select animate__animated animate__backInDown">
-      <div class="card_img_select" style="background-image: url(https://www.travelwisconsin.com/uploads/blog/e2/e2ccbd6f-1070-4272-889b-cc7720bd664d-farm-scene-with-cows.jpg);" id="img_pump"><button class="button_popup_open" onclick="togglePopup()"><img src="image/expand-window.png"></button></div>
+      <div class="card_img_select" style="background-image: url(image/vacuum-pump.jpg);" id="img_pump"></div>
         <div class="card_body_select">
-          <select class="select_all" id="pump" onchange="dataPump()">
+          <select class="select_box" id="pump" onchange="changePump()">
             <option value="1">Полиэфир</option>
             <option value="2">GEA</option>
             <option value="3">CTA</option>
           </select>
-          <div class="background_text_select">Конс трукция данной установки позволяет осуществлять поэтапное расширение функциональных возможностей, начиная от простейшего варианта, обеспечивающего только автоматическое додаивание и снятие доильных стаканов, до вариантов с АСУТП и системой компьютерного управления стадом.</div>
+          <div class="background_text background_text_select">Предназначена для получения технологического вакуума, используемого для доения коров. Установка вакуумная состоит из основных составных частей, представленных ниже.</div>
         </div>
     </div>
   </div>
-
-  <div class="card_center_pumpu">
-    <div class="card_list_pump animate__animated animate__fadeInDown">
-      <div class="title_text_pump">Вакуумный насос</div>
-      <img src="image/button_add.png" class="add_pump" onclick="addPump()">
-      <img src="image/button_delete.png" class="delete_pump" onclick="deletePump()">
+  <div class="center_list">
+    <div class="card_list animate__animated animate__fadeInDown">
+      <div class="title_text_list">Вакуумный насос</div>
+      <div class="button_list">
+        <img src="image/button/button_add.png" class="button_add" onclick="addPump()">
+        <img src="image/button/button_delete.png" class="button_delete" onclick="deletePump()">
+      </div>
     </div>
     <ul id="list_pump">
     </ul>
-    <a href="milk-pipeline.html" class="button_card align_button animate__animated animate__fadeInDown">Дальше</a>
+    <a href="milk-pipeline.html" class="button align_button animate__animated animate__fadeInDown">Дальше</a>
   </div>
-
-  <!--
-  <div class="pop_up" id="pop_up">
-    <div class="pop_up_body">
-      <button class="button_close" onclick="togglePopup()">&#10006</button>
-      <iframe id="FrameID" src="view3d/view3d.html"></iframe>
-    </div>
-  </div>
--->
-
 </body>
 </html>

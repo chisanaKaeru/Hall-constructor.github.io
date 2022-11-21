@@ -5,54 +5,44 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/text.css">
   <link rel="stylesheet" href="style/card.css">
-  <link rel="stylesheet" href="style/button.css">
-  <link rel="stylesheet" href="style/popup.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <link rel="icon" type="image/x-icon" href="/image/polyefir-agro.ico">
-  <script src="javascript/popup.js"></script>
   <script src="javascript/main.js"></script>
   <title>Конструктор доильного зала</title>
 </head>
-<body class="slider">
+<body class="slide_show">
   <div class="caption_text animate__animated animate__fadeInDown">Подвисная часть</div>
-  <div class="card_center">
+  <div class="center">
 
-    <div class="card sub animate__animated animate__backInDown">
-      <div class="card_img" style="background-image: url(https://www.travelwisconsin.com/uploads/blog/e2/e2ccbd6f-1070-4272-889b-cc7720bd664d-farm-scene-with-cows.jpg);"><button class="button_popup_open" onclick="togglePopup()"><img src="image/expand-window.png"></button></div>
-      <div class="card_body">
-        <p class="title_text">Полиэфир</p>
-        <p class="background_text">Конструкция данной установки позволяет осуществлять поэтапное расширение функциональных возможностей, начиная от простейшего варианта, обеспечивающего только автоматическое додаивание и снятие доильных стаканов, до вариантов с АСУТП и системой компьютерного управления стадом.</p>
-        <a href="washing-pad.html" class="button_card" onclick="getData(this.id)" id="Полиэфир">Выбрать</a>
-      </div>
+  <input type="radio" name="hanging-part" value="Полиэфир" id="part1" onclick="location.href='washing-pad.html'">
+  <label for="part1" class="card sub animate__animated animate__backInDown">
+    <div class="card_img" style="background-image: url(image/YDE.jpg);"></div>
+    <div class="card_body">
+    <p class="title_text">Полиэфир</p>
+      <p class="background_text">Текст.</p>
     </div>
+  </label>
 
-    <div class="card sup animate__animated animate__backInUp">
-      <div class="card_img" style="background-image: url(https://www.travelwisconsin.com/uploads/blog/e2/e2ccbd6f-1070-4272-889b-cc7720bd664d-farm-scene-with-cows.jpg);"><button class="button_popup_open" onclick="togglePopup()"><img src="image/expand-window.png"></button></div>
+  <input type="radio" name="hanging-part" value="IQ" id="part2" onclick="location.href='washing-pad.html'">
+  <label for="part2" class="card sup animate__animated animate__backInUp">
+      <div class="card_img" style="background-image: url(image/YDE.jpg);"></div>
       <div class="card_body">
         <p class="title_text">IQ</p>
-        <p class="background_text">Конструкция данной установки позволяет осуществлять поэтапное расширение функциональных возможностей, начиная от простейшего варианта, обеспечивающего только автоматическое додаивание и снятие доильных стаканов, до вариантов с АСУТП и системой компьютерного управления стадом.</p>
-        <a href="washing-pad.html" class="button_card" onclick="getData(this.id)" id="IQ">Выбрать</a>
+        <p class="background_text">Текст.</p>
       </div>
-    </div>
+  </label>
 
-    <div class="card sub animate__animated animate__backInDown">
-      <div class="card_img" style="background-image: url(https://www.travelwisconsin.com/uploads/blog/e2/e2ccbd6f-1070-4272-889b-cc7720bd664d-farm-scene-with-cows.jpg);"><button class="button_popup_open" onclick="togglePopup()"><img src="image/expand-window.png"></button></div>
+  <input type="radio" name="hanging-part" value="DeLaval" id="part3" onclick="location.href='washing-pad.html'">
+  <label for="part3" class="card sub animate__animated animate__backInDown">
+      <div class="card_img" style="background-image: url(image/YDE.jpg);"></div>
       <div class="card_body">
         <p class="title_text">DeLaval</p>
-        <p class="background_text">Конструкция данной установки позволяет осуществлять поэтапное расширение функциональных возможностей, начиная от простейшего варианта, обеспечивающего только автоматическое додаивание и снятие доильных стаканов, до вариантов с АСУТП и системой компьютерного управления стадом.</p>
-        <a href="washing-pad.html" class="button_card" onclick="getData(this.id)" id="DeLaval">Выбрать</a>
+        <p class="background_text">Текст.</p>
       </div>
-    </div>
+  </label>
 
   </div>
-
-  <div class="pop_up" id="pop_up">
-    <div class="pop_up_body">
-      <button class="button_close" onclick="togglePopup()">&#10006</button>
-      <iframe src="view3d/view3d.html"></iframe>
-    </div>
-  </div>
-
 </body>
 </html>
