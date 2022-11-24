@@ -9,13 +9,14 @@
   <link rel="stylesheet" href="style/card.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <link rel="icon" type="image/x-icon" href="/image/polyefir-agro.ico">
+  <script src="javascript/main.js"></script>
   <title>Конструктор доильного зала</title>
 </head>
 <body class="slide_show">
   <div class="caption_text animate__animated animate__fadeInDown">Выберите доильный зал для своей фермы</div>
   <div class="center">
 
-      <input type="radio" name="milking-parlor" value="УДЕ" id="constructor1" onclick="location.href='number-of-seats.html'">
+      <input type="radio" name="milking-parlor" value="УДЕ" id="constructor1" >
       <label for="constructor1" class="card sub animate__animated animate__backInDown">
           <div class="card_img" style="background-image: url(image/YDE.jpg);"></div>
           <div class="card_body">
@@ -24,7 +25,7 @@
           </div>
       </label>
 
-      <input type="radio" name="milking-parlor" value="УДП" id="constructor2" onclick="location.href='number-of-seats.html'">
+      <input type="radio" name="milking-parlor" value="УДП" id="constructor2">
       <label for="constructor2" class="card sup animate__animated animate__backInUp">
           <div class="card_img" style="background-image: url(image/YDP.jpg);"></div>
           <div class="card_body">
@@ -33,8 +34,8 @@
           </div>
       </label>
 
-      <input type="radio" name="milking-parlor" value="Тандем" id="constructor3" onclick="location.href='number-of-seats.html'">
-      <label for="constructor3" class="card sub animate__animated animate__backInDown">
+      <input type="radio" name="milking-parlor" value="Тандем" id="constructor3" onclick="getValueRadiobox(this)">
+      <label for="constructor3" class="card sub animate__animated animate__backInDown" onclick="location.href='number-of-seats.html'">
           <div class="card_img" style="background-image: url(image/Tandem.jpg);"></div>
           <div class="card_body">
             <p class="title_text title_text_card">Тандем</p>
@@ -42,7 +43,7 @@
           </div>
       </label>
 
-      <input type="radio" name="milking-parlor" value="Карусель" id="constructor4" disabled onclick="location.href='number-of-seats.html'">
+      <input type="radio" name="milking-parlor" value="Карусель" id="constructor4" disabled onclick="getValueRadiobox(this)">
       <label for="constructor4" class="card_off sup animate__animated animate__backInUp">
           <div class="card_img" style="background-image: url(image/Karysel.jpg);"></div>
           <div class="card_body">
@@ -51,7 +52,7 @@
           </div>
       </label>
 
-      <input type="radio" name="milking-parlor" value="Робот" id="constructor5" disabled onclick="location.href='number-of-seats.html'">
+      <input type="radio" name="milking-parlor" value="Робот" id="constructor5" disabled onclick="getValueRadiobox(this)">
       <label for="constructor5" class="card_off sub animate__animated animate__backInDown">
           <div class="card_img" style="background-image: url(image/Robot.jpg);"></div>
           <div class="card_body">
@@ -61,5 +62,7 @@
       </label>
 
   </div>
+
+  <button id="hi">sdghjfdsjghglsdjf</button>
 </body>
 </html>

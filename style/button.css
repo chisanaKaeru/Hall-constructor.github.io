@@ -1,5 +1,5 @@
 .button{
-  display: block;
+  position: relative;
   width: 175px;
   padding: 10px 0px;
   background: rgba(48, 130, 180, 0.85);
@@ -47,6 +47,6 @@
 .button_optional_equipment{
   position: absolute;
   right: 40px;
-  top: 45px;
+  top: 36px;
   width: 250px;
 }

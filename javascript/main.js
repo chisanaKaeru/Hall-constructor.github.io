@@ -138,6 +138,7 @@ function deletePump() {
   }
 }
 
+//input max 60
 function inputDataSystem(item) {
   var id = item.id
   if (document.getElementById(id).value <= 0) {
@@ -151,6 +152,7 @@ function inputDataSystem(item) {
   return valueSystem;
 }
 
+//select change img
 function changePump() {
   let value = document.getElementById("pump").value;
   if (value == 1) {
@@ -162,6 +164,7 @@ function changePump() {
   }
 }
 
+//select change img
 function changeWaterHeater() {
   let value = document.getElementById("water_heater").value;
   if (value == 1) {
@@ -173,6 +176,7 @@ function changeWaterHeater() {
   }
 }
 
+//select change img
 function changeCompressor() {
   let value = document.getElementById("compressor").value;
   if (value == 1) {
@@ -182,6 +186,46 @@ function changeCompressor() {
   }
 }
 
+//read data in localStorage
+function getValueCheckbox(checkbox){
+  if (checkbox.checked == true) {
+    localStorage.setItem(checkbox.id, checkbox.value);
+    alert(localStorage.getItem(checkbox.id));
+  } else {
+    localStorage.removeItem(checkbox.id);
+  }
+}
+
+function getValueRadiobox(radiobutton){
+
+  alert(radiobutton.id);
+
+  /*
+  if (radiobutton.checked == true) {
+    localStorage.setItem(radiobutton.name, radiobutton.value);
+    alert(localStorage.getItem(radiobutton.name));
+  }
+  */
+} 
+
+document.querySelector('#hi').onclick = function() {
+  console.log('hi');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//application-form add li
 function readData(){
   let list_form = document.getElementById("list_form");
   let liForm = document.createElement("li");
@@ -192,13 +236,14 @@ function readData(){
   liForm.append(textForm);
   list_form.appendChild(liForm);
 }
+
 /*
 function selectDataPump(item) {
   var id = item.id
   let value = document.getElementById(id).value;
 }
+*/
 
 function clearLocalStorage() {
   localStorage.clear();
 }
-*/

@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/text.css">
   <link rel="stylesheet" href="style/application-form.css">
   <link rel="stylesheet" href="style/button.css">
   <link rel="icon" type="image/x-icon" href="/image/polyefir-agro.ico">
@@ -13,24 +14,30 @@
 </head>
 <body class="slide_show">
   <div class="caption_text animate__animated animate__fadeInDown">Форма подача заявки на конструктор фермы</div>
-  <div class="card_center">
-  <div class="card_form animate__animated animate__fadeInDown">
-    <div class="caption_text_form">Ваши выбраные детали</div>
-    <br>
-    <ul id="list_form" onload="readData()">
-      <li>
-        <div class="li_text_form">Доильный зал: Карусель</div>
-      </li>
-    </ul>
-    <br>
-    <input type="text" placeholder="Введите наименование фермы">
-    <br>
-    <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Введите номер телефона">
-    <br>
-    <input type="email" placeholder="Введите почту">
-    <br>
-    <button class="button_card button_margin_form">Отправить</button>
-  </div>
+  <div class="center">
+
+    <div class="card_form animate__animated animate__fadeInDown">
+      <div class="caption_text_form">Ваши выбраные детали</div>
+      <div class="center_form">
+        <ul id="list_form">
+          <li>
+            <div class="li_text_form">Доильный зал: Карусель</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card_form animate__animated animate__fadeInDown">
+      <div class="caption_text_form">Заявка</div>
+      <div class="center_form">
+        <input type="text" placeholder="ФИО">
+        <input type="text" placeholder="Наименование организации">
+        <input type="email" placeholder="Электроная почта">
+        <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Контактный телефон">
+        <button class="button button_margin_form">Отправить</button>
+      </div>
+    </div>
+
 </div>
 </body>
 </html>
