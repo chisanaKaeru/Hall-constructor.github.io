@@ -5,30 +5,33 @@
   box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.25);
   border-radius: 14px;
   margin: 15px;
-  width: 600px;
-  height: auto;
-  min-height: 275px;
   border: 3px solid #3082B4;
+  min-width: 575px;
+  min-height: 275px;
 }
 
 .card_img_select{
   position: relative;
-  width: 300px;
+  max-width: 325px;
+}
+
+.img_select{
+  width: 100%;
   height: 100%;
   background-size: cover;
   border-radius: 12px;
-  justify-content: center;
 }
 
 .card_body_select{
   position: relative;
-  width: 300px;
+  width: 250px;
   padding: 5px;
 }
 
 .select_box{
   margin: 5px 10px;
-  width: 180px;
+  height: 45px;
+  width: 92%;
   background-color: #3082B4;
   border: 3px solid #4496C8;
   color: #ffffff;
@@ -42,13 +45,11 @@
 option{
   background-color: #ffffff;
   color: black;
-  border-radius: 8px;
 }
 
 input[type=number]{
   outline: none;
   margin: 5px 10px;
-  width: 180px;
   height: 40px;
   border: 3px solid #58AADC;
   border-radius: 8px;
@@ -64,31 +65,13 @@ input[type=number]:focus{
 
 .title_text_select{
   margin: 5px 12px;
+  line-height: 34px;
 }
 
 .background_text_select{
   margin: 5px 12px;
   letter-spacing: 0.5px;
 }
-
-.button_select_input{
-  margin: 10px 10px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .switch {
   position: relative;
@@ -98,14 +81,12 @@ input[type=number]:focus{
   margin: 5px 10px;
 }
 
-/* Hide default HTML checkbox */
 .switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-/* The slider */
 .slider {
   position: absolute;
   cursor: pointer;
@@ -144,7 +125,6 @@ input[type=checkbox]:checked + .slider:before {
   transform: translateX(26px);
 }
 
-/* Rounded sliders */
 .slider.round {
   border-radius: 34px;
 }

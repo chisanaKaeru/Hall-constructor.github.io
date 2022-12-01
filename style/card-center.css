@@ -1,8 +1,0 @@
-.card_center{
-  position: relative;
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin: auto;
-}

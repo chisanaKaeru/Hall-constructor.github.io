@@ -5,15 +5,32 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/navigation-menu.css">
   <link rel="stylesheet" href="style/text.css">
   <link rel="stylesheet" href="style/list.css">
   <link rel="stylesheet" href="style/button.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <link rel="icon" type="image/x-icon" href="/image/polyefir-agro.ico">
   <script src="javascript/main.js"></script>
+  <script src="javascript/pit.js"></script>
   <title>Конструктор доильного зала</title>
 </head>
-  <body class="slide_show">
+  <body class="slide_show" onload="setCheckedPage()">
+    <div class="menu">
+      <p class="title_text center">Меню конструктора</p>
+      <ul>
+        <li class="page" onclick="location.href='index.html'" id="page1">Доильный зал</li>
+        <li class="page active" onclick="location.href='number-of-seats.html'" id="page2">Яма</li>
+        <li class="page" onclick="location.href='vacuum-pump.html'" id="page3">Вакуумный насосы</li>
+        <li class="page" onclick="location.href='milk-pipeline.html'" id="page4">Молокопровод</li>
+        <li class="page" onclick="location.href='milking-system.html'" id="page5">Система доения</li>
+        <li class="page" onclick="location.href='identification-and-activity-system.html'" id="page6">Система идентификации и активности</li>
+        <li class="page" onclick="location.href='hanging-part.html'" id="page7">Подвисная часть</li>
+        <li class="page" onclick="location.href='washing-pad.html'" id="page8">Промежуточная дезинфекция</li>
+        <li class="page" onclick="location.href='optional-equipment.html'" id="page9">Дополнительное оборудование</li>
+        <li class="page" onclick="location.href='application-form.html'" id="page10">Форма заявки</li>
+      </ul>
+    </div>
     <div class="caption_text animate__animated animate__fadeInDown">Добавьте места для своей фермы</div>
     <div class="center_list">
       <div class="card_list animate__animated animate__fadeInDown">

@@ -58,14 +58,14 @@
   background-color: #FF6767;
 }
 
-li{
+.list{
   display: flex;
   border: none;
   justify-content: space-around;
   padding: 20px;
   font-family: arial;
   padding-left: 10px;
-  margin: 25px;
+  margin: 15px;
   width: 625px;
   height: 85px;
   background-color: rgb(88, 170, 220, 0.85);
@@ -74,23 +74,13 @@ li{
   border-radius: 12px;
 }
 
-.li_text{
-  position: relative;
-  font-weight: 400;
-  font-size: 26px;
-  line-height: 39px;
-  letter-spacing: 0.05em;
-  color: #FFFFFF;
-  margin: auto 0  ;
-}
-
 .select_seat{
   position: relative;
   background-color: #ffffff;
   border: 3px solid #4496C8;
   color: #000000;
   font-size: 24px;
-  width: 225px;
+  width: 330px;
   height: 45px;
   border-radius: 8px;
   padding: 5px;

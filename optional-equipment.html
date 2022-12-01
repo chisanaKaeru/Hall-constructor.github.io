@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/navigation-menu.css">
   <link rel="stylesheet" href="style/text.css">
   <link rel="stylesheet" href="style/card.css">
   <link rel="stylesheet" href="style/card-choice.css">
@@ -14,14 +15,29 @@
   <script src="javascript/main.js"></script>
   <title>Конструктор доильного зала</title>
 </head>
-<body class="slide_show">
+<body class="slide_show" onload="setCheckedPage()">
+  <div class="menu">
+    <p class="title_text center">Меню конструктора</p>
+    <ul>
+      <li class="page" onclick="location.href='index.html'" id="page1">Доильный зал</li>
+      <li class="page" onclick="location.href='number-of-seats.html'" id="page2">Яма</li>
+      <li class="page" onclick="location.href='vacuum-pump.html'" id="page3">Вакуумный насосы</li>
+      <li class="page" onclick="location.href='milk-pipeline.html'" id="page4">Молокопровод</li>
+      <li class="page" onclick="location.href='milking-system.html'" id="page5">Система доения</li>
+      <li class="page" onclick="location.href='identification-and-activity-system.html'" id="page6">Система идентификации и активности</li>
+      <li class="page" onclick="location.href='hanging-part.html'" id="page7">Подвисная часть</li>
+      <li class="page" onclick="location.href='washing-pad.html'" id="page8">Промежуточная дезинфекция</li>
+      <li class="page active" onclick="location.href='optional-equipment.html'" id="page9">Дополнительное оборудование</li>
+      <li class="page" onclick="location.href='application-form.html'" id="page10">Форма заявки</li>
+    </ul>
+  </div>
     <div class="caption_text animate__animated animate__fadeInDown">Дополнительное оборудование</div>
     <a href="application-form.html" class="button button_optional_equipment animate__animated animate__backInDown">Оставить заявку</a>
 
   <div class="center">
-    <input type="checkbox" name="optional-equipment" id="equipment1" onchange="getValueCheckbox(this)">
+    <input type="checkbox" name="optional-equipment" id="equipment1">
     <label for="equipment1" class="card_select animate__animated animate__backInDown">
-        <div class="card_img_select" style="background-image: url(image/vacuum-pump.jpg);" id="img_pump"></div>
+      <div class="card_img_select"><img src="image/vacuum-pump.jpg" class="img_select"></div>
         <div class="card_body_select">
           <div class="title_text title_text_select">Водонагреватели</div>
           <select class="select_box" id="waterHeaters">
@@ -33,12 +49,12 @@
         </div>
     </label>
 
-    <input type="checkbox" name="optional-equipment" id="equipment2" onchange="getValueCheckbox(this)">
+    <input type="checkbox" name="optional-equipment" id="equipment2">
     <label for="equipment2" class="card_select animate__animated animate__backInUp">
-      <div class="card_img_select" style="background-image: url(image/vacuum-pump.jpg);" id="img_pump"></div>
+      <div class="card_img_select"><img src="image/vacuum-pump.jpg" class="img_select"></div>
       <div class="card_body_select">
-        <div class="title_text title_text_select">Компрессор</div>
-        <select class="select_box" id="compressor">
+        <div class="title_text title_text_select">Компрессоры</div>
+        <select class="select_box" id="waterHeaters">
           <option value="1">Маслянный</option>
           <option value="2">Безмаслянный</option>
         </select>
@@ -46,18 +62,18 @@
       </div>
     </label>
 
-    <input type="checkbox" name="optional-equipment" id="equipment3" onchange="getValueCheckbox(this)">
+    <input type="checkbox" name="optional-equipment" id="equipment3">
     <label for="equipment3" class="card_select animate__animated animate__backInDown">
-      <div class="card_img_select" style="background-image: url(image/vacuum-pump.jpg);" id="img_pump"></div>
-        <div class="card_body_select">
-          <div class="title_text title_text_select">Дренажный насос</div>
-          <input type="number" placeholder="Кол-во насосов" class="input_text" id="drainagePump">
-          <div class="background_text background_text_select">Предназначена для получения технологического вакуума, используемого для доения коров. Установка вакуумная состоит из основных составных частей, представленных ниже.</div>
-        </div>
+      <div class="card_img_select"><img src="image/vacuum-pump.jpg" class="img_select"></div>
+      <div class="card_body_select">
+        <div class="title_text title_text_select">Дренажный насос</div>
+        <input type="number" placeholder="Кол-во насосов" class="input_text" id="drainagePump">
+        <div class="background_text background_text_select">Предназначена для получения технологического вакуума, используемого для доения коров. Установка вакуумная состоит из основных составных частей, представленных ниже.</div>
+      </div>
     </label>
 
   <div class="center">
-    <input type="checkbox" name="optional-equipment" value="Молочный насос" id="equipment4" onchange="getValueCheckbox(this)">
+    <input type="checkbox" name="optional-equipment" value="Молочный насос" id="equipment4">
     <label for="equipment4" class="card sub animate__animated animate__backInDown">
       <div class="card_img" style="background-image: url(image/YDE.jpg);"></div>
       <div class="card_body">
@@ -66,7 +82,7 @@
       </div>
     </label>
 
-    <input type="checkbox" name="optional-equipment" value="Осушитель" id="equipment5" onchange="getValueCheckbox(this)">
+    <input type="checkbox" name="optional-equipment" value="Осушитель" id="equipment5">
     <label for="equipment5" class="card sup animate__animated animate__backInUp">
       <div class="card_img" style="background-image: url(image/YDE.jpg);"></div>
       <div class="card_body">
@@ -75,7 +91,7 @@
       </div>
     </label>
 
-    <input type="checkbox" name="optional-equipment" value="Пункт распределительный" id="equipment6" onchange="getValueCheckbox(this)">
+    <input type="checkbox" name="optional-equipment" value="Пункт распределительный" id="equipment6">
     <label for="equipment6" class="card sub animate__animated animate__backInDown">
       <div class="card_img" style="background-image: url(image/YDE.jpg);"></div>
       <div class="card_body">
@@ -84,7 +100,7 @@
       </div>
     </label>
 
-    <input type="checkbox" name="optional-equipment" value="ЗИП" id="equipment7" onchange="getValueCheckbox(this)">
+    <input type="checkbox" name="optional-equipment" value="ЗИП" id="equipment7">
     <label for="equipment7" class="card sup animate__animated animate__backInUp">
       <div class="card_img" style="background-image: url(image/YDE.jpg);"></div>
       <div class="card_body">
@@ -93,7 +109,7 @@
       </div>
     </label>
 
-    <input type="checkbox" name="optional-equipment" value="Монтажный комплект" id="equipment8" onchange="getValueCheckbox(this)">
+    <input type="checkbox" name="optional-equipment" value="Монтажный комплект" id="equipment8">
     <label for="equipment8" class="card sub animate__animated animate__backInDown">
       <div class="card_img" style="background-image: url(image/YDE.jpg);"></div>
       <div class="card_body">
