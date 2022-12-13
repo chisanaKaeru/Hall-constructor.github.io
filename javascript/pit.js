@@ -3,39 +3,49 @@ let pit = 0;
 function addPit() {
   if (pit<=4) {
     pit++;
-  let list_pit = document.getElementById("list_pit");
-  let liPit = document.createElement("li");
-  liPit.setAttribute("class", "list animate__animated animate__fadeInDown");
+    let list_pit = document.getElementById("list_pit");
+    let li = document.createElement("li");
+    li.setAttribute("class", "list animate__animated animate__fadeInDown");
 
-  let optionTextPlaceholdePit = document.createTextNode("Количество мест");
-  let optionTextOnePit = document.createTextNode("Цех раздоя");
-  let optionTextTwoPit = document.createTextNode("Цех производства молока");
+    function box1(){
+      let optionTextPlaceholde = document.createTextNode("Количество мест");
+      let optionTextOne = document.createTextNode("Цех раздоя");
+      let optionTextTwo = document.createTextNode("Цех производства молока");
 
-  let selectPit = document.createElement("select");
-  selectPit.setAttribute("class", "select_seat")
-  selectPit.setAttribute("id", "option_pit" + pit);
-  selectPit.setAttribute("onchange", "selectDataPit(this)");
-  let optionPlaceholderPit = document.createElement("option");
-  optionPlaceholderPit.setAttribute("disabled", "");
-  optionPlaceholderPit.setAttribute("selected", "");
-  optionPlaceholderPit.setAttribute("hidden", "");
-  optionPlaceholderPit.appendChild(optionTextPlaceholdePit);
-  let optionOneSidePit = document.createElement("option");
-  optionOneSidePit.appendChild(optionTextOnePit);
-  let optionTwoSidePit = document.createElement("option");
-  optionTwoSidePit.appendChild(optionTextTwoPit);
-  selectPit.append(optionPlaceholderPit,optionOneSidePit,optionTwoSidePit);
+      let select = document.createElement("select");
+      select.setAttribute("class", "select-seat")
+      select.setAttribute("id", "option-pit" + pit);
+      select.setAttribute("onchange", "selectDataPit(this)");
 
-  let inputPit = document.createElement("input");
-  inputPit.setAttribute("type", "number");
-  inputPit.setAttribute("min", "1");
-  inputPit.setAttribute("max", "60");
-  inputPit.setAttribute("placeholder", "Кол-во мест");
-  inputPit.setAttribute("id", "input_pit" + pit);
-  inputPit.setAttribute("onchange", "inputDataPit(this)");
+      let optionPlaceholder = document.createElement("option");
+      optionPlaceholder.setAttribute("disabled", "");
+      optionPlaceholder.setAttribute("selected", "");
+      optionPlaceholder.setAttribute("hidden", "");
+      optionPlaceholder.appendChild(optionTextPlaceholde);
 
-  liPit.append(selectPit,inputPit);
-  list_pit.appendChild(liPit);
+      let optionOneSide = document.createElement("option");
+      optionOneSide.appendChild(optionTextOne);
+
+      let optionTwoSide = document.createElement("option");
+      optionTwoSide.appendChild(optionTextTwo);
+
+      select.append(optionPlaceholder,optionOneSide,optionTwoSide);
+      return select;
+    }
+
+    function box2(){
+      let input = document.createElement("input");
+      input.setAttribute("type", "number");
+      input.setAttribute("min", "1");
+      input.setAttribute("max", "60");
+      input.setAttribute("placeholder", "Кол-во мест");
+      input.setAttribute("id", "input-pit" + pit);
+      input.setAttribute("onchange", "inputDataPit(this)");
+      return input;
+    }
+
+    li.append(box1(),box2());
+    list_pit.appendChild(li);
   }
   else{
     alert("Больше 5-и ям добавлять нельзя");

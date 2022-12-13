@@ -8,55 +8,55 @@
   <link rel="stylesheet" href="style/navigation-menu.css">
   <link rel="stylesheet" href="style/text.css">
   <link rel="stylesheet" href="style/card.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <link rel="icon" type="image/x-icon" href="/image/polyefir-agro.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="javascript/main.js"></script>
   <title>Конструктор доильного зала</title>
 </head>
-<body class="slide_show" onload="setCheckedPage()">
+<body class="slide-show" onload="setCheckedPage()">
   <div class="menu">
-    <p class="title_text center">Меню конструктора</p>
-    <ul>
-      <li class="page" onclick="location.href='index.html'" id="page1">Доильный зал</li>
-      <li class="page" onclick="location.href='number-of-seats.html'" id="page2">Яма</li>
-      <li class="page" onclick="location.href='vacuum-pump.html'" id="page3">Вакуумный насосы</li>
-      <li class="page" onclick="location.href='milk-pipeline.html'" id="page4">Молокопровод</li>
-      <li class="page" onclick="location.href='milking-system.html'" id="page5">Система доения</li>
-      <li class="page" onclick="location.href='identification-and-activity-system.html'" id="page6">Система идентификации и активности</li>
-      <li class="page active" onclick="location.href='hanging-part.html'" id="page7">Подвисная часть</li>
-      <li class="page" onclick="location.href='washing-pad.html'" id="page8">Промежуточная дезинфекция</li>
-      <li class="page" onclick="location.href='optional-equipment.html'" id="page9">Дополнительное оборудование</li>
-      <li class="page" onclick="location.href='application-form.html'" id="page10">Форма заявки</li>
+    <input type="checkbox" id="menu-toggle"><label for="menu-toggle" class="label-icon"><i class="fa fa-angle-right fa-4x" aria-hidden="true"></i></label>
+    <ul class="menu-content">
+      <li class="button-page" onclick="location.href='index.html'" id="page1"><img src="image/icon-navbar/milk-carton.png" class="icon"><p class="text-body text-nav">Доильный зал</p></li>
+      <li class="button-page" onclick="location.href='number-of-seats.html'" id="page2"><img src="image/icon-navbar/milk-carton.png" class="icon"><p class="text-body text-nav">Яма</p></li>
+      <li class="button-page" onclick="location.href='vacuum-pump.html'" id="page3"><img src="image/icon-navbar/milk-carton.png" class="icon"><p class="text-body text-nav">Вакуумный насосы</p></li>
+      <li class="button-page" onclick="location.href='milk-pipeline.html'" id="page4"><img src="image/icon-navbar/milk-carton.png" class="icon"><p class="text-body text-nav">Молокопровод</p></li>
+      <li class="button-page" onclick="location.href='milking-system.html'" id="page5"><img src="image/icon-navbar/milk-carton.png" class="icon"><p class="text-body text-nav" id="text-nav">Система доения</p></li>
+      <li class="button-page" onclick="location.href='identification-and-activity-system.html'" id="page6"><img src="image/icon-navbar/milk-carton.png" class="icon"><p class="text-body text-nav">СИиА</p></li>
+      <li class="button-page active" onclick="location.href='hanging-part.html'" id="page7"><img src="image/icon-navbar/milk-carton.png" class="icon"><p class="text-body text-nav">Подвисная часть</p></li>
+      <li class="button-page" onclick="location.href='washing-pad.html'" id="page8"><img src="image/icon-navbar/milk-carton.png" class="icon"><p class="text-body text-nav">Гиена и содержание животных</p></li>
+      <li class="button-page" onclick="location.href='optional-equipment.html'" id="page9"><img src="image/icon-navbar/milk-carton.png" class="icon"><p class="text-body text-nav">Дополнительное оборудование</p></li>
+      <li class="button-page" onclick="location.href='application-form.html'" id="page10"><img src="image/icon-navbar/milk-carton.png" class="icon"><p class="text-body text-nav">3D просмотр зала</p></li>
     </ul>
   </div>
-  <div class="caption_text animate__animated animate__fadeInDown">Подвисная часть</div>
+
   <div class="center">
 
-  <input type="radio" name="hanging-part" value="Полиэфир" id="part1" onclick="location.href='washing-pad.html', hanging_part()">
-  <label for="part1" class="card sub animate__animated animate__backInDown">
-    <div class="card_img" style="background-image: url(image/YDE.jpg);"></div>
-    <div class="card_body">
-    <p class="title_text">Полиэфир</p>
-      <p class="background_text">Текст.</p>
+  <input class="input-card" type="radio" name="hanging-part" value="Полиэфир" id="part1" onclick="location.href='washing-pad.html', hanging_part()">
+  <label for="part1" class="card">
+    <div class="card-img" style="background-image: url(image/YDE.jpg);"></div>
+    <div class="card-body">
+      <p class="text-title">Полиэфир</p>
+      <p class="text-body text-body-card-width">Текст.</p>
     </div>
   </label>
 
-  <input type="radio" name="hanging-part" value="IQ" id="part2" onclick="location.href='washing-pad.html', hanging_part()">
-  <label for="part2" class="card sup animate__animated animate__backInUp">
-      <div class="card_img" style="background-image: url(image/YDE.jpg);"></div>
-      <div class="card_body">
-        <p class="title_text">IQ</p>
-        <p class="background_text">Текст.</p>
-      </div>
+  <input class="input-card" type="radio" name="hanging-part" value="IQ" id="part2" onclick="location.href='washing-pad.html', hanging_part()">
+  <label for="part2" class="card">
+    <div class="card-img" style="background-image: url(image/YDE.jpg);"></div>
+    <div class="card-body">
+      <p class="text-title">IQ</p>
+      <p class="text-body text-body-card-width">Текст.</p>
+    </div>
   </label>
 
-  <input type="radio" name="hanging-part" value="DeLaval" id="part3" onclick="location.href='washing-pad.html', hanging_part()">
-  <label for="part3" class="card sub animate__animated animate__backInDown">
-      <div class="card_img" style="background-image: url(image/YDE.jpg);"></div>
-      <div class="card_body">
-        <p class="title_text">DeLaval</p>
-        <p class="background_text">Текст.</p>
-      </div>
+  <input class="input-card" type="radio" name="hanging-part" value="DeLaval" id="part3" onclick="location.href='washing-pad.html', hanging_part()">
+  <label for="part3" class="card">
+    <div class="card-img" style="background-image: url(image/YDE.jpg);"></div>
+    <div class="card-body">
+      <p class="text-title">DeLaval</p>
+      <p class="text-body text-body-card-width">Текст.</p>
+    </div>
   </label>
 
   </div>

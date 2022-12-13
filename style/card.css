@@ -1,42 +1,41 @@
-label{
-  cursor: pointer;
-}
-
-input[type=radio], input[type=checkbox]{
+.input-card:where([type=radio], [type=checkbox]){
   pointer-events: none;
   display: none;
 }
 
-input[type=radio]:checked + label, input[type=checkbox]:checked + label{
+.input-card:where([type=radio], [type=checkbox]):checked + label{
   transition: .2s;
-  border: 3px solid #58dc80;
+  border: 5px solid #58dc80;
 }
 
-input[type=radio]:not(:checked) + label, input[type=checkbox]:not(:checked) + label{
+.input-card:where([type=radio], [type=checkbox]):not(:checked) + label{
   transition: .5s;
 }
 
-.card, .card_off{
+.card, .card-off{
+  color: #ffffff;
   position: relative;
-  background: rgba(48, 130, 180, 0.85);
-  width: 300px;
-  height: 465px;
+  min-width: 300px;
+  min-height: 460px;
   box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.25);
   border-radius: 14px;
-  margin: 20px;
+  margin: 5px 10px;
   font-size: 24px;
-  border: 3px solid transparent;
+  border: 5px solid transparent;
+  cursor: pointer;
 }
 
 .card{
-  background: rgba(48, 130, 180, 0.85);
+  background: #3082b4;
+  /*background: rgba(48, 130, 180, 0.85);*/
 }
 
-.card_off{
-  background: rgba(100, 130, 150, 0.85);
+.card-off{
+  background: #54595F;
+  /*background: rgba(100, 130, 150, 0.85);*/
 }
 
-.card_img{
+.card-img{
   height: 175px;
   width: 100%;
   background-size: cover;
@@ -49,77 +48,10 @@ img{
   margin: auto;
 }
 
-.card_body{
+.card-body{
   padding: 0px 20px;
 }
 
-.title_text_card, .background_text_card{
-  margin: 5px 0px;
-}
-
-.sub{
-  position: relative;
-  margin-top: 25px;
-  margin-bottom: 50px;
-}
-
-.sup{
-  position: relative;
-  margin-bottom: 25px;
-  margin-top: 50px;
-}
-
-@media (max-width:679px) {
-
-  .sub{
-    position: relative;
-    margin-top: 25px;
-    margin-bottom: 25px;
-  }
-
-  .sup{
-    position: relative;
-    margin-bottom: 25px;
-    margin-top: 25px;
-  }
-
-}
-
-
-
-/*
-.button_popup_open{
-  position: absolute;
-  width: 32px;
-  height: 32px;
-  border: 0px;
-  border-radius: 8px;
-  top: 5px;
-  right: 5px;
-  display: flex;
-  cursor: pointer;
-}
-*/
-
-
-
-/*
-.button_popup_open:hover{
-  background-color: rgb(210, 210, 210) ;
-}
-*/
-
-
-
-/*
-.button_popup_open_Off{
-  position: absolute;
-  width: 32px;
-  height: 32px;
-  border: 0px;
-  border-radius: 8px;
-  top: 5px;
-  right: 5px;
-  display: flex;
-}
-*/
+.text-body-card-width{
+  width: 250px;
+} 

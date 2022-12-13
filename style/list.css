@@ -1,60 +1,59 @@
-.center_list{
-  position: relative;
+.center-list{
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: center;
   margin: auto;
   flex-direction: column;
 }
 
-.card_list{
+.card-list{
   display: flex;
   flex-direction: row;
   width: 700px;
   height: 85px;
-  background: rgba(48, 130, 180, 0.85);
+  background: #3082B4;
   box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.25);
   border-radius: 14px;
   border: none;
   margin: 15px;
   padding: 20px;
-  padding-left: 45px;
 }
 
-.title_text_list{
+.text-ception-list{
   position: relative;
   height: 35px;
-  color: #ffffff;
-  font-size: 26px;
   font-family: arial;
   text-align: center;
   line-height: 40px;
+  flex: 1;
 }
 
-.button_list{
-  position: absolute;
+.button-list{
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  width: 100px;
-  right: 20px;
+  width: auto;
+  position: relative;
+  justify-content: flex-end;
+  cursor: pointer;
+  flex: 2;
 }
 
-.button_add, .button_delete{
+.button-add, .button-delete{
+  margin: 0px 5px 0px 5px;
   width: 40px;
   height: 40px;
   border-radius: 100%;
   outline: none;
   border: none;
-  justify-content: end;
   cursor: pointer;
 }
 
-.button_add{
+.button-add{
   background-color: #42FF00;
 }
 
-.button_delete{
+.button-delete{
   background-color: #FF6767;
 }
 
@@ -68,13 +67,18 @@
   margin: 15px;
   width: 625px;
   height: 85px;
-  background-color: rgb(88, 170, 220, 0.85);
+  background-color: #3082B4;
   filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.25));
   list-style-type: none;
   border-radius: 12px;
 }
 
-.select_seat{
+.box{
+  display: flex;
+  line-height: 45px;
+}
+
+.select-seat{
   position: relative;
   background-color: #ffffff;
   border: 3px solid #4496C8;
@@ -88,6 +92,11 @@
   margin: auto 0;
 }
 
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 input[type=number]{
   position: relative;
   width: 175px;
@@ -97,14 +106,14 @@ input[type=number]{
   color: #000000;
   padding: 12px 10px;
   font-size: 24px;
-  margin: auto 0;
+  margin: 0px 5px;
 }
 
-.select_seat:focus, input:focus{
+.select-seat:focus, input:focus{
   outline: none;
 }
 
-.select_pump{
+.select-pump{
   background-color: #ffffff;
   border: 3px solid #4496C8;
   color: #000000;
@@ -117,11 +126,70 @@ input[type=number]{
   position: relative;
 }
 
-.select_pump:focus{
+.select-pump:focus{
   outline: none;
 }
 
-.align_button{
-  position: absolute;
+.align-button{
   right: 260px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin: 5px 10px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input[type=checkbox]:checked + .slider {
+  background-color: #58dc80;
+}
+
+input[type=checkbox]:focus + .slider {
+  box-shadow: 0 0 1px #58dc80;
+}
+
+input[type=checkbox]:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }

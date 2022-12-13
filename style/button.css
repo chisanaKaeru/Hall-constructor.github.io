@@ -1,8 +1,9 @@
 .button{
+  position: relative;
   display: block;
   height: 45px;
   padding: 10px 40px;
-  background: rgba(48, 130, 180, 0.85);
+  background: #3082B4;
   border-radius: 12px;
   letter-spacing: 0.25em;
   text-transform: uppercase;
@@ -10,8 +11,9 @@
   text-decoration: none;
   outline: none;
   border: 3px solid #3ea2d8;
-  margin: 5px 10px;
+  margin: 5px 5px;
   line-height: 20px;
+  color: #ffffff;
 }
 
 .button:hover{
@@ -24,9 +26,10 @@
 }
 
 .button_off{
+  position: relative;
   width: 175px;
   height: 40;
-  background: rgb(28, 110, 160, 0.85);
+  background: #3082B4;
   border-radius: 12px;
   border: 2px solid #4496C8;
   letter-spacing: 0.25em;
@@ -35,18 +38,17 @@
   padding: 10px 0;
   text-decoration: none;
   cursor: default;
-}
-
-.background_text, .button, .button_off{
-  position: relative;
-  font-family: arial;
-  font-style: normal;
   color: #ffffff;
 }
 
-.button_optional_equipment{
-  position: absolute;
-  right: 40px;
-  top: 26px;
+.button-optional-equipment{
+  position: relative;
+  margin: 25px auto;
+  width: 275px;
+}
+
+.button-application-form{
+  position: relative;
+  margin: 25px auto;
   width: 300px;
 }

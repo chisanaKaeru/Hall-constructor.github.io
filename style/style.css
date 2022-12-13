@@ -8,6 +8,10 @@
   user-select: none;
 }
 
+body{
+  display: flex;
+}
+
 .center{
   position: relative;
   display: flex;
@@ -15,9 +19,19 @@
   flex-direction: row;
   flex-wrap: wrap;
   margin: auto;
+  align-items: center;
 }
 
-.slide_show{
+.center-list-page{
+  position: relative;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 25px auto;
+  align-items: center;
+}
+
+.slide-show{
   position: relative;
   width: 100%;
   height: 100vh;

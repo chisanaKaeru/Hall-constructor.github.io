@@ -1,4 +1,4 @@
-.card_select{
+.card-select{
   position: relative;
   display: flex;
   background: rgb(48, 130, 180, 0.85);
@@ -6,29 +6,30 @@
   border-radius: 14px;
   margin: 15px;
   border: 3px solid #3082B4;
-  min-width: 575px;
+  width: 575px;
   min-height: 275px;
+  margin: auto;
 }
 
-.card_img_select{
+.card-img-select{
   position: relative;
   max-width: 325px;
 }
 
-.img_select{
+.img-select{
   width: 100%;
   height: 100%;
   background-size: cover;
   border-radius: 12px;
 }
 
-.card_body_select{
+.card-body-select{
   position: relative;
   width: 250px;
   padding: 5px;
 }
 
-.select_box{
+.select-box{
   margin: 5px 10px;
   height: 45px;
   width: 92%;
@@ -63,72 +64,12 @@ input[type=number]:focus{
   transition: 0.2s;
 }
 
-.title_text_select{
+.title-text-select{
   margin: 5px 12px;
   line-height: 34px;
 }
 
-.background_text_select{
+.background-text-select{
   margin: 5px 12px;
-  letter-spacing: 0.5px;
-}
-
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-  margin: 5px 10px;
-}
-
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-input[type=checkbox]:checked + .slider {
-  background-color: #2196F3;
-}
-
-input[type=checkbox]:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
-}
-
-input[type=checkbox]:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
+  color: #ffffff;
 }

@@ -9,41 +9,40 @@
   <link rel="stylesheet" href="style/text.css">
   <link rel="stylesheet" href="style/card-choice.css">
   <link rel="stylesheet" href="style/button.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <link rel="icon" type="image/x-icon" href="/image/polyefir-agro.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="javascript/main.js"></script>
   <title>Конструктор доильного зала</title>
 </head>
-<body class="slide_show" onload="setCheckedPage()">
+<body class="slide-show" onload="setCheckedPage()">
   <div class="menu">
-    <p class="title_text center">Меню конструктора</p>
-    <ul>
-      <li class="page" onclick="location.href='index.html'" id="page1">Доильный зал</li>
-      <li class="page" onclick="location.href='number-of-seats.html'" id="page2">Яма</li>
-      <li class="page" onclick="location.href='vacuum-pump.html'" id="page3">Вакуумный насосы</li>
-      <li class="page" onclick="location.href='milk-pipeline.html'" id="page4">Молокопровод</li>
-      <li class="page" onclick="location.href='milking-system.html'" id="page5">Система доения</li>
-      <li class="page active" onclick="location.href='identification-and-activity-system.html'" id="page6">Система идентификации и активности</li>
-      <li class="page" onclick="location.href='hanging-part.html'" id="page7">Подвисная часть</li>
-      <li class="page" onclick="location.href='washing-pad.html'" id="page8">Промежуточная дезинфекция</li>
-      <li class="page" onclick="location.href='optional-equipment.html'" id="page9">Дополнительное оборудование</li>
-      <li class="page" onclick="location.href='application-form.html'" id="page10">Форма заявки</li>
+    <input type="checkbox" id="menu-toggle"><label for="menu-toggle" class="label-icon"><i class="fa fa-angle-right fa-4x" aria-hidden="true"></i></label>
+    <ul class="menu-content">
+      <li class="button-page" onclick="location.href='index.html'" id="page1"><img src="image/icon-navbar/milk-carton.png" class="icon"><p class="text-body text-nav">Доильный зал</p></li>
+      <li class="button-page" onclick="location.href='number-of-seats.html'" id="page2"><img src="image/icon-navbar/milk-carton.png" class="icon"><p class="text-body text-nav">Яма</p></li>
+      <li class="button-page" onclick="location.href='vacuum-pump.html'" id="page3"><img src="image/icon-navbar/milk-carton.png" class="icon"><p class="text-body text-nav">Вакуумный насосы</p></li>
+      <li class="button-page" onclick="location.href='milk-pipeline.html'" id="page4"><img src="image/icon-navbar/milk-carton.png" class="icon"><p class="text-body text-nav">Молокопровод</p></li>
+      <li class="button-page" onclick="location.href='milking-system.html'" id="page5"><img src="image/icon-navbar/milk-carton.png" class="icon"><p class="text-body text-nav" id="text-nav">Система доения</p></li>
+      <li class="button-page active" onclick="location.href='identification-and-activity-system.html'" id="page6"><img src="image/icon-navbar/milk-carton.png" class="icon"><p class="text-body text-nav">СИиА</p></li>
+      <li class="button-page" onclick="location.href='hanging-part.html'" id="page7"><img src="image/icon-navbar/milk-carton.png" class="icon"><p class="text-body text-nav">Подвисная часть</p></li>
+      <li class="button-page" onclick="location.href='washing-pad.html'" id="page8"><img src="image/icon-navbar/milk-carton.png" class="icon"><p class="text-body text-nav">Гиена и содержание животных</p></li>
+      <li class="button-page" onclick="location.href='optional-equipment.html'" id="page9"><img src="image/icon-navbar/milk-carton.png" class="icon"><p class="text-body text-nav">Дополнительное оборудование</p></li>
+      <li class="button-page" onclick="location.href='application-form.html'" id="page10"><img src="image/icon-navbar/milk-carton.png" class="icon"><p class="text-body text-nav">3D просмотр зала</p></li>
     </ul>
   </div>
-  <div class="caption_text animate__animated animate__fadeInDown">Система идентификации и активности</div>
 
   <div class="center">
-    <div class="card_select animate__animated animate__backInDown">
-      <div class="card_img_select"><img src="image/vacuum-pump.jpg" class="img_select"></div>
-      <div class="card_body_select">
-        <select class="select_box" id="pump">
+    <div class="card-select">
+      <div class="card-img-select"><img src="image/vacuum-pump.jpg" class="img-select"></div>
+      <div class="card-body-select">
+        <select class="select-box" id="pump">
           <option value="1">Версия 1</option>
           <option value="2">Версия 2</option>
           <option value="3">Версия 3</option>
         </select>
-        <input type="number" placeholder="Кол-во ошейников" class="input_text" onchange="inputDataSystem(this)">
-        <p class="background_text background_text_select">Предназначена для получения технологического вакуума, используемого для доения коров. Установка вакуумная состоит из основных составных частей, представленных ниже.</p>
-        <a href="hanging-part.html" class="button animate__animated animate__fadeInDown">Дальше</a>
+        <input type="number" placeholder="Кол-во ошейников" class="input-text" onchange="inputDataSystem(this)">
+        <p class="text-body background-text-select">Предназначена для получения технологического вакуума, используемого для доения коров. Установка вакуумная состоит из основных составных частей, представленных ниже.</p>
+        <a href="hanging-part.html" class="button align-button text-body">Дальше</a>
       </div>
     </div>
   </div>

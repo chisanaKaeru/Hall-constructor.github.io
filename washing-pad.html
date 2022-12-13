@@ -7,43 +7,86 @@
   <link rel="stylesheet" href="style/style.css">
   <link rel="stylesheet" href="style/navigation-menu.css">
   <link rel="stylesheet" href="style/text.css">
-  <link rel="stylesheet" href="style/card-choice.css">
+  <link rel="stylesheet" href="style/card.css">
   <link rel="stylesheet" href="style/button.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <link rel="icon" type="image/x-icon" href="/image/polyefir-agro.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="javascript/main.js"></script>
   <title>Конструктор доильного зала</title>
 </head>
-<body class="slide_show" onload="setCheckedPage()">
+<body class="slide-show" onload="setCheckedPage()">
   <div class="menu">
-    <p class="title_text center">Меню конструктора</p>
-    <ul>
-      <li class="page" onclick="location.href='index.html'" id="page1">Доильный зал</li>
-      <li class="page" onclick="location.href='number-of-seats.html'" id="page2">Яма</li>
-      <li class="page" onclick="location.href='vacuum-pump.html'" id="page3">Вакуумный насосы</li>
-      <li class="page" onclick="location.href='milk-pipeline.html'" id="page4">Молокопровод</li>
-      <li class="page" onclick="location.href='milking-system.html'" id="page5">Система доения</li>
-      <li class="page" onclick="location.href='identification-and-activity-system.html'" id="page6">Система идентификации и активности</li>
-      <li class="page" onclick="location.href='hanging-part.html'" id="page7">Подвисная часть</li>
-      <li class="page active" onclick="location.href='washing-pad.html'" id="page8">Промежуточная дезинфекция</li>
-      <li class="page" onclick="location.href='optional-equipment.html'" id="page9">Дополнительное оборудование</li>
-      <li class="page" onclick="location.href='application-form.html'" id="page10">Форма заявки</li>
+    <input type="checkbox" id="menu-toggle"><label for="menu-toggle" class="label-icon"><i class="fa fa-angle-right fa-4x" aria-hidden="true"></i></label>
+    <ul class="menu-content">
+      <li class="button-page" onclick="location.href='index.html'" id="page1"><img src="image/icon-navbar/milk-carton.png" class="icon"><p class="text-body text-nav">Доильный зал</p></li>
+      <li class="button-page" onclick="location.href='number-of-seats.html'" id="page2"><img src="image/icon-navbar/milk-carton.png" class="icon"><p class="text-body text-nav">Яма</p></li>
+      <li class="button-page" onclick="location.href='vacuum-pump.html'" id="page3"><img src="image/icon-navbar/milk-carton.png" class="icon"><p class="text-body text-nav">Вакуумный насосы</p></li>
+      <li class="button-page" onclick="location.href='milk-pipeline.html'" id="page4"><img src="image/icon-navbar/milk-carton.png" class="icon"><p class="text-body text-nav">Молокопровод</p></li>
+      <li class="button-page" onclick="location.href='milking-system.html'" id="page5"><img src="image/icon-navbar/milk-carton.png" class="icon"><p class="text-body text-nav" id="text-nav">Система доения</p></li>
+      <li class="button-page" onclick="location.href='identification-and-activity-system.html'" id="page6"><img src="image/icon-navbar/milk-carton.png" class="icon"><p class="text-body text-nav">СИиА</p></li>
+      <li class="button-page" onclick="location.href='hanging-part.html'" id="page7"><img src="image/icon-navbar/milk-carton.png" class="icon"><p class="text-body text-nav">Подвисная часть</p></li>
+      <li class="button-page active" onclick="location.href='washing-pad.html'" id="page8"><img src="image/icon-navbar/milk-carton.png" class="icon"><p class="text-body text-nav">Гиена и содержание животных</p></li>
+      <li class="button-page" onclick="location.href='optional-equipment.html'" id="page9"><img src="image/icon-navbar/milk-carton.png" class="icon"><p class="text-body text-nav">Дополнительное оборудование</p></li>
+      <li class="button-page" onclick="location.href='application-form.html'" id="page10"><img src="image/icon-navbar/milk-carton.png" class="icon"><p class="text-body text-nav">3D просмотр зала</p></li>
     </ul>
   </div>
-  <div class="caption_text animate__animated animate__fadeInDown">Промежуточная дезинфекция</div>
 
   <div class="center">
-    <div class="card_select animate__animated animate__backInDown">
-      <div class="card_img_select"><img src="image/vacuum-pump.jpg" class="img_select"></div> 
-        <div class="card_body_select">
-          <label class="switch">
-            <input type="checkbox" name="washing-pad" id="pad">
-            <span class="slider round"></span>
-          </label>
-          <div class="background_text background_text_select">Предназначена для получения технологического вакуума, используемого для доения коров. Установка вакуумная состоит из основных составных частей, представленных ниже.</div>
-          <div class="button_choice"><a href="optional-equipment.html" class="button button_select_input animate__animated animate__fadeInDown">Дальше</a></div>
+
+    <input class="input-card" type="radio" name="washing-pad" value="Промежуточная дезинфекция" id="washing1" onclick="location.href='number-of-seats.html', milking_parlor()">
+    <label for="washing1" class="card">
+        <div class="card-img" style="background-image: url(image/YDE.jpg);"></div>
+        <div class="card-body">
+          <p class="text-title">Промежуточная дезинфекция</p>
+          <p class="text-body text-width">Текст.</p>
         </div>
-    </div>
+    </label>
+
+    <input class="input-card" type="radio" name="washing-pad" value="Ванная для промывки копыт" id="washing2" onclick="location.href='number-of-seats.html', milking_parlor()">
+    <label for="washing2" class="card">
+        <div class="card-img" style="background-image: url(image/YDP.jpg);"></div>
+        <div class="card-body">
+          <p class="text-title">Ванная для промывки копыт</p>
+          <p class="text-body text-width">Текст.</p>
+        </div>
+    </label>
+
+    <input class="input-card" type="radio" name="washing-pad" value="Щетка-чесалка" id="washing3" onclick="location.href='number-of-seats.html', milking_parlor()">
+    <label for="washing3" class="card">
+        <div class="card-img" style="background-image: url(image/Tandem.jpg);"></div>
+        <div class="card-body">
+          <p class="text-title">Щетка-чесалка</p>
+          <p class="text-body text-width">Текст.</p>
+        </div>
+    </label>
+
+    <input class="input-card" type="radio" name="washing-pad" value="Поилка" id="washing4" onclick="location.href='number-of-seats.html', milking_parlor()">
+    <label for="washing4" class="card">
+        <div class="card-img" style="background-image: url(image/Tandem.jpg);"></div>
+        <div class="card-body">
+          <p class="text-title">Поилка</p>
+          <p class="text-body text-width">Текст.</p>
+        </div>
+    </label>
+
+    <input class="input-card" type="radio" name="washing-pad" value="Скрепер" id="washing5" onclick="location.href='number-of-seats.html', milking_parlor()">
+    <label for="washing5" class="card">
+        <div class="card-img" style="background-image: url(image/YDE.jpg);"></div>
+        <div class="card-body">
+          <p class="text-title">Скрепер</p>
+          <p class="text-body text-width">Текст.</p>
+        </div>
+    </label>
+
+    <input class="input-card" type="radio" name="washing-pad" value="Скруббер" id="washing6" onclick="location.href='number-of-seats.html', milking_parlor()">
+    <label for="washing6" class="card">
+        <div class="card-img" style="background-image: url(image/YDP.jpg);"></div>
+        <div class="card-body">
+          <p class="text-title">Скруббер</p>
+          <p class="text-body text-width">Текст.</p>
+        </div>
+    </label>
+
   </div>
 
 </body>

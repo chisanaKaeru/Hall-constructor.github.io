@@ -77,25 +77,30 @@ function hanging_part() {
 
 function setCheckedPage(){
   if (localStorage.getItem("milking-parlor") != null) {
-    document.getElementById("page1").setAttribute("class", "page true");
+    document.getElementById("page1").setAttribute("class", "button-page true");
   }
   for (let index = 1; index <= 5; index++) {
     if (localStorage.getItem("option_pit" + index) != null && localStorage.getItem("input_pit" + index) != null) {
-      document.getElementById("page2").setAttribute("class", "page true");
+      document.getElementById("page2").setAttribute("class", "button-page true");
     }
   }
   for (let index = 1; index <= 5; index++) {
     if (localStorage.getItem("option_pump" + index) != null) {
-      document.getElementById("page3").setAttribute("class", "page true");
+      document.getElementById("page3").setAttribute("class", "button-page true");
     }
-  }
+  } 
   if (localStorage.getItem("milk-pipeline") != null) {
-    document.getElementById("page4").setAttribute("class", "page true");
+    document.getElementById("page4").setAttribute("class", "button-page true");
   }
   if (localStorage.getItem("milking-system") != null) {
-    document.getElementById("page5").setAttribute("class", "page true");
+    document.getElementById("page5").setAttribute("class", "button-page true");
   }
   if (localStorage.getItem("hanging-part") != null) {
-    document.getElementById("page7").setAttribute("class", "page true");
+    document.getElementById("page7").setAttribute("class", "button-page true");
   }
+}
+
+function clearStorage(){
+  localStorage.clear();
+  location.reload();
 }

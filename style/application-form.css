@@ -1,13 +1,11 @@
-.center_form{
+.center-form{
   position: relative;
   display: flex;
-  align-items: center;
-  justify-content: center;
   margin: auto;
-  flex-direction: column;
+  grid-template-rows: 500px 100px 300px;
 }
 
-.card_form{
+.card-form{
   width: 500px;
   height: 750px;
   background-color: rgb(48, 130, 180, 0.85);
@@ -16,41 +14,7 @@
   border-radius: 14px;
 }
 
-input{
-  outline: none;
-  margin: 5px 10px;
-  width: 275px;
-  height: 40px;
-  border: 3px solid #58AADC;
-  border-radius: 8px;
-  color: #000000;
-  padding: 12px 10px;
-  font-size: 16px;
-}
-
-input:focus{
-  border: 3px solid #80D2FF;
-  transition: 0.2s;
-}
-
-.button_margin_form{
-  margin: 5px 10px;
-}
-
-.caption_text_form{
-  font-family: 'Inter';
-  font-style: normal;
-  text-align: center;
-  font-size: 24px;
-  height: 50px;
-  letter-spacing: 0.15em;
-  color: rgba(255, 255, 255, 0.95);
-  text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.50);
-  margin: 15px;
-  line-height: 50px;
-}
-
-li{
+.con{
   width: 325px;
   min-width: 50px;
   background-color: #58AADC;
@@ -60,7 +24,7 @@ li{
   margin: 15px;
 }
 
-.li_text_form{
+.li-text-form{
   font-weight: 400;
   font-size: 20px;
   line-height: 39px;
@@ -69,4 +33,19 @@ li{
   font-family: arial;
   line-height: 50px;
   text-align: center;
+}
+
+.view3d{
+  height: 85vh;
+  width: 1000px;
+  margin: 10px;
+  border-radius: 14px;
+}
+
+.li-components{
+  height: 78vh;
+  width: 500px;
+  background: #3082B4;
+  margin: 10px;
+  border-radius: 14px;
 }
