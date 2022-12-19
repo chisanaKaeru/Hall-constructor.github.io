@@ -14,7 +14,7 @@
   <script src="javascript/main.js"></script>
   <title>Конструктор доильного зала</title>
 </head>
-<body class="slide-show" onload="setCheckedPage()">
+<body class="slide-show" onload="setCheckedPage(), setDataIAAC()">
   <div class="menu">
     <input type="checkbox" id="menu-toggle"><label for="menu-toggle" class="label-icon"><i class="fa fa-angle-right fa-4x" aria-hidden="true"></i></label>
     <ul class="menu-content">
@@ -33,14 +33,14 @@
 
   <div class="center">
     <div class="card-select">
-      <div class="card-img-select"><img src="image/vacuum-pump.jpg" class="img-select"></div>
+      <div class="card-img-select"><img src="image/vacuum-pump.jpg" class="img-select" id="img-iaac"></div>
       <div class="card-body-select">
-        <select class="select-box" id="pump">
-          <option value="1">Версия 1</option>
-          <option value="2">Версия 2</option>
-          <option value="3">Версия 3</option>
+        <select class="select-box" id="iaac" onclick="changeIAAC()">
+          <option value="Версия 1">Версия 1</option>
+          <option value="Версия 2">Версия 2</option>
+          <option value="Версия 3">Версия 3</option>
         </select>
-        <input type="number" placeholder="Кол-во ошейников" class="input-text" onchange="inputDataSystem(this)">
+        <input type="number" placeholder="Кол-во ошейников" class="input-text" id="iaac-input" onchange="inputNumber(this)">
         <p class="text-body background-text-select">Предназначена для получения технологического вакуума, используемого для доения коров. Установка вакуумная состоит из основных составных частей, представленных ниже.</p>
         <a href="hanging-part.html" class="button align-button text-body">Дальше</a>
       </div>

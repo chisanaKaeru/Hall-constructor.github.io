@@ -57,6 +57,7 @@ input[type=number]{
   color: #000000;
   padding: 12px 10px;
   font-size: 16px;
+  -webkit-appearance: none;
 }
 
 input[type=number]:focus{

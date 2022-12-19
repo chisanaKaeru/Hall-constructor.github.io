@@ -8,12 +8,13 @@
   <link rel="stylesheet" href="style/navigation-menu.css">
   <link rel="stylesheet" href="style/text.css">
   <link rel="stylesheet" href="style/card.css">
+  <link rel="stylesheet" href="style/button.css">
   <link rel="icon" type="image/x-icon" href="/image/polyefir-agro.ico">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="javascript/main.js"></script>
   <title>Конструктор доильного зала</title>
 </head>
-<body class="slide-show" onload="setCheckedPage()">
+<body class="slide-show" onload="setCheckedPage(), setCheckedInputParlor()">
   <div class="menu">
     <input type="checkbox" id="menu-toggle"><label for="menu-toggle" class="label-icon"><i class="fa fa-angle-right fa-4x" aria-hidden="true"></i></label>
     <ul class="menu-content">
@@ -29,52 +30,59 @@
       <li class="button-page" onclick="location.href='application-form.html'" id="page10"><img src="image/icon-navbar/milk-carton.png" class="icon"><p class="text-body text-nav">3D просмотр зала</p></li>
     </ul>
   </div>
-  <div class="center">
+  <div class="div-column">
+    <div class="center">
 
-    <input class="input-card" type="radio" name="milking-parlor" value="УДЕ" id="constructor1" onclick="location.href='number-of-seats.html', milking_parlor()">
-    <label for="constructor1" class="card" id="1">
-        <div class="card-img" style="background-image: url(image/YDE.jpg);"></div>
-        <div class="card-body">
-          <p class="text-title">УДЕ</p>
-          <p class="text-body text-body-card-width">Конструкция данной установки позволяет осуществлять поэтапное расширение функциональных возможностей, начиная от простейшего варианта, обеспечивающего только автоматическое додаивание и снятие доильных стаканов, до вариантов с АСУТП и системой компьютерного управления стадом.</p>
-        </div>
-    </label>
+      <input class="input-card" type="radio" name="milking-parlor" value="УДЕ" id="constructor1" onclick="RadioButton(this)">
+      <label for="constructor1" class="card">
+          <div class="card-img" style="background-image: url(image/YDE.jpg);"></div>
+          <div class="card-body">
+            <p class="text-title">УДЕ</p>
+            <p class="text-body text-body-card-width">Конструкция данной установки позволяет осуществлять поэтапное расширение функциональных возможностей, начиная от простейшего варианта, обеспечивающего только автоматическое додаивание и снятие доильных стаканов, до вариантов с АСУТП и системой компьютерного управления стадом.</p>
+          </div>
+      </label>
 
-    <input class="input-card" type="radio" name="milking-parlor" value="УДП" id="constructor2" onclick="location.href='number-of-seats.html', milking_parlor()">
-    <label for="constructor2" class="card" id="1">
-        <div class="card-img" style="background-image: url(image/YDP.jpg);"></div>
-        <div class="card-body">
-          <p class="text-title">УДП</p>
-          <p class="text-body text-body-card-width">Предназначена для высокопроизводительного доения коров на специальной площадке типа «Параллель». Обеспечивает на каждом доильном месте автоматическое управление процессами доения и снятия подвесной части доильного аппарата, индивидуальный учет молока; возможность связи с ЭВМ.</p>
-        </div>
-    </label>
+      <input class="input-card" type="radio" name="milking-parlor" value="УДП" id="constructor2" onclick="RadioButton(this)">
+      <label for="constructor2" class="card">
+          <div class="card-img" style="background-image: url(image/YDP.jpg);"></div>
+          <div class="card-body">
+            <p class="text-title">УДП</p>
+            <p class="text-body text-body-card-width">Предназначена для высокопроизводительного доения коров на специальной площадке типа «Параллель». Обеспечивает на каждом доильном месте автоматическое управление процессами доения и снятия подвесной части доильного аппарата, индивидуальный учет молока; возможность связи с ЭВМ.</p>
+          </div>
+      </label>
 
-    <input class="input-card" type="radio" name="milking-parlor" value="Тандем" id="constructor3" onclick="location.href='number-of-seats.html', milking_parlor()">
-    <label for="constructor3" class="card">
-        <div class="card-img" style="background-image: url(image/Tandem.jpg);"></div>
-        <div class="card-body">
-          <p class="text-title">Тандем</p>
-          <p class="text-body text-body-card-width">Данный доильный зал имеет конфигурацию в котором животные располагаются параллельно кромке доильной ямы. Самый красивый, удобный и настолько же редко применяемый в нашей стране в настоящее время тип доильного зала.</p>
-        </div>
-    </label>
+      <input class="input-card" type="radio" name="milking-parlor" value="Тандем" id="constructor3" onclick="RadioButton(this)">
+      <label for="constructor3" class="card">
+          <div class="card-img" style="background-image: url(image/Tandem.jpg);"></div>
+          <div class="card-body">
+            <p class="text-title">Тандем</p>
+            <p class="text-body text-body-card-width">Данный доильный зал имеет конфигурацию в котором животные располагаются параллельно кромке доильной ямы. Самый красивый, удобный и настолько же редко применяемый в нашей стране в настоящее время тип доильного зала.</p>
+          </div>
+      </label>
 
-    <input class="input-card" type="radio" name="milking-parlor" value="Карусель" id="constructor4" disabled onclick="location.href='number-of-seats.html', milking_parlor()">
-    <label for="constructor4" class="card-off">
-        <div class="card-img" style="background-image: url(image/Karysel.jpg);"></div>
-        <div class="card-body">
-          <p class="text-title">Карусель</p>
-          <p class="text-body text-body-card-width">Доильный зал Карусель - воплощение конвейерного типа производства молока. Главное отличие такого доильного в уменьшеннии до нуля фронта доения за счет того, что животное само подъезжает к оператору на подвижной платформе, в то время как оператор подключает доильные аппараты, оставаясь на своем месте.</p>
-        </div>
-    </label>
+      <input class="input-card" type="radio" name="milking-parlor" value="Карусель" id="constructor4" disabled onclick="RadioButton(this)">
+      <label for="constructor4" class="card-off">
+          <div class="card-img" style="background-image: url(image/Karysel.jpg);"></div>
+          <div class="card-body">
+            <p class="text-title">Карусель</p>
+            <p class="text-body text-body-card-width">Доильный зал Карусель - воплощение конвейерного типа производства молока. Главное отличие такого доильного в уменьшеннии до нуля фронта доения за счет того, что животное само подъезжает к оператору на подвижной платформе, в то время как оператор подключает доильные аппараты, оставаясь на своем месте.</p>
+          </div>
+      </label>
 
-    <input class="input-card" type="radio" name="milking-parlor" value="Робот" id="constructor5" disabled onclick="location.href='number-of-seats.html', milking_parlor()">
-    <label for="constructor5" class="card-off">
-        <div class="card-img" style="background-image: url(image/Robot.jpg);"></div>
-        <div class="card-body">
-          <p class="text-title">Робот</p>
-          <p class="text-body text-body-card-width">Инновационная система поточно-цехового производства молока с использованием доильных роботов сочетает в себе преимущества роботизированного доения и традиционных доильных залов. Процесс полностью автоматизирован и осуществляется в фиксированные временные интервалы.</p>
-        </div>
-    </label>
+      <input class="input-card" type="radio" name="milking-parlor" value="Робот" id="constructor5" disabled onclick="RadioButton(this)">
+      <label for="constructor5" class="card-off">
+          <div class="card-img" style="background-image: url(image/Robot.jpg);"></div>
+          <div class="card-body">
+            <p class="text-title">Робот</p>
+            <p class="text-body text-body-card-width">Инновационная система поточно-цехового производства молока с использованием доильных роботов сочетает в себе преимущества роботизированного доения и традиционных доильных залов. Процесс полностью автоматизирован и осуществляется в фиксированные временные интервалы.</p>
+          </div>
+      </label>
+
+    </div>
+
+    <div class="button-center">
+      <a href="number-of-seats.html" class="button align-button text-body">Дальше</a>
+    </div>
 
   </div>
 </body>

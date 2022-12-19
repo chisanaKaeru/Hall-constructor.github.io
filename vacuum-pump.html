@@ -18,7 +18,7 @@
   <script src="javascript/pump.js"></script>
   <title>Конструктор доильного зала</title>
 </head>
-<body class="slide-show" onload="setCheckedPage()">
+<body class="slide-show" onload="setCheckedPage(), setDataPump(), setLi()">
   <div class="menu">
     <input type="checkbox" id="menu-toggle"><label for="menu-toggle" class="label-icon"><i class="fa fa-angle-right fa-4x" aria-hidden="true"></i></label>
     <ul class="menu-content">
@@ -38,12 +38,12 @@
   <div class="center-list-page">
 
     <div class="card-select">
-      <div class="card-img-select"><img src="image/vacuum-pump.jpg" class="img-select"></div>
+      <div class="card-img-select"><img src="image/vacuum-pump.jpg" class="img-select" id="img-pump"></div>
       <div class="card-body-select">
-        <select class="select-box" id="pump">
-          <option value="1">Полиэфир</option>
-          <option value="2">GEA</option>
-          <option value="3">CTA</option>
+        <select class="select-box" id="pump" onchange="changePump()">
+          <option value="Полиэфир">Полиэфир</option>
+          <option value="GEA">GEA</option>
+          <option value="CTA">CTA</option>
         </select>
         <div class="text-body background-text-select">Предназначена для получения технологического вакуума, используемого для доения коров.</div>
       </div>

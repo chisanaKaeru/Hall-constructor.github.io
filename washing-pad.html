@@ -14,7 +14,7 @@
   <script src="javascript/main.js"></script>
   <title>Конструктор доильного зала</title>
 </head>
-<body class="slide-show" onload="setCheckedPage()">
+<body class="slide-show" onload="setCheckedPage(), setCheckedInputPad()">
   <div class="menu">
     <input type="checkbox" id="menu-toggle"><label for="menu-toggle" class="label-icon"><i class="fa fa-angle-right fa-4x" aria-hidden="true"></i></label>
     <ul class="menu-content">
@@ -30,64 +30,66 @@
       <li class="button-page" onclick="location.href='application-form.html'" id="page10"><img src="image/icon-navbar/milk-carton.png" class="icon"><p class="text-body text-nav">3D просмотр зала</p></li>
     </ul>
   </div>
+  <div class="div-column">
+    <div class="center">
+      <input class="input-card" type="radio" name="washing-pad" value="Промежуточная дезинфекция" id="washing1" onclick="RadioButton(this)">
+      <label for="washing1" class="card">
+          <div class="card-img" style="background-image: url(image/YDE.jpg);"></div>
+          <div class="card-body">
+            <p class="text-title">Промежуточная дезинфекция</p>
+            <p class="text-body text-width">Текст.</p>
+          </div>
+      </label>
 
-  <div class="center">
+      <input class="input-card" type="radio" name="washing-pad" value="Ванная для промывки копыт" id="washing2" onclick="RadioButton(this)">
+      <label for="washing2" class="card">
+          <div class="card-img" style="background-image: url(image/YDP.jpg);"></div>
+          <div class="card-body">
+            <p class="text-title">Ванная для промывки копыт</p>
+            <p class="text-body text-width">Текст.</p>
+          </div>
+      </label>
 
-    <input class="input-card" type="radio" name="washing-pad" value="Промежуточная дезинфекция" id="washing1" onclick="location.href='number-of-seats.html', milking_parlor()">
-    <label for="washing1" class="card">
-        <div class="card-img" style="background-image: url(image/YDE.jpg);"></div>
-        <div class="card-body">
-          <p class="text-title">Промежуточная дезинфекция</p>
-          <p class="text-body text-width">Текст.</p>
-        </div>
-    </label>
+      <input class="input-card" type="radio" name="washing-pad" value="Щетка-чесалка" id="washing3" onclick="RadioButton(this)">
+      <label for="washing3" class="card">
+          <div class="card-img" style="background-image: url(image/Tandem.jpg);"></div>
+          <div class="card-body">
+            <p class="text-title">Щетка-чесалка</p>
+            <p class="text-body text-width">Текст.</p>
+          </div>
+      </label>
+    </div>
 
-    <input class="input-card" type="radio" name="washing-pad" value="Ванная для промывки копыт" id="washing2" onclick="location.href='number-of-seats.html', milking_parlor()">
-    <label for="washing2" class="card">
-        <div class="card-img" style="background-image: url(image/YDP.jpg);"></div>
-        <div class="card-body">
-          <p class="text-title">Ванная для промывки копыт</p>
-          <p class="text-body text-width">Текст.</p>
-        </div>
-    </label>
+    <div class="center">
+      <input class="input-card" type="radio" name="washing-pad" value="Поилка" id="washing4" onclick="RadioButton(this)">
+      <label for="washing4" class="card">
+          <div class="card-img" style="background-image: url(image/Tandem.jpg);"></div>
+          <div class="card-body">
+            <p class="text-title">Поилка</p>
+            <p class="text-body text-width">Текст.</p>
+          </div>
+      </label>
 
-    <input class="input-card" type="radio" name="washing-pad" value="Щетка-чесалка" id="washing3" onclick="location.href='number-of-seats.html', milking_parlor()">
-    <label for="washing3" class="card">
-        <div class="card-img" style="background-image: url(image/Tandem.jpg);"></div>
-        <div class="card-body">
-          <p class="text-title">Щетка-чесалка</p>
-          <p class="text-body text-width">Текст.</p>
-        </div>
-    </label>
+      <input class="input-card" type="radio" name="washing-pad" value="Скрепер" id="washing5" onclick="RadioButton(this)">
+      <label for="washing5" class="card">
+          <div class="card-img" style="background-image: url(image/YDE.jpg);"></div>
+          <div class="card-body">
+            <p class="text-title">Скрепер</p>
+            <p class="text-body text-width">Текст.</p>
+          </div>
+      </label>
 
-    <input class="input-card" type="radio" name="washing-pad" value="Поилка" id="washing4" onclick="location.href='number-of-seats.html', milking_parlor()">
-    <label for="washing4" class="card">
-        <div class="card-img" style="background-image: url(image/Tandem.jpg);"></div>
-        <div class="card-body">
-          <p class="text-title">Поилка</p>
-          <p class="text-body text-width">Текст.</p>
-        </div>
-    </label>
-
-    <input class="input-card" type="radio" name="washing-pad" value="Скрепер" id="washing5" onclick="location.href='number-of-seats.html', milking_parlor()">
-    <label for="washing5" class="card">
-        <div class="card-img" style="background-image: url(image/YDE.jpg);"></div>
-        <div class="card-body">
-          <p class="text-title">Скрепер</p>
-          <p class="text-body text-width">Текст.</p>
-        </div>
-    </label>
-
-    <input class="input-card" type="radio" name="washing-pad" value="Скруббер" id="washing6" onclick="location.href='number-of-seats.html', milking_parlor()">
-    <label for="washing6" class="card">
-        <div class="card-img" style="background-image: url(image/YDP.jpg);"></div>
-        <div class="card-body">
-          <p class="text-title">Скруббер</p>
-          <p class="text-body text-width">Текст.</p>
-        </div>
-    </label>
-
+      <input class="input-card" type="radio" name="washing-pad" value="Скруббер" id="washing6" onclick="RadioButton(this)">
+      <label for="washing6" class="card">
+          <div class="card-img" style="background-image: url(image/YDP.jpg);"></div>
+          <div class="card-body">
+            <p class="text-title">Скруббер</p>
+            <p class="text-body text-width">Текст.</p>
+          </div>
+      </label>
+    </div>
   </div>
+  <a href="number-of-seats.html" class="button text-body button-washing-pad">Дальше</a>
 
 </body>
 </html>

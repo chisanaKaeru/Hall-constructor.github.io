@@ -15,7 +15,7 @@
   <script src="javascript/main.js"></script>
   <title>Конструктор доильного зала</title>
 </head>
-<body class="slide-show" onload="setCheckedPage()">
+<body class="slide-show" onload="setCheckedPage(), setCheckedInpuEequipment()">
   <div class="menu">
     <input type="checkbox" id="menu-toggle"><label for="menu-toggle" class="label-icon"><i class="fa fa-angle-right fa-4x" aria-hidden="true"></i></label>
     <ul class="menu-content">
@@ -31,57 +31,59 @@
       <li class="button-page" onclick="location.href='application-form.html'" id="page10"><img src="image/icon-navbar/milk-carton.png" class="icon"><p class="text-body text-nav">3D просмотр зала</p></li>
     </ul>
   </div>
+  <div class="div-column">
+    <div class="center">
 
-  <div class="center">
+      <input class="input-card" type="checkbox" name="optional-equipment" value="Молочный насос" id="equipment1" onclick="CheckboxButton(this)">
+      <label for="equipment1" class="card">
+        <div class="card-img" style="background-image: url(image/YDE.jpg);"></div>
+        <div class="card-body">
+          <p class="text-title">Молочный насос</p>
+          <p class="text-body text-body-card-width">Текст.</p>
+        </div>
+      </label>
 
-    <input class="input-card" type="checkbox" name="optional-equipment" value="Молочный насос" id="equipment1">
-    <label for="equipment1" class="card">
-      <div class="card-img" style="background-image: url(image/YDE.jpg);"></div>
-      <div class="card-body">
-        <p class="text-title">Молочный насос</p>
-        <p class="text-body text-body-card-width">Текст.</p>
-      </div>
-    </label>
+      <input class="input-card" type="checkbox" name="optional-equipment" value="Осушитель" id="equipment2" onclick="CheckboxButton(this)">
+      <label for="equipment2" class="card">
+        <div class="card-img" style="background-image: url(image/YDE.jpg);"></div>
+        <div class="card-body">
+          <p class="text-title">Осушитель</p>
+          <p class="text-body text-body-card-width">Текст.</p>
+        </div>
+      </label>
 
-    <input class="input-card" type="checkbox" name="optional-equipment" value="Осушитель" id="equipment2">
-    <label for="equipment2" class="card">
-      <div class="card-img" style="background-image: url(image/YDE.jpg);"></div>
-      <div class="card-body">
-        <p class="text-title">Осушитель</p>
-        <p class="text-body text-body-card-width">Текст.</p>
-      </div>
-    </label>
+      <input class="input-card" type="checkbox" name="optional-equipment" value="Установка водоподготовки" id="equipment3" onclick="CheckboxButton(this)">
+      <label for="equipment3" class="card">
+        <div class="card-img" style="background-image: url(image/YDE.jpg);"></div>
+        <div class="card-body">
+          <p class="text-title">Установка водоподготовки</p>
+          <p class="text-body text-body-card-width">Текст.</p>
+        </div>
+      </label>
 
-    <input class="input-card" type="checkbox" name="optional-equipment" value="Установка водоподготовки" id="equipment3">
-    <label for="equipment3" class="card">
-      <div class="card-img" style="background-image: url(image/YDE.jpg);"></div>
-      <div class="card-body">
-        <p class="text-title">Установка водоподготовки</p>
-        <p class="text-body text-body-card-width">Текст.</p>
-      </div>
-    </label>
+    </div>
+    <div class="center">
+      <input class="input-card" type="checkbox" name="optional-equipment" value="Мойка высокого давления" id="equipment4" onclick="CheckboxButton(this)">
+      <label for="equipment4" class="card">
+        <div class="card-img" style="background-image: url(image/YDE.jpg);"></div>
+        <div class="card-body">
+          <p class="text-title">Мойка высокого давления</p>
+          <p class="text-body text-body-card-width">Текст.</p>
+        </div>
+      </label>
 
-    <input class="input-card" type="checkbox" name="optional-equipment" value="Мойка высокого давления" id="equipment4">
-    <label for="equipment4" class="card">
-      <div class="card-img" style="background-image: url(image/YDE.jpg);"></div>
-      <div class="card-body">
-        <p class="text-title">Мойка высокого давления</p>
-        <p class="text-body text-body-card-width">Текст.</p>
-      </div>
-    </label>
+      <input class="input-card" type="checkbox" name="optional-equipment" value="Расходники (масла, моющие)" id="equipment5" onclick="CheckboxButton(this)">
+      <label for="equipment5" class="card">
+        <div class="card-img" style="background-image: url(image/YDE.jpg);"></div>
+        <div class="card-body">
+          <p class="text-title">Расходники (масла, моющие)</p>
+          <p class="text-body text-body-card-width">Текст.</p>
+        </div>
+      </label>
 
-    <input class="input-card" type="checkbox" name="optional-equipment" value="Расходники (масла, моющие)" id="equipment5">
-    <label for="equipment5" class="card">
-      <div class="card-img" style="background-image: url(image/YDE.jpg);"></div>
-      <div class="card-body">
-        <p class="text-title">Расходники (масла, моющие)</p>
-        <p class="text-body text-body-card-width">Текст.</p>
-      </div>
-    </label>
-
-    <a href="application-form.html" class="button text-body button-optional-equipment">Посмотреть 3D</a>
+    </div>
 
   </div>
-
+  <a href="application-form.html" class="button text-body button-optional-equipment">Посмотреть 3D</a>
 </body>
 </html>

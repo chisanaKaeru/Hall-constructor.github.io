@@ -14,6 +14,7 @@
   margin: 5px 5px;
   line-height: 20px;
   color: #ffffff;
+  min-width: 175px;
 }
 
 .button:hover{
@@ -41,14 +42,21 @@
   color: #ffffff;
 }
 
-.button-optional-equipment{
-  position: relative;
+.button-washing-pad{
+  position: absolute;
   margin: 25px auto;
-  width: 275px;
+  right: 50px;
+  bottom: -5px;
+}
+
+.button-optional-equipment{
+  position: absolute;
+  margin: 25px auto;
+  right: 50px;
+  bottom: -5px;
 }
 
 .button-application-form{
   position: relative;
   margin: 25px auto;
-  width: 300px;
 }
