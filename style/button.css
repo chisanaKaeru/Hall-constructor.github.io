@@ -1,4 +1,4 @@
-.button{
+.button {
   position: relative;
   display: block;
   height: 45px;
@@ -17,16 +17,16 @@
   min-width: 175px;
 }
 
-.button:hover{
+.button:hover {
   transition: 0.2s;
   border: 3px solid #80d3ff;
 }
 
-.button:not(:hover){
+.button:not(:hover) {
   transition: 0.5s;
 }
 
-.button_off{
+.button_off {
   position: relative;
   width: 175px;
   height: 40;
@@ -42,21 +42,14 @@
   color: #ffffff;
 }
 
-.button-washing-pad{
+.button-column {
   position: absolute;
   margin: 25px auto;
   right: 50px;
   bottom: -5px;
 }
 
-.button-optional-equipment{
-  position: absolute;
-  margin: 25px auto;
-  right: 50px;
-  bottom: -5px;
-}
-
-.button-application-form{
+.button-application-form {
   position: relative;
-  margin: 25px auto;
+  margin: auto;
 }

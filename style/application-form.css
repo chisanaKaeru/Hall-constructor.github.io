@@ -1,11 +1,11 @@
-.center-form{
+.center-form {
   position: relative;
   display: flex;
   margin: auto;
   grid-template-rows: 500px 100px 300px;
 }
 
-.card-form{
+.card-form {
   width: 500px;
   height: 750px;
   background-color: rgb(48, 130, 180, 0.85);
@@ -14,17 +14,7 @@
   border-radius: 14px;
 }
 
-.con{
-  width: 325px;
-  min-width: 50px;
-  background-color: #58AADC;
-  filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.25));
-  list-style-type: none;
-  border-radius: 12px;
-  margin: 15px;
-}
-
-.li-text-form{
+.li-text-form {
   font-weight: 400;
   font-size: 20px;
   line-height: 39px;
@@ -35,17 +25,59 @@
   text-align: center;
 }
 
-.view3d{
+.view3d {
   height: 85vh;
   width: 1000px;
   margin: 10px;
   border-radius: 14px;
 }
 
-.li-components{
-  height: 78vh;
-  width: 500px;
+.li-components {
+  min-height: 78vh;
+  width: 600px;
   background: #3082B4;
   margin: 10px;
   border-radius: 14px;
+}
+
+.div-request {
+  height: 85vh;
+}
+
+.ul-center {
+  padding: 15px;
+  position: relative;
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.li-element {
+  display: flex;
+  width: 550px;
+  min-height: 50px;
+  background-color: rgb(53, 140, 194);
+  filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.25));
+  list-style-type: none;
+  border-radius: 12px;
+  padding: 15px 0px 15px 20px;
+  margin: 5px 0px 10px 0px;
+  color: #FFFFFF;
+}
+
+.text-elemnt {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px;
+}
+
+.button-change {
+  height: 24px;
+  width: auto;
+  padding: 0;
+  position: absolute;
+  right: 10px;
+  top: 12px;
+  bottom: 0;
 }

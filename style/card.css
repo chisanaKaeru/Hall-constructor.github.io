@@ -1,17 +1,3 @@
-.input-card:where([type=radio], [type=checkbox]){
-  pointer-events: none;
-  display: none;
-}
-
-.input-card:where([type=radio], [type=checkbox]):checked + label{
-  transition: .2s;
-  border: 5px solid #58dc80;
-}
-
-.input-card:where([type=radio], [type=checkbox]):not(:checked) + label{
-  transition: .5s;
-}
-
 .card, .card-off{
   color: #ffffff;
   position: relative;
@@ -27,12 +13,10 @@
 
 .card{
   background: #3082b4;
-  /*background: rgba(48, 130, 180, 0.85);*/
 }
 
 .card-off{
   background: #54595F;
-  /*background: rgba(100, 130, 150, 0.85);*/
 }
 
 .card-img{
@@ -54,4 +38,18 @@ img{
 
 .text-body-card-width{
   width: 250px;
-} 
+}
+
+.input-card:where([type=radio], [type=checkbox]){
+  pointer-events: none;
+  display: none;
+}
+
+.input-card:where([type=radio], [type=checkbox]):checked + label{
+  transition: .2s;
+  border: 5px solid #58dc80;
+}
+
+.input-card:where([type=radio], [type=checkbox]):not(:checked) + label{
+  transition: .5s;
+}

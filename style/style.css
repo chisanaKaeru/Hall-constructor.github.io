@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -8,21 +8,21 @@
   user-select: none;
 }
 
-input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+body {
+  display: flex;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-        input[type=number] {
+input[type=number] {
   -moz-appearance: textfield;
 }
 
-body{
-  display: flex;
-}
-
-.center{
-  position: relative;
+.center {
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -31,7 +31,7 @@ body{
   align-items: center;
 }
 
-.center-list-page{
+.center-list-page {
   position: relative;
   justify-content: center;
   flex-direction: row;
@@ -40,8 +40,8 @@ body{
   align-items: center;
 }
 
-.button-center{
-  margin: 50px auto;
+.button-center {
+  margin: 25px 60%;
   position: relative;
   display: flex;
   justify-content: center;
@@ -61,7 +61,6 @@ body{
 }
 
 .slide-show{
-  position: relative;
   width: 100%;
   height: 100vh;
   background-position: center;

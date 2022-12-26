@@ -3,6 +3,8 @@ let pit = 0;
 function addPit() {
   if (pit<=4) {
     pit++;
+    localStorage.setItem("pitLi", pit);
+
     let list_pit = document.getElementById("list_pit");
     let li = document.createElement("li");
     li.setAttribute("class", "list animate__animated animate__fadeInDown");
@@ -40,7 +42,7 @@ function addPit() {
       input.setAttribute("max", "60");
       input.setAttribute("placeholder", "Кол-во мест");
       input.setAttribute("id", "input-pit" + pit);
-      input.setAttribute("onchange", "inputDataPit(this)");
+      input.setAttribute("onchange", "inputNumberPit(this)");
       return input;
     }
 
@@ -55,26 +57,65 @@ function addPit() {
 function deletePit() {
   var lu = document.getElementById('list_pit');
   lu.removeChild(lu.lastChild);
+  localStorage.removeItem("option-pit"+pit);
+  localStorage.removeItem("input-pit"+pit);
   pit--;
+  localStorage.setItem("pitLi", pit);
   if (pit <= 0) {
     pit = 0;
+    localStorage.removeItem("pitLi");
   }
 }
 
-function selectDataPit(item) {
-  let value = document.getElementById(item.id).value;
-  localStorage.setItem(item.id, value);
+function selectDataPit(object) {
+  localStorage.setItem(object.id, object.value);
 }
 
-function inputDataPit(item) {
-  if (document.getElementById(item.id).value <= 0) {
-    document.getElementById(item.id).value = 1;
-    alert("Минимум можно 1-но место");
-  } else {
-    if (document.getElementById(item.id).value >= 60) {
-      document.getElementById(item.id).value = 60;
-      alert("Максим можно 60 мест");
-    }
+function inputNumberPit(object) {
+  if (object.value > 60) {
+    object.value = 60;
   }
-  localStorage.setItem(item.id, item.value);
+  else if (object.value < 1) {
+    object.value = 1;
+  }
+  localStorage.setItem(object.id, object.value);
+}
+
+function setLiPit(){
+  let number = localStorage.getItem("pitLi");
+  for (let index = 1; index <= number; index++) {
+    addPit();
+  }
+
+  if (localStorage.getItem("option-pit1") != null) {
+    document.getElementById("option-pit1").value = localStorage.getItem("option-pit1");
+  }
+  if (localStorage.getItem("option-pit2") != null) {
+    document.getElementById("option-pit2").value = localStorage.getItem("option-pit2");
+  }
+  if (localStorage.getItem("option-pit3") != null) {
+    document.getElementById("option-pit3").value = localStorage.getItem("option-pit3");
+  }
+  if (localStorage.getItem("option-pit4") != null) {
+    document.getElementById("option-pit4").value = localStorage.getItem("option-pit4");
+  }
+  if (localStorage.getItem("option-pit5") != null) {
+    document.getElementById("option-pit5").value = localStorage.getItem("option-pit5");
+  }
+
+  if (localStorage.getItem("input-pit1") != null) {
+    document.getElementById("input-pit1").value = localStorage.getItem("input-pit1");
+  }
+  if (localStorage.getItem("input-pit2") != null) {
+    document.getElementById("input-pit2").value = localStorage.getItem("input-pit2");
+  }
+  if (localStorage.getItem("input-pit3") != null) {
+    document.getElementById("input-pit3").value = localStorage.getItem("input-pit3");
+  }
+  if (localStorage.getItem("input-pit4") != null) {
+    document.getElementById("input-pit4").value = localStorage.getItem("input-pit4");
+  }
+  if (localStorage.getItem("input-pit5") != null) {
+    document.getElementById("input-pit5").value = localStorage.getItem("input-pit5");
+  }
 }

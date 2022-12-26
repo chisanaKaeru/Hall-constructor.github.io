@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="style/navigation-menu.css">
   <link rel="stylesheet" href="style/text.css">
   <link rel="stylesheet" href="style/card.css">
+  <link rel="stylesheet" href="style/card-choice.css">
   <link rel="stylesheet" href="style/button.css">
   <link rel="icon" type="image/x-icon" href="/image/polyefir-agro.ico">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -15,81 +16,116 @@
   <title>Конструктор доильного зала</title>
 </head>
 <body class="slide-show" onload="setCheckedPage(), setCheckedInputPad()">
-  <div class="menu">
-    <input type="checkbox" id="menu-toggle"><label for="menu-toggle" class="label-icon"><i class="fa fa-angle-right fa-4x" aria-hidden="true"></i></label>
-    <ul class="menu-content">
-      <li class="button-page" onclick="location.href='index.html'" id="page1"><img src="image/icon-navbar/milk-carton.png" class="icon"><p class="text-body text-nav">Доильный зал</p></li>
-      <li class="button-page" onclick="location.href='number-of-seats.html'" id="page2"><img src="image/icon-navbar/milk-carton.png" class="icon"><p class="text-body text-nav">Яма</p></li>
-      <li class="button-page" onclick="location.href='vacuum-pump.html'" id="page3"><img src="image/icon-navbar/milk-carton.png" class="icon"><p class="text-body text-nav">Вакуумный насосы</p></li>
-      <li class="button-page" onclick="location.href='milk-pipeline.html'" id="page4"><img src="image/icon-navbar/milk-carton.png" class="icon"><p class="text-body text-nav">Молокопровод</p></li>
-      <li class="button-page" onclick="location.href='milking-system.html'" id="page5"><img src="image/icon-navbar/milk-carton.png" class="icon"><p class="text-body text-nav" id="text-nav">Система доения</p></li>
-      <li class="button-page" onclick="location.href='identification-and-activity-system.html'" id="page6"><img src="image/icon-navbar/milk-carton.png" class="icon"><p class="text-body text-nav">СИиА</p></li>
-      <li class="button-page" onclick="location.href='hanging-part.html'" id="page7"><img src="image/icon-navbar/milk-carton.png" class="icon"><p class="text-body text-nav">Подвисная часть</p></li>
-      <li class="button-page active" onclick="location.href='washing-pad.html'" id="page8"><img src="image/icon-navbar/milk-carton.png" class="icon"><p class="text-body text-nav">Гиена и содержание животных</p></li>
-      <li class="button-page" onclick="location.href='optional-equipment.html'" id="page9"><img src="image/icon-navbar/milk-carton.png" class="icon"><p class="text-body text-nav">Дополнительное оборудование</p></li>
-      <li class="button-page" onclick="location.href='application-form.html'" id="page10"><img src="image/icon-navbar/milk-carton.png" class="icon"><p class="text-body text-nav">3D просмотр зала</p></li>
-    </ul>
-  </div>
+
   <div class="div-column">
     <div class="center">
       <input class="input-card" type="radio" name="washing-pad" value="Промежуточная дезинфекция" id="washing1" onclick="RadioButton(this)">
       <label for="washing1" class="card">
-          <div class="card-img" style="background-image: url(image/YDE.jpg);"></div>
-          <div class="card-body">
-            <p class="text-title">Промежуточная дезинфекция</p>
-            <p class="text-body text-width">Текст.</p>
-          </div>
+        <div class="card-img" style="background-image: url(image/YDE.jpg);"></div>
+        <div class="card-body">
+          <p class="text-title">Промежуточная дезинфекция</p>
+          <p class="text-body text-body-card-width">Текст.</p>
+        </div>
       </label>
 
       <input class="input-card" type="radio" name="washing-pad" value="Ванная для промывки копыт" id="washing2" onclick="RadioButton(this)">
       <label for="washing2" class="card">
-          <div class="card-img" style="background-image: url(image/YDP.jpg);"></div>
-          <div class="card-body">
-            <p class="text-title">Ванная для промывки копыт</p>
-            <p class="text-body text-width">Текст.</p>
-          </div>
+        <div class="card-img" style="background-image: url(image/YDE.jpg);"></div>
+        <div class="card-body">
+          <p class="text-title">Ванная для промывки копыт</p>
+          <p class="text-body text-body-card-width">Текст.</p>
+        </div>
       </label>
 
       <input class="input-card" type="radio" name="washing-pad" value="Щетка-чесалка" id="washing3" onclick="RadioButton(this)">
       <label for="washing3" class="card">
-          <div class="card-img" style="background-image: url(image/Tandem.jpg);"></div>
-          <div class="card-body">
-            <p class="text-title">Щетка-чесалка</p>
-            <p class="text-body text-width">Текст.</p>
-          </div>
+        <div class="card-img" style="background-image: url(image/YDE.jpg);"></div>
+        <div class="card-body">
+          <p class="text-title">Щетка-чесалка</p>
+          <p class="text-body text-body-card-width">Текст.</p>
+        </div>
       </label>
     </div>
 
     <div class="center">
       <input class="input-card" type="radio" name="washing-pad" value="Поилка" id="washing4" onclick="RadioButton(this)">
       <label for="washing4" class="card">
-          <div class="card-img" style="background-image: url(image/Tandem.jpg);"></div>
-          <div class="card-body">
-            <p class="text-title">Поилка</p>
-            <p class="text-body text-width">Текст.</p>
-          </div>
+        <div class="card-img" style="background-image: url(image/YDE.jpg);"></div>
+        <div class="card-body">
+          <p class="text-title">Поилка</p>
+          <p class="text-body text-body-card-width">Текст.</p>
+        </div>
       </label>
 
       <input class="input-card" type="radio" name="washing-pad" value="Скрепер" id="washing5" onclick="RadioButton(this)">
       <label for="washing5" class="card">
-          <div class="card-img" style="background-image: url(image/YDE.jpg);"></div>
-          <div class="card-body">
-            <p class="text-title">Скрепер</p>
-            <p class="text-body text-width">Текст.</p>
-          </div>
+        <div class="card-img" style="background-image: url(image/YDE.jpg);"></div>
+        <div class="card-body">
+          <p class="text-title">Скрепер</p>
+          <p class="text-body text-body-card-width">Текст.</p>
+        </div>
       </label>
 
       <input class="input-card" type="radio" name="washing-pad" value="Скруббер" id="washing6" onclick="RadioButton(this)">
       <label for="washing6" class="card">
-          <div class="card-img" style="background-image: url(image/YDP.jpg);"></div>
-          <div class="card-body">
-            <p class="text-title">Скруббер</p>
-            <p class="text-body text-width">Текст.</p>
-          </div>
+        <div class="card-img" style="background-image: url(image/YDE.jpg);"></div>
+        <div class="card-body">
+          <p class="text-title">Скруббер</p>
+          <p class="text-body text-body-card-width">Текст.</p>
+        </div>
       </label>
     </div>
   </div>
-  <a href="number-of-seats.html" class="button text-body button-washing-pad">Дальше</a>
+
+  <a href="optional-equipment.html" class="button text-body button-column">Дальше</a>
+
+  <nav class="nav">
+    <button type="button" class="nav-close" onclick="toggleNav()">
+      <i class="fa fa-angle-right fa-4x" aria-hidden="true" style="color:#dddddd; margin:auto;"></i>
+    </button>
+    <div class="nav-links-container">
+      <a href="index.html" class="nav__link" id="page1">
+        <span class="text-body">Доильный зал</span>
+        <img src="image/icon-navbar/milk-carton.png" class="icon">
+      </a>
+      <a href="number-of-seats.html" class="nav__link" id="page2">
+        <span class="text-body">Яма</span>
+        <img src="image/icon-navbar/milk-carton.png" class="icon">
+      </a>
+      <a href="vacuum-pump.html" class="nav__link" id="page3">
+        <span class="text-body">Вакуумный насосы</span>
+        <img src="image/icon-navbar/milk-carton.png" class="icon">
+      </a>
+      <a href="milk-pipeline.html" class="nav__link" id="page4">
+        <span class="text-body">Молокопровод</span>
+        <img src="image/icon-navbar/milk-carton.png" class="icon">
+      </a>
+      <a href="milking-system.html" class="nav__link" id="page5">
+        <span class="text-body">Система доения</span>
+        <img src="image/icon-navbar/milk-carton.png" class="icon">
+      </a>
+      <a href="identification-and-activity-system.html" class="nav__link" id="page6">
+        <span class="text-body">СИиА</span>
+        <img src="image/icon-navbar/milk-carton.png" class="icon">
+      </a>
+      <a href="hanging-part.html" class="nav__link" id="page7">
+        <span class="text-body">Подвисная часть</span>
+        <img src="image/icon-navbar/milk-carton.png" class="icon">
+      </a>
+      <a href="washing-pad.html" class="nav__link active-page" id="page8">
+        <span class="text-body">Гигиена и содержание животных</span>
+        <img src="image/icon-navbar/milk-carton.png" class="icon">
+      </a>
+      <a href="optional-equipment.html" class="nav__link" id="page9">
+        <span class="text-body">Дополнительное оборудование</span>
+        <img src="image/icon-navbar/milk-carton.png" class="icon">
+      </a>
+      <a href="application-form.html" class="nav__link" id="page10" onclick="verifyData(event)">
+        <span class="text-body">3D просмотр зала</span>
+        <img src="image/icon-navbar/milk-carton.png" class="icon">
+      </a>
+    </div>
+  </nav>
 
 </body>
 </html>

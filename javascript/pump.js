@@ -98,7 +98,7 @@ function inputNumberPump(object) {
   localStorage.setItem(object.id, object.value);
 }
 
-function setLi(){
+function setLiPump(){
   let number = localStorage.getItem("pumpLi");
   for (let index = 1; index <= number; index++) {
     addPump();
@@ -129,7 +129,7 @@ function setLi(){
   if (localStorage.getItem("textbox3") != null) {
     document.getElementById("textbox3").value = localStorage.getItem("textbox3");
   }
-  if (localStorage.getItem("ptextbox") != null) {
+  if (localStorage.getItem("textbox4") != null) {
     document.getElementById("textbox4").value = localStorage.getItem("textbox4");
   }
   if (localStorage.getItem("textbox5") != null) {
