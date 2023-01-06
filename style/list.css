@@ -18,15 +18,16 @@
   border: none;
   margin: 15px;
   padding: 20px;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .text-ception-list{
   position: relative;
   height: 35px;
-  font-family: arial;
   text-align: center;
-  line-height: 40px;
-  flex: 1;
+  line-height: 35px;
+  width: 225px;
 }
 
 .button-list{
@@ -35,7 +36,6 @@
   width: auto;
   position: relative;
   justify-content: flex-end;
-  flex: 2;
 }
 
 .button-add, .button-delete{

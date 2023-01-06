@@ -8,8 +8,19 @@
   user-select: none;
 }
 
-body {
-  display: flex;
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px transparent;
+  border-radius: 14px;
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 14px;
 }
 
 input::-webkit-outer-spin-button,
@@ -23,15 +34,46 @@ input[type=number] {
 }
 
 .center {
+  position: relative;
   display: flex;
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin: auto;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
-.center-list-page {
+.center-application {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container-center {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  margin: 15px auto;
+}
+
+.container-column {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.break {
+  flex-basis: 100%;
+  width: 0;
+  flex-grow: 3;
+}
+
+.center-li-page {
   position: relative;
   justify-content: center;
   flex-direction: row;
@@ -40,25 +82,21 @@ input[type=number] {
   align-items: center;
 }
 
-.button-center {
-  margin: 25px 60%;
+.center-button {
   position: relative;
   display: flex;
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
+  margin: 15px auto;
   align-items: center;
+  justify-items: center;
 }
 
-.div-column{
-  justify-content: center;
-  margin: auto;
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: center;
+.button-column {
+  position: absolute;
+  margin: 25px auto;
+  right: 25px;
+  bottom: -5px;
 }
+
 
 .slide-show{
   width: 100%;
@@ -88,4 +126,16 @@ input[type=number] {
   80%{
     background-image: url('/image/background/cow5.jpg');
   }
+}
+
+@media only screen and (max-width: 1350px)  {
+
+  .button-column {
+    position: relative;
+    display: flex;
+    margin: 15px auto;
+    align-items: center;
+    justify-items: center;
+  }
+
 }

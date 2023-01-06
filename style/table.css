@@ -5,19 +5,20 @@
 table{
   background: #3082B4;
   text-align: center;
+  margin: auto;
 }
 
 table, th, td{
   border: 2px solid #5cc0ff;
   border-collapse: collapse;
-  padding: 5px;
+  padding: 5px 2px;
 }
 
 th{
   font-size: 18px;
   font-family: "Work Sans", sans-serif;
   color: #ffffff;
-  width: 100px;
+  width: 80px;
 }
 
 td{

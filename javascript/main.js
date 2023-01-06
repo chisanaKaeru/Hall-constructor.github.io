@@ -17,14 +17,6 @@ function inputNumber(object)  {
 function changePump()  {
   let object = document.getElementById("pump");
   localStorage.setItem(object.id, object.value);
-  if (object.value == "Полиэфир")  {
-    document.getElementById("img-pump").setAttribute("src", "image/vacuum-pump.jpg");
-  } else if (object.value == "GEA")  {
-    document.getElementById("img-pump").setAttribute("src", "http://www.rosphoto.com/images/u/articles/1510/7_5.jpg");
-  } else if (object.value == "CTA") {
-    document.getElementById("img-pump").setAttribute("src", "https://www.interfax.ru/ftproot/photos/photostory/2022/04/29/week/week7_1100.jpg");
-  }
-  localStorage.setItem(object.id, object.value);
 }
 
 //select change img

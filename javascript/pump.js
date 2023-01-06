@@ -15,7 +15,7 @@ function addPump() {
 
       let liText = document.createElement("h3");
       liText.setAttribute("class", "text-title");
-      let h3 = document.createTextNode("Резвервный");
+      let h3 = document.createTextNode("Резервный");
       liText.appendChild(h3);
 
       let label = document.createElement("label");
@@ -81,10 +81,11 @@ function selectData(item) {
 }
 
 function switchPump(object){
-  if (object.checked == true) {
-    localStorage.setItem(object.id, object.value);
-  } else {
-    localStorage.removeItem(object.id);
+  if (object.checked) {
+    localStorage.setItem(object.id, "Да");
+  }
+  else {
+    localStorage.setItem(object.id, "Нет");
   }
 }
 

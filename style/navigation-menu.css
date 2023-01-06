@@ -9,11 +9,12 @@
 }
 
 .nav {
-  width: 350px;
+  width: 405px;
   height: 100vh;
   position: fixed;
+  top: 0;
   background: rgba(48, 130, 180, 0.95);
-  transform: translateX(-275px);
+  transform: translateX(-335px);
   transition: transform 0.2s;
   overflow: hidden;
 }
@@ -48,6 +49,8 @@ i{
   align-items: center;
   justify-content: space-between;
   padding: 15px 25px;
+  height: 55px;
+  margin: 0 0 10px 0;
   text-decoration: none;
   color: #dddddd;
 }
@@ -65,15 +68,15 @@ i{
   border-radius: 100%;
   width: 10px;
   height: 10px;
-  right: 10px;
-  top: 10px;
+  right: 8px;
+  top: 8px;
   background: #58dc80;
 }
 
 .icon {
   position: absolute;
-  right: 25px;
-  height: 32px;
+  right: 20px;
+  height: 40px;
   width: auto;
   margin: 0;
   padding: 0;

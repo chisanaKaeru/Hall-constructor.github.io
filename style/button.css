@@ -42,13 +42,6 @@
   color: #ffffff;
 }
 
-.button-column {
-  position: absolute;
-  margin: 25px auto;
-  right: 50px;
-  bottom: -5px;
-}
-
 .button-application-form {
   position: relative;
   margin: auto;

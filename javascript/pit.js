@@ -10,7 +10,7 @@ function addPit() {
     li.setAttribute("class", "list animate__animated animate__fadeInDown");
 
     function box1(){
-      let optionTextPlaceholde = document.createTextNode("Количество мест");
+      let optionTextPlaceholde = document.createTextNode("Выберите цех");
       let optionTextOne = document.createTextNode("Цех раздоя");
       let optionTextTwo = document.createTextNode("Цех производства молока");
 

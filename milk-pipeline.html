@@ -17,24 +17,27 @@
 <body class="slide-show" onload="setCheckedPage(), setCheckedInputPipeline()">
 
   <div class="center">
-    <input class="input-card" type="radio" name="milk-pipeline" value="Без отводной линии" id="pipeline1" onclick="RadioButton(this)">
-    <label for="pipeline1" class="card">
-      <div class="card-img" style="background-image: url(image/YDE.jpg);"></div>
-      <div class="card-body">
-        <p class="text-title">Без отводной линии</p>
-        <p class="text-body text-width">Текст.</p>
-      </div>
-    </label>
+    <div class="container-center">
+      <input class="input-card" type="radio" name="milk-pipeline" value="Без отводной линии" id="pipeline1" onclick="RadioButton(this)">
+      <label for="pipeline1" class="card">
+        <div class="card-img" style="background-image: url(image/YDE.jpg);"></div>
+        <div class="card-body">
+          <p class="text-title">Без отводной линии</p>
+          <p class="text-body text-width">Текст.</p>
+        </div>
+      </label>
 
-    <input class="input-card" type="radio" name="milk-pipeline" value="С отводной линией" id="pipeline2" onclick="RadioButton(this)">
-    <label for="pipeline2" class="card">
-      <div class="card-img" style="background-image: url(image/YDE.jpg);"></div>
-      <div class="card-body">
-        <p class="text-title">С отводной линией</p>
-        <p class="text-body text-width">Текст.</p>
-      </div>
-    </label>
-    <div class="button-center">
+      <input class="input-card" type="radio" name="milk-pipeline" value="С отводной линией" id="pipeline2" onclick="RadioButton(this)">
+      <label for="pipeline2" class="card">
+        <div class="card-img" style="background-image: url(image/YDE.jpg);"></div>
+        <div class="card-body">
+          <p class="text-title">С отводной линией</p>
+          <p class="text-body text-width">Текст.</p>
+        </div>
+      </label>
+    </div>
+
+    <div class="center-button">
       <a href="milking-system.html" class="button align-button text-body">Дальше</a>
     </div>
   </div>
@@ -45,44 +48,44 @@
     </button>
     <div class="nav-links-container">
       <a href="index.html" class="nav__link" id="page1">
-        <span class="text-body">Доильный зал</span>
-        <img src="image/icon-navbar/milk-carton.png" class="icon">
+        <span class="text-title">Доильный зал</span>
+        <img src="image/icon-navbar/milking-parlor.png" class="icon">
       </a>
       <a href="number-of-seats.html" class="nav__link" id="page2">
-        <span class="text-body">Яма</span>
-        <img src="image/icon-navbar/milk-carton.png" class="icon">
+        <span class="text-title">Размер</span>
+        <img src="image/icon-navbar/pit.png" class="icon">
       </a>
       <a href="vacuum-pump.html" class="nav__link" id="page3">
-        <span class="text-body">Вакуумный насосы</span>
-        <img src="image/icon-navbar/milk-carton.png" class="icon">
+        <span class="text-title">Вакуумный насосы</span>
+        <img src="image/icon-navbar/pump.png" class="icon">
       </a>
       <a href="milk-pipeline.html" class="nav__link active-page" id="page4">
-        <span class="text-body">Молокопровод</span>
-        <img src="image/icon-navbar/milk-carton.png" class="icon">
+        <span class="text-title">Молокопровод</span>
+        <img src="image/icon-navbar/pipeline.png" class="icon">
       </a>
       <a href="milking-system.html" class="nav__link" id="page5">
-        <span class="text-body">Система доения</span>
-        <img src="image/icon-navbar/milk-carton.png" class="icon">
+        <span class="text-title">Система доения</span>
+        <img src="image/icon-navbar/milking.png" class="icon">
       </a>
       <a href="identification-and-activity-system.html" class="nav__link" id="page6">
-        <span class="text-body">СИиА</span>
-        <img src="image/icon-navbar/milk-carton.png" class="icon">
+        <span class="text-title">Идентификация и активность</span>
+        <img src="image/icon-navbar/livestock.png" class="icon">
       </a>
       <a href="hanging-part.html" class="nav__link" id="page7">
-        <span class="text-body">Подвисная часть</span>
-        <img src="image/icon-navbar/milk-carton.png" class="icon">
+        <span class="text-title">Подвесная часть</span>
+        <img src="image/icon-navbar/milking-system.png" class="icon">
       </a>
       <a href="washing-pad.html" class="nav__link" id="page8">
-        <span class="text-body">Гигиена и содержание животных</span>
-        <img src="image/icon-navbar/milk-carton.png" class="icon">
+        <span class="text-title">Гигиена и содержание животных</span>
+        <img src="image/icon-navbar/safe.png" class="icon">
       </a>
       <a href="optional-equipment.html" class="nav__link" id="page9">
-        <span class="text-body">Дополнительное оборудование</span>
-        <img src="image/icon-navbar/milk-carton.png" class="icon">
+        <span class="text-title">Дополнительное оборудование</span>
+        <img src="image/icon-navbar/tool-box.png" class="icon">
       </a>
       <a href="application-form.html" class="nav__link" id="page10" onclick="verifyData(event)">
-        <span class="text-body">3D просмотр зала</span>
-        <img src="image/icon-navbar/milk-carton.png" class="icon">
+        <span class="text-title">3D просмотр зала</span>
+        <img src="image/icon-navbar/view3d.png" class="icon">
       </a>
     </div>
   </nav>

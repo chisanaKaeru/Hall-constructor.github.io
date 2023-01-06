@@ -26,26 +26,23 @@
 }
 
 .view3d {
-  height: 85vh;
-  width: 1000px;
+  height: 95vh;
+  width: 100vh;
   margin: 10px;
   border-radius: 14px;
 }
 
 .li-components {
-  min-height: 78vh;
-  width: 600px;
+  height: 89vh;
+  width: 700px;
   background: #3082B4;
-  margin: 10px;
   border-radius: 14px;
-}
-
-.div-request {
-  height: 85vh;
+  margin: 10px;
+  overflow: auto;
 }
 
 .ul-center {
-  padding: 15px;
+  padding: 5px;
   position: relative;
   display: flex;
   align-content: center;
@@ -55,21 +52,26 @@
 
 .li-element {
   display: flex;
-  width: 550px;
+  width: 650px;
   min-height: 50px;
   background-color: rgb(53, 140, 194);
   filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.25));
   list-style-type: none;
   border-radius: 12px;
-  padding: 15px 0px 15px 20px;
+  padding: 15px 0px 15px 15px;
   margin: 5px 0px 10px 0px;
   color: #FFFFFF;
 }
 
-.text-elemnt {
+.text-element {
   display: flex;
   flex-direction: column;
+}
+.text-li {
+  display: flex;
   margin: 0 10px;
+  font-size: 18px;
+  line-height: 28px;
 }
 
 .button-change {
