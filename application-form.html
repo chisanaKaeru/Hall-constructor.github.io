@@ -23,7 +23,7 @@
 <body class="slide-show" onload="setCheckedPage(), createElement()">
 
   <div class="center-application">
-    <!--<iframe src="/view3d/view3d.html" frameborder="0" class="view3d"></iframe>-->
+    <iframe src="/view3d/view3d.html" frameborder="0" class="view3d"></iframe>
     <div>
       <div class="li-components">
         <ul class="ul-center" id="list-element"></ul>
@@ -44,6 +44,7 @@
               <button class="button text-body">Отправить заявку</button>
             </form>
             <button type="submit" class="button text-body" onclick="createPDF()">Скачать документ</button>
+            <button type="submit" class="button text-body" onclick="getURlPDF()">Ссылка на документ</button>
             <div class="button-close" onclick="togglePopup()">&#10006;</div>
             <!-- clearStorage() -->
     </div>

@@ -105,19 +105,19 @@ function setLiPump(){
     addPump();
   }
 
-  if (localStorage.getItem("pad1") != null) {
+  if (localStorage.getItem("pad1") == "Да") {
     document.getElementById("pad1").checked = true;
   }
-  if (localStorage.getItem("pad2") != null) {
+  if (localStorage.getItem("pad2") == "Да") {
     document.getElementById("pad2").checked = true;
   }
-  if (localStorage.getItem("pad3") != null) {
+  if (localStorage.getItem("pad3") == "Да") {
     document.getElementById("pad3").checked = true;
   }
-  if (localStorage.getItem("pad4") != null) {
+  if (localStorage.getItem("pad4") == "Да") {
     document.getElementById("pad4").checked = true;
   }
-  if (localStorage.getItem("pad5") != null) {
+  if (localStorage.getItem("pad5") == "Да") {
     document.getElementById("pad5").checked = true;
   }
 

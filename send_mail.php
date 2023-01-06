@@ -1,41 +1,40 @@
-<?php
- 
-require 'PHPMailer-master/PHPMailerAutoload.php';
- 
+<?php 
+
+require_once('phpmailer/PHPMailerAutoload.php');
 $mail = new PHPMailer;
- 
-//Дебаг
-//0 = off (for production use)
-//1 = клиентские сообщения
-//2 = серверные и клиентские сообщения
-//$mail->SMTPDebug = 2;
- 
-$mail->isSMTP();
-$mail->Host = 'smtp.mail.ru'; //gmail: smtp.gmail.com
-$mail->SMTPAuth = true;
-$mail->Username = 'rtestpochta03@mail.ru';
-$mail->Password = '4FmY9ZpzCEzuyj4baXTW';
-$mail->SMTPSecure = 'ssl';
-$mail->Port = 465;
-$mail->setLanguage('ru');
+$mail->CharSet = 'utf-8';
+
+$name = $_POST['name'];
+$phone = $_POST['phone'];
+$email = $_POST['email'];
+
+//$mail->SMTPDebug = 3;                               // Enable verbose debug output
+
+$mail->isSMTP();                                      // Set mailer to use SMTP
+$mail->Host = 'smtp.mail.ru';  																							// Specify main and backup SMTP servers
+$mail->SMTPAuth = true;                               // Enable SMTP authentication
+$mail->Username = 'testpochta03@mail.ru';
+$mail->Password = 'WwPPwAspQR9Det0MHK7J';
+$mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
+$mail->Port = 465; // TCP port to connect to / этот порт может отличаться у других провайдеров
+
 $mail->setFrom('testpochta03@mail.ru', 'Robot');
-$mail->addAddress('pasha260777@gmail.com', 'My Friend');    //Получатель
-//$mail->addAddress('my.friend2@gmail.com');              //Еще получатель
-//$mail->addReplyTo('my.friend3@gmail.com', 'My Friend 3');
-//$mail->addCC('my.friend.cc@example.com');               //Копия
-//$mail->addBCC('my.friend.bcc@example.com');             //Скрытая копия
- 
-//$mail->addAttachment('/path/to/file.zip');              //Прикрепить файл
-//$mail->addAttachment('/path/to/image.jpg', 'new.jpg');  //Прикрепить файл + задать имя
-$mail->isHTML(true);
- 
-$mail->Subject = 'Тема письма';
-$mail->Body    = '<b>HTML</b> версия письма';
-$mail->AltBody = 'Текстовая версия письма, без HTML тегов (для клиентов не поддерживающих HTML)';
- 
-//Отправка сообщения
+$mail->addAddress('pasha260777@gmail.com', 'My Friend');       // Кому будет уходить письмо 
+//$mail->addAddress('ellen@example.com');               // Name is optional
+//$mail->addReplyTo('info@example.com', 'Information');
+//$mail->addCC('cc@example.com');
+//$mail->addBCC('bcc@example.com');
+//$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
+//$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
+$mail->isHTML(true);                                  // Set email format to HTML
+
+$mail->Subject = 'Заявка с тестового сайта';
+$mail->Body    = '' .$name . ' оставил заявку, его телефон ' .$phone. '<br>Почта этого пользователя: ' .$email;
+$mail->AltBody = '';
+
 if(!$mail->send()) {
-    echo 'Ошибка при отправке. Ошибка: ' . $mail->ErrorInfo;
+    echo 'Error';
 } else {
-    echo 'Сообщение успешно отправлено';
+    echo '<script>alert("Сообщение доставлено")</script>';
 }
+?>

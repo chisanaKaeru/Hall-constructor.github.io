@@ -14,6 +14,11 @@ function createPDF(){
   pdfMake.createPdf(docInfo).open();
 }
 
+function getURlPDF() {
+  pdfDoc = printer.createPdfKitDocument(docInfo);
+  pdfDoc.end();
+}
+
 function pit(){
   let text = '';
   for (let index = 1; index <= 6; index++) {
