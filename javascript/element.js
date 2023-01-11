@@ -87,9 +87,9 @@ function createElement(){
     let divBody = div_body();
     divBody.append(textBody);
     for (let index = 1; index <= 6; index++) {
-      if (localStorage.getItem("textbox"+index) != null) {
+      if (localStorage.getItem("option-pump"+index) != null) {
         let option = text_li("Резервный: ", "pad"+index);
-        let input = text_li("Кол-во: ", "textbox"+index);
+        let input = text_li("Мощность насоса: ", "option-pump"+index);
         option.appendChild(input);
         divBody.append(option);
       }
@@ -159,10 +159,14 @@ function createElement(){
   function pad(){
     let Li = li();
     let textTitle = text_title("Гигиена и содержание животных");
-    let textBody = text_body("washing-pad");
     let divBody = div_body();
-    divBody.appendChild(textBody);
-    let link = button_change("washing-pad");
+    for (let index = 1; index <= 6; index++) {
+      if (localStorage.getItem("washing"+index) != null) {
+        let textBody = text_body("washing" + index);
+        divBody.appendChild(textBody);
+      }
+    }
+    let link = button_change("optional-equipment.html");
     Li.append(textTitle, divBody, link);
     return Li;
   }

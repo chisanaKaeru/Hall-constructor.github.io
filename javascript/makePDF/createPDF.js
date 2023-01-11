@@ -14,11 +14,6 @@ function createPDF(){
   pdfMake.createPdf(docInfo).open();
 }
 
-function getURlPDF() {
-  pdfDoc = printer.createPdfKitDocument(docInfo);
-  pdfDoc.end();
-}
-
 function pit(){
   let text = '';
   for (let index = 1; index <= 6; index++) {
@@ -32,8 +27,18 @@ function pit(){
 function pump(){
   let text = 'Фирма насоса: ' + localStorage.getItem("pump") + '\n';
   for (let index = 1; index <= 6; index++) {
-    if (localStorage.getItem("textbox"+index) != null) {
-      text += 'Резервный: ' + localStorage.getItem('pad'+index) + '     Количество: ' + localStorage.getItem("textbox"+index) + '\n';
+    if (localStorage.getItem("option-pump"+index) != null) {
+      text += '\nРезервный: ' + localStorage.getItem('pad'+index) + '\nМощность насоса: ' + localStorage.getItem("option-pump"+index) + '\n';
+    }
+  }
+  return text;
+}
+
+function pad(){
+  let text ="";
+  for (let index = 1; index <= 6; index++) {
+    if (localStorage.getItem("washing"+index) != null) {
+      text += localStorage.getItem("washing"+index) + '\n';
     }
   }
   return text;
@@ -118,7 +123,7 @@ var docInfo = {
           ['Система доения',localStorage.getItem('milking-system')],
           ['Идентификация и активность',localStorage.getItem('iaac') + '\nКоличество: ' + localStorage.getItem('iaac-input')],
           ['Подвесная часть',localStorage.getItem('hanging-part')],
-          ['Гигиена и содержание животных',localStorage.getItem('washing-pad')],
+          ['Гигиена и содержание животных',pad()],
           ['Дополнительное оборудование',equipment()],
         ]
       }

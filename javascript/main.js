@@ -13,6 +13,11 @@ function inputNumber(object)  {
   localStorage.setItem(object.id, object.value);
 }
 
+//input max 60
+function inputNumberIAAS(object)  {
+  localStorage.setItem(object.id, object.value);
+}
+
 //select change img
 function changePump()  {
   let object = document.getElementById("pump");
@@ -99,8 +104,23 @@ function setCheckedInputPart() {
 }
 
 function setCheckedInputPad() {
-  if (localStorage.getItem("washing-pad-id") != null)  {
-    document.getElementById(localStorage.getItem("washing-pad-id")).checked = true;
+  if (localStorage.getItem("washing1") != null)  {
+    document.getElementById("washing1").checked = true;
+  }
+  if (localStorage.getItem("washing2") != null)  {
+    document.getElementById("washing2").checked = true;
+  }
+  if (localStorage.getItem("washing3") != null)  {
+    document.getElementById("washing3").checked = true;
+  }
+  if (localStorage.getItem("washing4") != null)  {
+    document.getElementById("washing4").checked = true;
+  }
+  if (localStorage.getItem("washing5") != null)  {
+    document.getElementById("washing5").checked = true;
+  }
+  if (localStorage.getItem("washing6") != null)  {
+    document.getElementById("washing6").checked = true;
   }
 }
 
@@ -129,7 +149,7 @@ function setCheckedPage() {
   if (localStorage.getItem("option-pit1") != null && localStorage.getItem("input-pit1") != null)  {
     document.getElementById("page2").appendChild(divVerified());
   }
-  if ((localStorage.getItem("pump") != null) && (localStorage.getItem("textbox1") != null || localStorage.getItem("textbox2") != null || localStorage.getItem("textbox3") != null || localStorage.getItem("textbox4") != null || localStorage.getItem("textbox5") != null)) {
+  if (localStorage.getItem("pump") != null && localStorage.getItem("option-pump1") != null)  {
     document.getElementById("page3").appendChild(divVerified());
   }
   if (localStorage.getItem("milk-pipeline") != null)  {
@@ -162,7 +182,7 @@ function verifyData(e) {
   } else if (localStorage.getItem("option-pit1") == null && localStorage.getItem("input-pit1") == null) {
     e.preventDefault();
     alert('Вы ничего не добавили в разделе "Яма"');
-  } else if (localStorage.getItem("textbox1") == null) {
+  } else if (localStorage.getItem("option-pump1") == null) {
     e.preventDefault();
     alert('Вы ничего не выбрали или не добавли в разделе "Вакуумный насосы"');
   } else if (localStorage.getItem("milk-pipeline") == null) {

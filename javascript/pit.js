@@ -10,12 +10,20 @@ function addPit() {
     li.setAttribute("class", "list animate__animated animate__fadeInDown");
 
     function box1(){
+      let div = document.createElement("div");
+      div.setAttribute("class", "box");
+
+      let liText = document.createElement("h3");
+      liText.setAttribute("class", "text-title");
+      let h3 = document.createTextNode("Цех:");
+      liText.appendChild(h3);
+
       let optionTextPlaceholde = document.createTextNode("Выберите цех");
       let optionTextOne = document.createTextNode("Цех раздоя");
       let optionTextTwo = document.createTextNode("Цех производства молока");
 
       let select = document.createElement("select");
-      select.setAttribute("class", "select-seat")
+      select.setAttribute("class", "select")
       select.setAttribute("id", "option-pit" + pit);
       select.setAttribute("onchange", "selectDataPit(this)");
 
@@ -25,17 +33,26 @@ function addPit() {
       optionPlaceholder.setAttribute("hidden", "");
       optionPlaceholder.appendChild(optionTextPlaceholde);
 
-      let optionOneSide = document.createElement("option");
-      optionOneSide.appendChild(optionTextOne);
+      let optionOne = document.createElement("option");
+      optionOne.appendChild(optionTextOne);
 
-      let optionTwoSide = document.createElement("option");
-      optionTwoSide.appendChild(optionTextTwo);
+      let optionTwo = document.createElement("option");
+      optionTwo.appendChild(optionTextTwo);
 
-      select.append(optionPlaceholder,optionOneSide,optionTwoSide);
-      return select;
+      select.append(optionPlaceholder,optionOne,optionTwo);
+      div.append(liText, select);
+      return div;
     }
 
     function box2(){
+      let div = document.createElement("div");
+      div.setAttribute("class", "box");
+
+      let liText = document.createElement("h3");
+      liText.setAttribute("class", "text-title");
+      let h3 = document.createTextNode("Количество:");
+      liText.appendChild(h3);
+
       let input = document.createElement("input");
       input.setAttribute("type", "number");
       input.setAttribute("min", "1");
@@ -43,7 +60,9 @@ function addPit() {
       input.setAttribute("placeholder", "Кол-во мест");
       input.setAttribute("id", "input-pit" + pit);
       input.setAttribute("onchange", "inputNumberPit(this)");
-      return input;
+
+      div.append(liText, input);
+      return div;
     }
 
     li.append(box1(),box2());

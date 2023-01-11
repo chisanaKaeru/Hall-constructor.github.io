@@ -21,21 +21,21 @@
 <body class="slide-show" onload="setCheckedPage(), setDataPump(), setLiPump(), changePump()">
 
   <div class="center-list-page">
-    <div class="center-list">
-      <div class="card-list">
-        <div class="text-ception-list">Вакуумный насос</div>
-        <select class="select-box" id="pump" onchange="changePump()">
-          <option value="Полиэфир">Полиэфир</option>
-          <option value="GEA">GEA</option>
-          <option value="CTA">CTA</option>
-        </select>
-        <div class="button-list">
-          <img src="image/button/button_add.png" class="button-add" onclick="addPump()">
-          <img src="image/button/button_delete.png" class="button-delete" onclick="deletePump()">
-        </div>
+    <div class="card-list">
+      <div class="text-ception-list">Вакуумный насос</div>
+      <select class="select-box" id="pump" onchange="changePump()">
+        <option value="Полиэфир">Полиэфир</option>
+        <option value="GEA">GEA</option>
+        <option value="CTA">CTA</option>
+      </select>
+      <div class="button-list">
+        <img src="image/button/button_add.png" class="button-add" onclick="addPump()">
+        <img src="image/button/button_delete.png" class="button-delete" onclick="deletePump()">
       </div>
-      <ul id="list_pump">
-      </ul>
+    </div>
+    <ul id="list_pump">
+    </ul>
+    <div class="center-button">
       <a href="milk-pipeline.html" class="button align-button text-body">Дальше</a>
     </div>
   </div>

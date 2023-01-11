@@ -42,15 +42,53 @@ function addPump() {
 
       let liText = document.createElement("h3");
       liText.setAttribute("class", "text-title");
-      let h3 = document.createTextNode("Количество");
+      let h3 = document.createTextNode("Мощность насоса");
       liText.appendChild(h3);
 
-      let input = document.createElement("input");
-      input.setAttribute("type", "number");
-      input.setAttribute("id", "textbox"+pump);
-      input.setAttribute("onchange", "inputNumberPump(this)");
+      let optionTextPlaceholde = document.createTextNode("Выберите из списка");
+      let optionTextOne = document.createTextNode("800 л/мин - 2,2 кВт");
+      let optionTextTwo = document.createTextNode("1600 л/мин - 4 кВт");
+      let optionTextThree = document.createTextNode("2100 л/мин - 5,5 кВт");
+      let optionTextFour = document.createTextNode("2800 л/мин - 7,5 кВт");
+      let optionTextFive = document.createTextNode("3300 л/мин - 7,5 кВт");
+      let optionTextSix = document.createTextNode("4200 л/мин - 11 кВт");
+      let optionTextSeven = document.createTextNode("6600 л/мин - 15 кВт");
 
-      div.append(liText, input);
+      let select = document.createElement("select");
+      select.setAttribute("class", "select")
+      select.setAttribute("id", "option-pump" + pump);
+      select.setAttribute("onchange", "selectDataPump(this)");
+
+      let optionPlaceholder = document.createElement("option");
+      optionPlaceholder.setAttribute("disabled", "");
+      optionPlaceholder.setAttribute("selected", "");
+      optionPlaceholder.setAttribute("hidden", "");
+      optionPlaceholder.appendChild(optionTextPlaceholde);
+
+      let optionOne = document.createElement("option");
+      optionOne.appendChild(optionTextOne);
+
+      let optionTwo = document.createElement("option");
+      optionTwo.appendChild(optionTextTwo);
+
+      let optionThree = document.createElement("option");
+      optionThree.appendChild(optionTextThree);
+
+      let optionFour = document.createElement("option");
+      optionFour.appendChild(optionTextFour);
+
+      let optionFive = document.createElement("option");
+      optionFive.appendChild(optionTextFive);
+
+      let optionSix = document.createElement("option");
+      optionSix.appendChild(optionTextSix);
+
+      let optionSeven = document.createElement("option");
+      optionSeven.appendChild(optionTextSeven);
+
+      select.append(optionPlaceholder,optionOne,optionTwo,optionThree,optionFour,optionFive,optionSix,optionSeven);
+
+      div.append(liText, select);
       return div;
     }
 
@@ -89,13 +127,7 @@ function switchPump(object){
   }
 }
 
-function inputNumberPump(object) {
-  if (object.value > 60) {
-    object.value = 60;
-  }
-  else if (object.value < 1) {
-    object.value = 1;
-  }
+function selectDataPump(object) {
   localStorage.setItem(object.id, object.value);
 }
 
@@ -121,19 +153,19 @@ function setLiPump(){
     document.getElementById("pad5").checked = true;
   }
 
-  if (localStorage.getItem("textbox1") != null) {
-    document.getElementById("textbox1").value = localStorage.getItem("textbox1");
+  if (localStorage.getItem("option-pump1") != null) {
+    document.getElementById("option-pump1").value = localStorage.getItem("option-pump1");
   }
-  if (localStorage.getItem("textbox2") != null) {
-    document.getElementById("textbox2").value = localStorage.getItem("textbox2");
+  if (localStorage.getItem("option-pump2") != null) {
+    document.getElementById("option-pump2").value = localStorage.getItem("option-pump2");
   }
-  if (localStorage.getItem("textbox3") != null) {
-    document.getElementById("textbox3").value = localStorage.getItem("textbox3");
+  if (localStorage.getItem("option-pump3") != null) {
+    document.getElementById("option-pump3").value = localStorage.getItem("option-pump3");
   }
-  if (localStorage.getItem("textbox4") != null) {
-    document.getElementById("textbox4").value = localStorage.getItem("textbox4");
+  if (localStorage.getItem("option-pump4") != null) {
+    document.getElementById("option-pump4").value = localStorage.getItem("option-pump4");
   }
-  if (localStorage.getItem("textbox5") != null) {
-    document.getElementById("textbox5").value = localStorage.getItem("textbox5");
+  if (localStorage.getItem("option-pump5") != null) {
+    document.getElementById("option-pump5").value = localStorage.getItem("option-pump5");
   }
 }

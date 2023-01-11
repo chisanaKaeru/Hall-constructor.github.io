@@ -1,6 +1,5 @@
 .button {
-  position: relative;
-  display: block;
+  display: flex;
   height: 45px;
   padding: 10px 40px;
   background: #3082B4;

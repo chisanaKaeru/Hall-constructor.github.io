@@ -41,10 +41,9 @@
               <input type="text" placeholder="Наименование организации" name="name_organization" id="name_organization">
               <input type="email" placeholder="Электроная почта" name="email" id="email">
               <input type="tel" placeholder="Контактный телефон" name="phone" id="phone">
-              <button class="button text-body">Отправить заявку</button>
+              <button class="button text-body" onclick="clearStorage()">Отправить заявку</button>
             </form>
             <button type="submit" class="button text-body" onclick="createPDF()">Скачать документ</button>
-            <button type="submit" class="button text-body" onclick="getURlPDF()">Ссылка на документ</button>
             <div class="button-close" onclick="togglePopup()">&#10006;</div>
             <!-- clearStorage() -->
     </div>
