@@ -12,15 +12,19 @@
   <link rel="stylesheet" href="style/button.css">
   <link rel="icon" type="image/x-icon" href="/image/polyefir-agro.ico">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="prefetch prerender" href="/image/background/cow1.jpg" />
+  <link rel="prefetch prerender" href="/image/background/cow2.jpg" />
+  <link rel="prefetch prerender" href="/image/background/cow3.jpg" />
+  <link rel="prefetch prerender" href="/image/background/cow4.jpg" />
+  <link rel="prefetch prerender" href="/image/background/cow5.jpg" />
   <script src="javascript/main.js"></script>
   <title>Конструктор доильного зала</title>
 </head>
 <body class="slide-show" onload="setCheckedPage(), setCheckedInpuEequipment()">
 
-    <div class="center">
-      <div class="container-column">
+    <div class="grid grid-pos">
         <input class="input-card" type="checkbox" name="optional-equipment" value="Молочный насос" id="equipment1" onclick="CheckboxButton(this)">
-        <label for="equipment1" class="card">
+        <label for="equipment1" class="card 1">
           <div class="card-img" style="background-image: url(image/YDE.jpg);"></div>
           <div class="card-body">
             <p class="text-title">Молочный насос</p>
@@ -29,7 +33,7 @@
         </label>
 
         <input class="input-card" type="checkbox" name="optional-equipment" value="Осушитель" id="equipment2" onclick="CheckboxButton(this)">
-        <label for="equipment2" class="card">
+        <label for="equipment2" class="card 2">
           <div class="card-img" style="background-image: url(image/YDE.jpg);"></div>
           <div class="card-body">
             <p class="text-title">Осушитель</p>
@@ -38,7 +42,7 @@
         </label>
 
         <input class="input-card" type="checkbox" name="optional-equipment" value="Установка водоподготовки" id="equipment3" onclick="CheckboxButton(this)">
-        <label for="equipment3" class="card">
+        <label for="equipment3" class="card 3">
           <div class="card-img" style="background-image: url(image/YDE.jpg);"></div>
           <div class="card-body">
             <p class="text-title">Установка водоподготовки</p>
@@ -47,7 +51,7 @@
         </label>
 
         <input class="input-card" type="checkbox" name="optional-equipment" value="Мойка высокого давления" id="equipment4" onclick="CheckboxButton(this)">
-        <label for="equipment4" class="card">
+        <label for="equipment4" class="card 4">
           <div class="card-img" style="background-image: url(image/YDE.jpg);"></div>
           <div class="card-body">
             <p class="text-title">Мойка высокого давления</p>
@@ -56,18 +60,17 @@
         </label>
 
         <input class="input-card" type="checkbox" name="optional-equipment" value="Расходники (масла, моющие)" id="equipment5" onclick="CheckboxButton(this)">
-        <label for="equipment5" class="card">
+        <label for="equipment5" class="card 5">
           <div class="card-img" style="background-image: url(image/YDE.jpg);"></div>
           <div class="card-body">
             <p class="text-title">Расходники (масла, моющие)</p>
             <p class="text-body text-body-card-width">Текст.</p>
           </div>
         </label>
-      </div>
+    </div>
 
-      <div class="center-button">
-        <a href="application-form.html" class="button text-body">Посмотреть 3D</a>
-      </div>
+    <div class="center-button">
+      <a href="application-form.html" class="button text-body">Посмотреть 3D</a>
     </div>
 
   <nav class="nav">

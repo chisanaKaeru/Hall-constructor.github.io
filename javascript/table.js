@@ -1,6 +1,7 @@
 function createTable(){
   let storage = localStorage.getItem("milking-parlor");
   if (storage == 'УДЕ') {
+    document.getElementById("button-help").setAttribute("class", "button align-button text-body button-help");
     document.getElementById("table").innerHTML = `
     <tr>
       <th rowspan="5">Установка</th>
@@ -83,6 +84,7 @@ function createTable(){
     </tr>`;
   } else if (storage == 'УДП') {
     {
+      document.getElementById("button-help").setAttribute("class", "button align-button text-body button-help");
       document.getElementById("table").innerHTML = `
       <tr>
         <th rowspan="5">Установка</th>

@@ -45,3 +45,18 @@
   position: relative;
   margin: auto;
 }
+
+.button-help {
+  border-color: #ffff5b;
+  color: #ffff5b;
+}
+
+.button-help:hover {
+  transition: 0.2s;
+  border: 3px solid #ffffff;
+  color: #ffffff;
+}
+
+.hidden {
+  visibility: hidden;
+}

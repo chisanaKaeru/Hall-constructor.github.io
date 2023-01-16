@@ -11,6 +11,11 @@
   <link rel="stylesheet" href="style/button.css">
   <link rel="icon" type="image/x-icon" href="/image/polyefir-agro.ico">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="prefetch prerender" href="/image/background/cow1.jpg" />
+  <link rel="prefetch prerender" href="/image/background/cow2.jpg" />
+  <link rel="prefetch prerender" href="/image/background/cow3.jpg" />
+  <link rel="prefetch prerender" href="/image/background/cow4.jpg" />
+  <link rel="prefetch prerender" href="/image/background/cow5.jpg" />
   <script src="javascript/main.js"></script>
   <title>Конструктор доильного зала</title>
 </head>
@@ -18,20 +23,29 @@
 
   <div class="center">
     <div class="container-center">
-      <input class="input-card" type="radio" name="milk-pipeline" value="Без отводной линии" id="pipeline1" onclick="RadioButton(this)">
+      <input class="input-card" type="radio" name="milk-pipeline" value="Нижний молокопровод" id="pipeline1" onclick="RadioButton(this)">
       <label for="pipeline1" class="card">
         <div class="card-img" style="background-image: url(image/YDE.jpg);"></div>
         <div class="card-body">
-          <p class="text-title">Без отводной линии</p>
+          <p class="text-title">Нижний молокопровод</p>
           <p class="text-body text-width">Текст.</p>
         </div>
       </label>
 
-      <input class="input-card" type="radio" name="milk-pipeline" value="С отводной линией" id="pipeline2" onclick="RadioButton(this)">
+      <input class="input-card" type="radio" name="milk-pipeline" value="Верхний молокопровод" id="pipeline2" onclick="RadioButton(this)">
       <label for="pipeline2" class="card">
         <div class="card-img" style="background-image: url(image/YDE.jpg);"></div>
         <div class="card-body">
-          <p class="text-title">С отводной линией</p>
+          <p class="text-title">Верхний молокопровод</p>
+          <p class="text-body text-width">Текст.</p>
+        </div>
+      </label>
+
+      <input class="input-card" type="radio" name="milk-pipeline" value="Средний молокопровод" id="pipeline2" onclick="RadioButton(this)">
+      <label for="pipeline2" class="card">
+        <div class="card-img" style="background-image: url(image/YDE.jpg);"></div>
+        <div class="card-body">
+          <p class="text-title">Средний молокопровод</p>
           <p class="text-body text-width">Текст.</p>
         </div>
       </label>
