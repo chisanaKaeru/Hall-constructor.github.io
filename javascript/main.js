@@ -218,3 +218,7 @@ function clearStorage() {
   localStorage.clear();
   location.reload();
 }
+
+function yep() {
+  document.getElementById("yes").setAttribute("src", "Chicken Leg.glb");
+}

@@ -147,7 +147,7 @@ function createElement(){
 
   function part(){
     let Li = li();
-    let textTitle = text_title("Подвисная часть");
+    let textTitle = text_title("Подвесная часть");
     let textBody = text_body("hanging-part");
     let divBody = div_body();
     divBody.appendChild(textBody);

@@ -83,3 +83,28 @@
   top: 12px;
   bottom: 0;
 }
+
+.box-3d {
+  position: relative;
+  display: flex;
+  background: #3082B4;
+  border-radius: 14px;
+  width: 95vh;
+  height: 95vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-3d {
+  position: absolute;
+  bottom: 50px;
+  left: 45%;
+
+}
+
+model-viewer {
+  width: 95vh;
+  height: 95vh;
+  margin: 0;
+  border-radius: 14px;
+}

@@ -23,12 +23,18 @@
   <script src="javascript//makePDF/vfs_fonts.js"></script>
   <script src="javascript/makePDF/createPDF.js"></script>
   <script src="javascript/main.js"></script>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
   <title>Конструктор доильного зала</title>
 </head>
 <body class="slide-show" onload="setCheckedPage(), createElement()">
 
   <div class="center-application">
-    <iframe src="/view3d/view3d.html" frameborder="0" class="view3d"></iframe>
+    <!--<iframe src="/view3d/view3d.html" frameborder="0" class="view3d"></iframe>-->
+    <div class="box-3d">
+      <model-viewer id="yes" src="Chicken.glb" camera-controls></model-viewer>
+      <button onclick="yep()" class="button-3d">Поменять модельку</button>
+    </div>
     <div>
       <div class="li-components">
         <ul class="ul-center" id="list-element"></ul>

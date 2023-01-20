@@ -52,10 +52,23 @@ input[type=number] {
 .grid {
   display: grid;
   place-items: center;
-  grid-template-columns: 350px 350px 350px;
-  grid-auto-flow: row dense;
+  grid-template-columns: repeat(4, 225px);
   justify-content: center;
   margin-top: 15px;
+}
+
+/* Dealing with 2 orphan items */
+
+.item {
+  grid-column: span 2;
+}
+
+.item:last-child:nth-child(3n - 1) {
+  grid-column-end: -2;
+}
+
+.item:nth-last-child(2):nth-child(3n + 1) {
+  grid-column-end: 4;
 }
 
 .center-application {
