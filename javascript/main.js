@@ -2,7 +2,6 @@ function toggleNav()  {
   document.body.classList.toggle("nav-open");
 }
 
-//input max 60
 function inputNumber(object)  {
   if (object.value > 60)  {
     object.value = 60;
@@ -13,14 +12,7 @@ function inputNumber(object)  {
   localStorage.setItem(object.id, object.value);
 }
 
-//input max 60
 function inputNumberIAAS(object)  {
-  localStorage.setItem(object.id, object.value);
-}
-
-//select change img
-function changePump()  {
-  let object = document.getElementById("pump");
   localStorage.setItem(object.id, object.value);
 }
 
@@ -56,34 +48,24 @@ function divVerified() {
   return div;
 }
 
-function setCheckedInputParlor() {
-  if (localStorage.getItem("milking-parlor-id") != null)  {
-    document.getElementById(localStorage.getItem("milking-parlor-id")).checked = true;
+function setData(idItem) {
+  if (localStorage.getItem(idItem+"-id") != null)  {
+    document.getElementById(localStorage.getItem(idItem+"-id")).checked = true;
+  }
+}
+
+function setCheckedInputPump() {
+  if (localStorage.getItem("pump-checkbox1") != null)  {
+    document.getElementById("pump-checkbox1").checked = true;
+  }
+  if (localStorage.getItem("pump-checkbox2") != null)  {
+    document.getElementById("pump-checkbox2").checked = true;
   }
 }
 
 function setDataPit() {
   if (localStorage.getItem("pit") != null)  {
     document.getElementById("pit").value = localStorage.getItem("pit");
-  }
-}
-
-function setDataPump() {
-  if (localStorage.getItem("pump") != null)  {
-    document.getElementById("pump").value = localStorage.getItem("pump");
-    changePump();
-  }
-}
-
-function setCheckedInputPipeline() {
-  if (localStorage.getItem("milk-pipeline-id") != null)  {
-    document.getElementById(localStorage.getItem("milk-pipeline-id")).checked = true;
-  }
-}
-
-function setCheckedInputSystem() {
-  if (localStorage.getItem("milking-system-id") != null)  {
-    document.getElementById(localStorage.getItem("milking-system-id")).checked = true;
   }
 }
 
@@ -94,12 +76,6 @@ function setDataIAAC() {
   }
   if (localStorage.getItem("iaac-input") != null)  {
     document.getElementById("iaac-input").value = localStorage.getItem("iaac-input");
-  }
-}
-
-function setCheckedInputPart() {
-  if (localStorage.getItem("hanging-part-id") != null)  {
-    document.getElementById(localStorage.getItem("hanging-part-id")).checked = true;
   }
 }
 
@@ -149,7 +125,7 @@ function setCheckedPage() {
   if (localStorage.getItem("option-pit1") != null && localStorage.getItem("input-pit1") != null)  {
     document.getElementById("page2").appendChild(divVerified());
   }
-  if (localStorage.getItem("pump") != null && localStorage.getItem("option-pump1") != null)  {
+  if (localStorage.getItem("vacuum-pump") != null)  {
     document.getElementById("page3").appendChild(divVerified());
   }
   if (localStorage.getItem("milk-pipeline") != null)  {
@@ -164,8 +140,11 @@ function setCheckedPage() {
   if (localStorage.getItem("hanging-part") != null)  {
     document.getElementById("page7").appendChild(divVerified());
   }
-  if (localStorage.getItem("washing-pad") != null)  {
-    document.getElementById("page8").appendChild(divVerified());
+  for (let index = 1; index < 6; index++)  {
+    if (localStorage.getItem("washing"+index) != null)  {
+      document.getElementById("page8").appendChild(divVerified());
+      break;
+    }
   }
   for (let index = 1; index < 6; index++)  {
     if (localStorage.getItem("equipment"+index) != null)  {
@@ -182,9 +161,9 @@ function verifyData(e) {
   } else if (localStorage.getItem("option-pit1") == null && localStorage.getItem("input-pit1") == null) {
     e.preventDefault();
     alert('Вы ничего не добавили в разделе "Яма"');
-  } else if (localStorage.getItem("option-pump1") == null) {
+  } else if (localStorage.getItem("vacuum-pump") == null) {
     e.preventDefault();
-    alert('Вы ничего не выбрали или не добавли в разделе "Вакуумный насосы"');
+    alert('Вы ничего не выбрали в разделе "Установка вакуума"');
   } else if (localStorage.getItem("milk-pipeline") == null) {
     e.preventDefault();
     alert('Вы ничего не выбрали в разделе "Молокопровод"');
@@ -197,28 +176,34 @@ function verifyData(e) {
   } else if (localStorage.getItem("hanging-part") == null) {
     e.preventDefault();
     alert('Вы ничего не выбрали в разделе "Подвисная часть"');
-  } else if (localStorage.getItem("washing-pad") == null) {
-    e.preventDefault();
-    alert('Вы ничего не выбрали в разделе "Гигиена и содержание животных"');
   } else {
+
     let numberTrue = 0;
+    for (let index = 1; index < 5; index++)  {
+      if (localStorage.getItem("washing"+index) == null)  {
+        numberTrue++;
+      }
+      if (numberTrue == 4) {
+        e.preventDefault();
+        alert('Вы ничего не выбрали в разделе "Гигиена и содержание животных"');
+      }
+    }
+    numberTrue = 0;
     for (let index = 1; index < 6; index++)  {
       if (localStorage.getItem("equipment"+index) == null)  {
         numberTrue++;
       }
-    }
-    if (numberTrue == 5) {
-      e.preventDefault();
-      alert('Вы ничего не выбрали в разделе "Дополнительное оборудование"');
+      if (numberTrue == 5) {
+        e.preventDefault();
+        alert('Вы ничего не выбрали в разделе "Дополнительное оборудование"');
+      }
     }
   }
 }
 
+/*
 function clearStorage() {
   localStorage.clear();
   location.reload();
 }
-
-function yep() {
-  document.getElementById("yes").setAttribute("src", "Chicken Leg.glb");
-}
+*/

@@ -11,15 +11,15 @@ function li() {
 
 function text_title(text_title){
   let p = document.createElement("p");
-  p.setAttribute("class", "text-title");
+  p.setAttribute("class", "text-title text-caption-li");
   let text = document.createTextNode(text_title+":");
   p.appendChild(text);
   return p;
 }
 
-function div_body() {
+function div_body(class_name) {
   let div = document.createElement("div");
-  div.setAttribute("class", "text-element");
+  div.setAttribute("class", class_name);
   return div;
 }
 
@@ -56,17 +56,20 @@ function createElement(){
     let Li = li();
     let textTitle = text_title("Доильный зал");
     let textBody = text_body("milking-parlor");
-    let divBody = div_body();
+    let divBody = div_body("text-element");
+    let divBodyLi = div_body("container-li");
     divBody.appendChild(textBody);
+    divBodyLi.append(textTitle, divBody);
     let link = button_change("index.html");
-    Li.append(textTitle, divBody, link);
+    Li.append(divBodyLi, link);
     return Li;
   }
 
   function pit(){
     let Li = li();
     let textTitle = text_title("Яма");
-    let divBody = div_body();
+    let divBody = div_body("text-element");
+    let divBodyLi = div_body("container-li");
     for (let index = 1; index <= 6; index++) {
       if (localStorage.getItem("option-pit"+index) != null && localStorage.getItem("input-pit"+index) != null) {
         let option = text_li("Цех: ", "option-pit"+index);
@@ -75,27 +78,28 @@ function createElement(){
         divBody.appendChild(option);
       }
     }
+    divBodyLi.append(textTitle, divBody);
     let link = button_change("number-of-seats.html");
-    Li.append(textTitle, divBody, link);
+    Li.append(divBodyLi, link);
     return Li;
   }
 
   function pump(){
     let Li = li();
-    let textTitle = text_title("Вакуумный насосы");
-    let textBody = text_li("Фирма насоса: ", "pump");
-    let divBody = div_body();
+    let textTitle = text_title("Установка вакуума");
+    let textBody = text_li("Фирма насоса: ", "vacuum-pump");
+    let divBody = div_body("text-element");
+    let divBodyLi = div_body("container-li");
     divBody.append(textBody);
-    for (let index = 1; index <= 6; index++) {
-      if (localStorage.getItem("option-pump"+index) != null) {
-        let option = text_li("Резервный: ", "pad"+index);
-        let input = text_li("Мощность насоса: ", "option-pump"+index);
-        option.appendChild(input);
-        divBody.append(option);
+    for (let index = 1; index <= 2; index++) {
+      if (localStorage.getItem("pump-checkbox"+index) != null) {
+        let textBody = text_body("pump-checkbox" + index);
+        divBody.appendChild(textBody);
       }
     }
+    divBodyLi.append(textTitle, divBody);
     let link = button_change("vacuum-pump.html");
-    Li.append(textTitle, divBody, link);
+    Li.append(divBodyLi, link);
     return Li;
   }
 
@@ -103,10 +107,12 @@ function createElement(){
     let Li = li();
     let textTitle = text_title("Молокопровод");
     let textBody = text_body("milk-pipeline");
-    let divBody = div_body();
+    let divBody = div_body("text-element");
+    let divBodyLi = div_body("container-li");
     divBody.appendChild(textBody);
+    divBodyLi.append(textTitle, divBody);
     let link = button_change("milk-pipeline.html");
-    Li.append(textTitle, divBody, link);
+    Li.append(divBodyLi, link);
     return Li;
   }
 
@@ -114,21 +120,12 @@ function createElement(){
     let Li = li();
     let textTitle = text_title("Система доения");
     let textBody = text_body("milking-system");
-    let divBody = div_body();
+    let divBody = div_body("text-element");
+    let divBodyLi = div_body("container-li");
     divBody.appendChild(textBody);
+    divBodyLi.append(textTitle, divBody);
     let link = button_change("milking-system.html");
-    Li.append(textTitle, divBody, link);
-    return Li;
-  }
-
-  function system(){
-    let Li = li();
-    let textTitle = text_title("Система доения");
-    let textBody = text_body("milking-system");
-    let divBody = div_body();
-    divBody.appendChild(textBody);
-    let link = button_change("milking-system.html");
-    Li.append(textTitle, divBody, link);
+    Li.append(divBodyLi, link);
     return Li;
   }
 
@@ -138,10 +135,12 @@ function createElement(){
 
     let option = text_li("Версия ошейника: ", "iaac");
     let input = text_li("Количество: ", "iaac-input");
-    let divBody = div_body();
+    let divBody = div_body("text-element");
+    let divBodyLi = div_body("container-li");
     divBody.append(option, input);
+    divBodyLi.append(textTitle, divBody);
     let link = button_change("identification-and-activity-system.html");
-    Li.append(textTitle, divBody, link);
+    Li.append(divBodyLi, link);
     return Li;
   }
 
@@ -149,47 +148,48 @@ function createElement(){
     let Li = li();
     let textTitle = text_title("Подвесная часть");
     let textBody = text_body("hanging-part");
-    let divBody = div_body();
+    let divBody = div_body("text-element");
+    let divBodyLi = div_body("container-li");
     divBody.appendChild(textBody);
+    divBodyLi.append(textTitle, divBody);
     let link = button_change("hanging-part.html");
-    Li.append(textTitle, divBody, link);
+    Li.append(divBodyLi, link);
     return Li;
   }
 
   function pad(){
     let Li = li();
     let textTitle = text_title("Гигиена и содержание животных");
-    let divBody = div_body();
+    let divBody = div_body("text-element");
+    let divBodyLi = div_body("container-li");
     for (let index = 1; index <= 6; index++) {
       if (localStorage.getItem("washing"+index) != null) {
         let textBody = text_body("washing" + index);
         divBody.appendChild(textBody);
       }
     }
+    divBodyLi.append(textTitle, divBody);
     let link = button_change("optional-equipment.html");
-    Li.append(textTitle, divBody, link);
+    Li.append(divBodyLi, link);
     return Li;
   }
 
   function equipment(){
     let Li = li();
     let textTitle = text_title("Дополнительное оборудование");
-    let divBody = div_body();
+    let divBody = div_body("text-element");
+    let divBodyLi = div_body("container-li");
     for (let index = 1; index <= 6; index++) {
       if (localStorage.getItem("equipment"+index) != null) {
         let textBody = text_body("equipment" + index);
         divBody.appendChild(textBody);
       }
     }
+    divBodyLi.append(textTitle, divBody);
     let link = button_change("optional-equipment.html");
-    Li.append(textTitle, divBody, link);
+    Li.append(divBodyLi, link);
     return Li;
   }
 
   Ul.append(parlor(), pit(), pump(), pipeline(), system(), iaac(), part(), pad(), equipment());
-
-
-  /*
-  ///addElement(3, "div8", "Дополнительное оборудование");
-  */
 }

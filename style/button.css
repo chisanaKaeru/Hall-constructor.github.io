@@ -1,7 +1,6 @@
-.button {
+.button, .button-popup, .button-help, .button-application-form {
   display: flex;
   height: 45px;
-  padding: 10px 40px;
   background: #3082B4;
   border-radius: 12px;
   letter-spacing: 0.25em;
@@ -10,13 +9,19 @@
   text-decoration: none;
   outline: none;
   border: 3px solid #3ea2d8;
-  margin: 5px 5px;
   line-height: 20px;
   color: #ffffff;
-  min-width: 175px;
+  width: 250px;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 
-.button:hover {
+.button {
+  margin: 25px;
+}
+
+.button:hover, .button-help:hover, .button-popup:hover {
   transition: 0.2s;
   border: 3px solid #80d3ff;
 }
@@ -41,22 +46,30 @@
   color: #ffffff;
 }
 
-.button-application-form {
-  position: relative;
-  margin: auto;
+.hidden {
+  visibility: hidden;
 }
 
 .button-help {
-  border-color: #ffff5b;
-  color: #ffff5b;
+  width: 45px;
+  margin: 35px 15px;
 }
 
-.button-help:hover {
-  transition: 0.2s;
-  border: 3px solid #ffffff;
-  color: #ffffff;
+.button-popup {
+  width: 275px;
+  margin: 5px;
 }
 
-.hidden {
-  visibility: hidden;
+.button-application-form {
+  margin: 25px 5px 5px;
+}
+
+@media screen and (max-width:600px) {
+  .button-help {
+    margin: 100px 10px 10px;
+  }
+
+  .button-application-form {
+    margin: 25px 5px 25px;
+  }
 }

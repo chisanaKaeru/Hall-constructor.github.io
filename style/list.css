@@ -10,8 +10,7 @@
 .card-list{
   display: flex;
   flex-direction: row;
-  width: 725px;
-  height: 85px;
+  width: 100%;
   background: #3082B4;
   box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.25);
   border-radius: 14px;
@@ -24,9 +23,8 @@
 
 .text-ception-list{
   position: relative;
-  height: 35px;
   text-align: center;
-  line-height: 35px;
+  height: 35px;
   width: 225px;
 }
 
@@ -59,21 +57,22 @@
 .list{
   display: flex;
   border: none;
-  justify-content: space-around;
-  padding: 20px;
-  padding-left: 10px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
   margin: 15px;
-  width: 700px;
-  height: 85px;
   background-color: #3082B4;
   filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.25));
   list-style-type: none;
   border-radius: 12px;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .box{
   display: flex;
   line-height: 45px;
+  margin: 5px;
 }
 
 .select{
@@ -96,7 +95,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 
 input[type=number]{
   position: relative;
-  width: 100px;
+  width: 160px;
   height: 45px;
   border: 3px solid #4496C8;
   border-radius: 8px;
@@ -176,4 +175,19 @@ input[type=checkbox]:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+@media screen and (max-width: 600px) {
+
+  .card-list {
+    width: 95%;
+  }
+
+  .select {
+    font-size: 20px;
+  }
+
+  input[type=number]{
+    font-size: 20px;
+  }
 }

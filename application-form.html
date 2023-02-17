@@ -1,113 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style/style.css">
-  <link rel="stylesheet" href="style/navigation-menu.css">
-  <link rel="stylesheet" href="style/text.css">
-  <link rel="stylesheet" href="style/application-form.css">
-  <link rel="stylesheet" href="style/button.css">
-  <link rel="stylesheet" href="style/popup.css">
-  <link rel="icon" type="image/x-icon" href="/image/polyefir-agro.ico">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="prefetch prerender" href="/image/background/cow1.jpg" />
-  <link rel="prefetch prerender" href="/image/background/cow2.jpg" />
-  <link rel="prefetch prerender" href="/image/background/cow3.jpg" />
-  <link rel="prefetch prerender" href="/image/background/cow4.jpg" />
-  <link rel="prefetch prerender" href="/image/background/cow5.jpg" />
-  <script src="javascript/element.js"></script>
-  <script src="javascript/popup.js"></script>
-  <script src="javascript/makePDF/pdfmake.min.js"></script>
-  <script src="javascript//makePDF/vfs_fonts.js"></script>
-  <script src="javascript/makePDF/createPDF.js"></script>
-  <script src="javascript/main.js"></script>
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/navigation-menu.css" />
+    <link rel="stylesheet" href="style/text.css" />
+    <link rel="stylesheet" href="style/application-form.css" />
+    <link rel="stylesheet" href="style/button.css" />
+    <link rel="stylesheet" href="style/popup.css" />
+    <link rel="icon" type="image/x-icon" href="/image/polyefir-agro.ico" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="javascript/element.js"></script>
+    <script src="javascript/popup.js"></script>
+    <script src="javascript/makePDF/pdfmake.min.js"></script>
+    <script src="javascript//makePDF/vfs_fonts.js"></script>
+    <script src="javascript/makePDF/createPDF.js"></script>
+    <script src="javascript/main.js"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script src="javascript/validation/maska-nomera.js" type="text/javascript"></script>
 
-  <title>Конструктор доильного зала</title>
-</head>
-<body class="slide-show" onload="setCheckedPage(), createElement()">
-
-  <div class="center-application">
-    <!--<iframe src="/view3d/view3d.html" frameborder="0" class="view3d"></iframe>-->
-    <div class="box-3d">
-      <model-viewer id="yes" src="Chicken.glb" camera-controls></model-viewer>
-      <button onclick="yep()" class="button-3d">Поменять модельку</button>
-    </div>
-    <div>
-      <div class="li-components">
-        <ul class="ul-center" id="list-element"></ul>
+    <title>Конструктор доильного зала</title>
+  </head>
+  <body class="background-image" onload="setCheckedPage(), createElement()">
+    <div class="card-center">
+      <div class="box-3d">
+        <model-viewer class="model-3d" src="Chicken.glb" camera-controls></model-viewer>
       </div>
-      <button class="button text-body button-application-form" onclick="togglePopup()">Оставить заявку</button>
+      <div class="card-сomponents">
+        <div class="li-components">
+          <ul class="ul-center" id="list-element"></ul>
+        </div>
+        <button class="button-application-form text-body" onclick="togglePopup()">Оставить заявку</button>
+      </div>
     </div>
-  </div>
 
-  <div class="popup" id="popup">
-      <div class="popup-body">
-        <h1 class="text-caption">Заявка</h1>
-            <form action="send_mail.php" method="POST" class="form-center">
-              <input type="text" placeholder="ФИО" name="name" id="name">
-              <input type="text" placeholder="Наименование организации" name="name_organization" id="name_organization">
-              <input type="email" placeholder="Электроная почта" name="email" id="email">
-              <input type="tel" placeholder="Контактный телефон" name="phone" id="phone">
-              <button class="button text-body" onclick="clearStorage()">Отправить заявку</button>
-            </form>
-            <button type="submit" class="button text-body" onclick="createPDF()">Скачать документ</button>
-            <div class="button-close" onclick="togglePopup()">&#10006;</div>
-            <!-- clearStorage() -->
+    <div class="popup-shadow" id="popup">
+      <div class="popup">
+        <div class="popup-caption">
+          <h1 class="text-caption text-align-center">Заявка</h1>
+          <div class="button-close" onclick="togglePopup()">&#10006;</div>
+        </div>
+        <div class="popup-body">
+          <form class="js-form form-center" id="form" novalidate>
+            <input type="text" class="js-input" name="name" id="name" placeholder="ФИО" />
+            <input type="text" class="js-input" name="name_organization" id="name_organization" placeholder="Наименование организации" />
+            <input type="email" class="js-input js-input-email" name="email" id="email" placeholder="Электроная почта" />
+            <input type="tel" class="js-input js-input-phone phone" name="phone" id="phone" placeholder="Контактный телефон" />
+            <button type="submit" id="button" class="button-popup text-body">Отправить заявку</button>
+          </form>
+          <button class="button-popup text-body" onclick="generate()">Скачать документ</button>
+        </div>
+      </div>
     </div>
-  </div>
 
-  <nav class="nav">
-    <button type="button" class="nav-close" onclick="toggleNav()">
-      <i class="fa fa-angle-right fa-4x" aria-hidden="true" style="color:#dddddd; margin:auto;"></i>
-    </button>
-    <div class="nav-links-container">
-      <a href="index.html" class="nav__link" id="page1">
-        <span class="text-title">Доильный зал</span>
-        <img src="image/icon-navbar/milking-parlor.png" class="icon">
-      </a>
-      <a href="number-of-seats.html" class="nav__link" id="page2">
-        <span class="text-title">Размер</span>
-        <img src="image/icon-navbar/pit.png" class="icon">
-      </a>
-      <a href="vacuum-pump.html" class="nav__link" id="page3">
-        <span class="text-title">Вакуумный насосы</span>
-        <img src="image/icon-navbar/pump.png" class="icon">
-      </a>
-      <a href="milk-pipeline.html" class="nav__link" id="page4">
-        <span class="text-title">Молокопровод</span>
-        <img src="image/icon-navbar/pipeline.png" class="icon">
-      </a>
-      <a href="milking-system.html" class="nav__link" id="page5">
-        <span class="text-title">Система доения</span>
-        <img src="image/icon-navbar/milking.png" class="icon">
-      </a>
-      <a href="identification-and-activity-system.html" class="nav__link" id="page6">
-        <span class="text-title">Идентификация и активность</span>
-        <img src="image/icon-navbar/livestock.png" class="icon">
-      </a>
-      <a href="hanging-part.html" class="nav__link" id="page7">
-        <span class="text-title">Подвесная часть</span>
-        <img src="image/icon-navbar/milking-system.png" class="icon">
-      </a>
-      <a href="washing-pad.html" class="nav__link" id="page8">
-        <span class="text-title">Гигиена и содержание животных</span>
-        <img src="image/icon-navbar/safe.png" class="icon">
-      </a>
-      <a href="optional-equipment.html" class="nav__link" id="page9">
-        <span class="text-title">Дополнительное оборудование</span>
-        <img src="image/icon-navbar/tool-box.png" class="icon">
-      </a>
-      <a href="application-form.html" class="nav__link active-page" id="page10">
-        <span class="text-title">3D просмотр зала</span>
-        <img src="image/icon-navbar/view3d.png" class="icon">
-      </a>
-    </div>
-  </nav>
+    <nav class="nav">
+      <button type="button" class="nav-close" onclick="toggleNav()">
+        <i class="fa fa-angle-right fa-4x" aria-hidden="true" style="color: #dddddd; margin: auto"></i>
+      </button>
+      <div class="nav-links-container">
+        <a href="index.html" class="nav__link" id="page1">
+          <span class="text-title">Доильный зал</span>
+          <img src="image/icon-navbar/milking-parlor.png" class="icon" />
+        </a>
+        <a href="number-of-seats.html" class="nav__link" id="page2">
+          <span class="text-title">Размер</span>
+          <img src="image/icon-navbar/pit.png" class="icon" />
+        </a>
+        <a href="vacuum-pump.html" class="nav__link" id="page3">
+          <span class="text-title">Установка вакуума</span>
+          <img src="image/icon-navbar/pump.png" class="icon" />
+        </a>
+        <a href="milk-pipeline.html" class="nav__link" id="page4">
+          <span class="text-title">Молокопровод</span>
+          <img src="image/icon-navbar/pipeline.png" class="icon" />
+        </a>
+        <a href="milking-system.html" class="nav__link" id="page5">
+          <span class="text-title">Система доения</span>
+          <img src="image/icon-navbar/milking.png" class="icon" />
+        </a>
+        <a href="identification-and-activity-system.html" class="nav__link" id="page6">
+          <span class="text-title">Идентификация и активность</span>
+          <img src="image/icon-navbar/livestock.png" class="icon" />
+        </a>
+        <a href="hanging-part.html" class="nav__link" id="page7">
+          <span class="text-title">Подвесная часть</span>
+          <img src="image/icon-navbar/milking-system.png" class="icon" />
+        </a>
+        <a href="washing-pad.html" class="nav__link" id="page8">
+          <span class="text-title">Гигиена и содержание животных</span>
+          <img src="image/icon-navbar/safe.png" class="icon" />
+        </a>
+        <a href="optional-equipment.html" class="nav__link" id="page9">
+          <span class="text-title">Дополнительное оборудование</span>
+          <img src="image/icon-navbar/tool-box.png" class="icon" />
+        </a>
+        <a href="application-form.html" class="nav__link active-page" id="page10">
+          <span class="text-title">3D просмотр зала</span>
+          <img src="image/icon-navbar/view3d.png" class="icon" />
+        </a>
+      </div>
+    </nav>
 
-
-
-</body>
+    <script src="javascript/validation/validation.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+      emailjs.init("Are6d4IUSo_YLi0fk");
+    </script>
+  </body>
 </html>

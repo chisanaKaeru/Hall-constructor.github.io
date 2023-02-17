@@ -1,133 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style/style.css">
-  <link rel="stylesheet" href="style/navigation-menu.css">
-  <link rel="stylesheet" href="style/text.css">
-  <link rel="stylesheet" href="style/card.css">
-  <link rel="stylesheet" href="style/card-choice.css">
-  <link rel="stylesheet" href="style/button.css">
-  <link rel="icon" type="image/x-icon" href="/image/polyefir-agro.ico">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="prefetch prerender" href="/image/background/cow1.jpg" />
-  <link rel="prefetch prerender" href="/image/background/cow2.jpg" />
-  <link rel="prefetch prerender" href="/image/background/cow3.jpg" />
-  <link rel="prefetch prerender" href="/image/background/cow4.jpg" />
-  <link rel="prefetch prerender" href="/image/background/cow5.jpg" />
-  <script src="javascript/main.js"></script>
-  <title>Конструктор доильного зала</title>
-</head>
-<body class="slide-show" onload="setCheckedPage(), setCheckedInputPad()">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/navigation-menu.css" />
+    <link rel="stylesheet" href="style/text.css" />
+    <link rel="stylesheet" href="style/card.css" />
+    <link rel="stylesheet" href="style/card-choice.css" />
+    <link rel="stylesheet" href="style/button.css" />
+    <link rel="icon" type="image/x-icon" href="/image/polyefir-agro.ico" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="javascript/main.js"></script>
+    <title>Конструктор доильного зала</title>
+  </head>
+  <body class="background-image" onload="setCheckedPage(), setCheckedInputPad()">
+    <div class="card-center">
+      <div class="flex">
+        <input class="card-input" type="checkbox" name="washing-pad" value="Промежуточная дезинфекция" id="washing1" onclick="CheckboxButton(this)" />
+        <label for="washing1" class="card">
+          <img src="image/YDE.jpg" alt="Промежуточная дезинфекция" class="card-image" />
+          <span class="card-body">
+            <p class="text-title">Промежуточная дезинфекция</p>
+            <p class="text-body text-body-card-width">Текст.</p>
+          </span>
+        </label>
 
-  <div class="grid">
-      <input class="input-card" type="checkbox" name="washing-pad" value="Промежуточная дезинфекция" id="washing1" onclick="CheckboxButton(this)">
-      <label for="washing1" class="card">
-        <div class="card-img" style="background-image: url(image/YDE.jpg);"></div>
-        <div class="card-body">
-          <p class="text-title">Промежуточная дезинфекция</p>
-          <p class="text-body text-body-card-width">Текст.</p>
-        </div>
-      </label>
+        <input class="card-input" type="checkbox" name="washing-pad" value="Ванная для промывки копыт" id="washing2" onclick="CheckboxButton(this)" />
+        <label for="washing2" class="card">
+          <img src="image/YDE.jpg" alt="Ванная для промывки копыт" class="card-image" />
+          <span class="card-body">
+            <p class="text-title">Ванная для промывки копыт</p>
+            <p class="text-body text-body-card-width">Текст.</p>
+          </span>
+        </label>
 
-      <input class="input-card" type="checkbox" name="washing-pad" value="Ванная для промывки копыт" id="washing2" onclick="CheckboxButton(this)">
-      <label for="washing2" class="card">
-        <div class="card-img" style="background-image: url(image/YDE.jpg);"></div>
-        <div class="card-body">
-          <p class="text-title">Ванная для промывки копыт</p>
-          <p class="text-body text-body-card-width">Текст.</p>
-        </div>
-      </label>
+        <input class="card-input" type="checkbox" name="washing-pad" value="Щетка-чесалка" id="washing3" onclick="CheckboxButton(this)" />
+        <label for="washing3" class="card">
+          <img src="image/YDE.jpg" alt="Щетка-чесалка" class="card-image" />
+          <span class="card-body">
+            <p class="text-title">Щетка-чесалка</p>
+            <p class="text-body text-body-card-width">Текст.</p>
+          </span>
+        </label>
 
-      <input class="input-card" type="checkbox" name="washing-pad" value="Щетка-чесалка" id="washing3" onclick="CheckboxButton(this)">
-      <label for="washing3" class="card">
-        <div class="card-img" style="background-image: url(image/YDE.jpg);"></div>
-        <div class="card-body">
-          <p class="text-title">Щетка-чесалка</p>
-          <p class="text-body text-body-card-width">Текст.</p>
-        </div>
-      </label>
+        <input class="card-input break" type="checkbox" name="washing-pad" value="Поилка" id="washing4" onclick="CheckboxButton(this)" />
+        <label for="washing4" class="card new-string">
+          <img src="image/YDE.jpg" alt="Поилка" class="card-image" />
+          <span class="card-body">
+            <p class="text-title">Поилка</p>
+            <p class="text-body text-body-card-width">Текст.</p>
+          </span>
+        </label>
 
-      <input class="input-card break" type="checkbox" name="washing-pad" value="Поилка" id="washing4" onclick="CheckboxButton(this)">
-      <label for="washing4" class="card">
-        <div class="card-img" style="background-image: url(image/YDE.jpg);"></div>
-        <div class="card-body">
-          <p class="text-title">Поилка</p>
-          <p class="text-body text-body-card-width">Текст.</p>
-        </div>
-      </label>
+        <input class="card-input break" type="checkbox" name="washing-pad" value="Скрепер" id="washing5" onclick="CheckboxButton(this)" />
+        <label for="washing5" class="card">
+          <img src="image/YDE.jpg" alt="Скрепер" class="card-image" />
+          <span class="card-body">
+            <p class="text-title">Скрепер</p>
+            <p class="text-body text-body-card-width">Текст.</p>
+          </span>
+        </label>
 
-      <input class="input-card break" type="checkbox" name="washing-pad" value="Скрепер" id="washing5" onclick="CheckboxButton(this)">
-      <label for="washing5" class="card">
-        <div class="card-img" style="background-image: url(image/YDE.jpg);"></div>
-        <div class="card-body">
-          <p class="text-title">Скрепер</p>
-          <p class="text-body text-body-card-width">Текст.</p>
-        </div>
-      </label>
-
-      <input class="input-card break" type="checkbox" name="washing-pad" value="Скруббер" id="washing6" onclick="CheckboxButton(this)">
-      <label for="washing6" class="card">
-        <div class="card-img" style="background-image: url(image/YDE.jpg);"></div>
-        <div class="card-body">
-          <p class="text-title">Скруббер</p>
-          <p class="text-body text-body-card-width">Текст.</p>
-        </div>
-      </label>
-  </div>
-  <div class="center-button">
-    <a href="optional-equipment.html" class="button text-body">Дальше</a>
-  </div>
-
-  <nav class="nav">
-    <button type="button" class="nav-close" onclick="toggleNav()">
-      <i class="fa fa-angle-right fa-4x" aria-hidden="true" style="color:#dddddd; margin:auto;"></i>
-    </button>
-    <div class="nav-links-container">
-      <a href="index.html" class="nav__link" id="page1">
-        <span class="text-title">Доильный зал</span>
-        <img src="image/icon-navbar/milking-parlor.png" class="icon">
-      </a>
-      <a href="number-of-seats.html" class="nav__link" id="page2">
-        <span class="text-title">Размер</span>
-        <img src="image/icon-navbar/pit.png" class="icon">
-      </a>
-      <a href="vacuum-pump.html" class="nav__link" id="page3">
-        <span class="text-title">Вакуумный насосы</span>
-        <img src="image/icon-navbar/pump.png" class="icon">
-      </a>
-      <a href="milk-pipeline.html" class="nav__link" id="page4">
-        <span class="text-title">Молокопровод</span>
-        <img src="image/icon-navbar/pipeline.png" class="icon">
-      </a>
-      <a href="milking-system.html" class="nav__link" id="page5">
-        <span class="text-title">Система доения</span>
-        <img src="image/icon-navbar/milking.png" class="icon">
-      </a>
-      <a href="identification-and-activity-system.html" class="nav__link" id="page6">
-        <span class="text-title">Идентификация и активность</span>
-        <img src="image/icon-navbar/livestock.png" class="icon">
-      </a>
-      <a href="hanging-part.html" class="nav__link" id="page7">
-        <span class="text-title">Подвесная часть</span>
-        <img src="image/icon-navbar/milking-system.png" class="icon">
-      </a>
-      <a href="washing-pad.html" class="nav__link active-page" id="page8">
-        <span class="text-title">Гигиена и содержание животных</span>
-        <img src="image/icon-navbar/safe.png" class="icon">
-      </a>
-      <a href="optional-equipment.html" class="nav__link" id="page9">
-        <span class="text-title">Дополнительное оборудование</span>
-        <img src="image/icon-navbar/tool-box.png" class="icon">
-      </a>
-      <a href="application-form.html" class="nav__link" id="page10" onclick="verifyData(event)">
-        <span class="text-title">3D просмотр зала</span>
-        <img src="image/icon-navbar/view3d.png" class="icon">
-      </a>
+        <input class="card-input break" type="checkbox" name="washing-pad" value="Скруббер" id="washing6" onclick="CheckboxButton(this)" />
+        <label for="washing6" class="card">
+          <img src="image/YDE.jpg" alt="Скруббер" class="card-image" />
+          <span class="card-body">
+            <p class="text-title">Скруббер</p>
+            <p class="text-body text-body-card-width">Текст.</p>
+          </span>
+        </label>
+      </div>
+      <div class="button-center">
+        <a href="optional-equipment.html" class="button text-body">Дальше</a>
+      </div>
     </div>
-  </nav>
 
-</body>
+    <nav class="nav">
+      <button type="button" class="nav-close" onclick="toggleNav()">
+        <i class="fa fa-angle-right fa-4x" aria-hidden="true" style="color: #dddddd; margin: auto"></i>
+      </button>
+      <div class="nav-links-container">
+        <a href="index.html" class="nav__link" id="page1">
+          <span class="text-title">Доильный зал</span>
+          <img src="image/icon-navbar/milking-parlor.png" class="icon" />
+        </a>
+        <a href="number-of-seats.html" class="nav__link" id="page2">
+          <span class="text-title">Размер</span>
+          <img src="image/icon-navbar/pit.png" class="icon" />
+        </a>
+        <a href="vacuum-pump.html" class="nav__link" id="page3">
+          <span class="text-title">Установка вакуума</span>
+          <img src="image/icon-navbar/pump.png" class="icon" />
+        </a>
+        <a href="milk-pipeline.html" class="nav__link" id="page4">
+          <span class="text-title">Молокопровод</span>
+          <img src="image/icon-navbar/pipeline.png" class="icon" />
+        </a>
+        <a href="milking-system.html" class="nav__link" id="page5">
+          <span class="text-title">Система доения</span>
+          <img src="image/icon-navbar/milking.png" class="icon" />
+        </a>
+        <a href="identification-and-activity-system.html" class="nav__link" id="page6">
+          <span class="text-title">Идентификация и активность</span>
+          <img src="image/icon-navbar/livestock.png" class="icon" />
+        </a>
+        <a href="hanging-part.html" class="nav__link" id="page7">
+          <span class="text-title">Подвесная часть</span>
+          <img src="image/icon-navbar/milking-system.png" class="icon" />
+        </a>
+        <a href="washing-pad.html" class="nav__link active-page" id="page8">
+          <span class="text-title">Гигиена и содержание животных</span>
+          <img src="image/icon-navbar/safe.png" class="icon" />
+        </a>
+        <a href="optional-equipment.html" class="nav__link" id="page9">
+          <span class="text-title">Дополнительное оборудование</span>
+          <img src="image/icon-navbar/tool-box.png" class="icon" />
+        </a>
+        <a href="application-form.html" class="nav__link" id="page10" onclick="verifyData(event)">
+          <span class="text-title">3D просмотр зала</span>
+          <img src="image/icon-navbar/view3d.png" class="icon" />
+        </a>
+      </div>
+    </nav>
+  </body>
 </html>

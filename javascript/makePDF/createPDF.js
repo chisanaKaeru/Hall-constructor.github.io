@@ -1,17 +1,77 @@
+function validateEmail(email) {
+  let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(email).toLowerCase());
+}
+
+function validateCountry(country) {
+  let re = new RegExp('.co$');
+  return re.test(String(country).toLowerCase());
+}
+
+function generate(){
+    formInputs = document.querySelectorAll('.js-input');
+    inputEmail = document.querySelector('.js-input-email');
+    let flag = false;
+    let emailVal = inputEmail.value,
+        emptyInputs = Array.from(formInputs).filter(input => input.value === '');
+
+    formInputs.forEach(function (input) {
+        if (input.value === '') {
+            input.classList.add('error');
+
+        } else {
+            input.classList.remove('error');
+            flag = true;
+        }
+    });
+
+    if (emptyInputs.length !== 0) {
+        return false;
+    }
+
+    if(!validateEmail(emailVal)) {
+        inputEmail.classList.add('error');
+        return false;
+    } else {
+        inputEmail.classList.remove('error');
+        flag = true;
+    }
+
+    if (validateCountry(emailVal)) {
+        inputEmail.classList.add('error');
+        return false;
+    } else {
+        inputEmail.classList.remove('error');
+        flag = true;
+    }
+    if (flag) {
+      let name = document.getElementById('name').value;
+      localStorage.setItem('name', name);
+
+      let name_organization = document.getElementById('name_organization').value;
+      localStorage.setItem('name_organization', name_organization);
+
+      let email = document.getElementById('email').value;
+      localStorage.setItem('email', email);
+
+      let phone = document.getElementById('phone').value;
+      localStorage.setItem('phone', phone);
+      window.open('generatePDF.html');
+    }
+
+}
+
 function createPDF(){
-  let name = document.getElementById('name').value;
-  localStorage.setItem('name', name);
-
-  let name_organization = document.getElementById('name_organization').value;
-  localStorage.setItem('name_organization', name_organization);
-
-  let email = document.getElementById('email').value;
-  localStorage.setItem('email', email);
-
-  let phone = document.getElementById('phone').value;
-  localStorage.setItem('phone', phone);
-
   pdfMake.createPdf(docInfo).open();
+  window.close();
+}
+
+function createPDFF(){
+
+  pdfMake.createPdf(docInfo).getDataUrl(function (outDoc) {
+    //window.open(outDoc);
+    window.location= outDoc;
+  });
 }
 
 function pit(){
@@ -24,11 +84,12 @@ function pit(){
   return text;
 }
 
+
 function pump(){
-  let text = 'Фирма насоса: ' + localStorage.getItem("pump") + '\n';
-  for (let index = 1; index <= 6; index++) {
-    if (localStorage.getItem("option-pump"+index) != null) {
-      text += '\nРезервный: ' + localStorage.getItem('pad'+index) + '\nМощность насоса: ' + localStorage.getItem("option-pump"+index) + '\n';
+  let text = 'Фирма насоса: ' + localStorage.getItem("vacuum-pump") + '\n';
+  for (let index = 1; index <= 2; index++) {
+    if (localStorage.getItem("pump-checkbox"+index) != null) {
+      text += localStorage.getItem("pump-checkbox"+index) + '\n';
     }
   }
   return text;
@@ -57,33 +118,34 @@ function equipment(){
 var today = new Date();
 var docInfo = {
 
+  title: 'Заявка на доильный зал',
   pageSize:'A4',
   pageOrientation:'portrait',
   pageMargins:[25,25,25,60],
 
   content:[
     {
-      text:'Кому Полиэфир АГРО',
+      text:'От: '+localStorage.getItem('name'),
       fontSize:14,
       alignment:'right'
     },
     {
-      text:'Директору Гецман А. С.',
+      text:'Наименование организации: '+localStorage.getItem('name_organization'),
       fontSize:14,
       alignment:'right'
     },
     {
-      text:'От '+localStorage.getItem('name_organization'),
+      text:'Телефон для связи: '+localStorage.getItem('phone'),
       fontSize:14,
       alignment:'right'
     },
     {
-      text:'т. для связи '+localStorage.getItem('phone'),
+      text:'Адрес электронной почты: '+localStorage.getItem('email'),
       fontSize:14,
       alignment:'right'
     },
     {
-      text:'Дата подачи заявки: '+ today.toLocaleDateString('en-US'),
+      text:'Дата подачи заявки: '+ today.toLocaleDateString('ru-RU'),
       fontSize:14,
       alignment:'right'
     },
@@ -94,7 +156,7 @@ var docInfo = {
       margin:[0,25,0,0]
     },
     {
-      text:'на доильный зал',
+      text:'на Доильный зал',
       fontSize:14,
       alignment:'center'
     },
@@ -117,8 +179,8 @@ var docInfo = {
         widths:[250,280],
         body:[
           ['Доильный зал',localStorage.getItem('milking-parlor')],
-          ['Размер ям',pit()],
-          ['Вакуммный насосы',pump()],
+          ['Яма',pit()],
+          ['Вакуумный насос',pump()],
           ['Молокопровод',localStorage.getItem('milk-pipeline')],
           ['Система доения',localStorage.getItem('milking-system')],
           ['Идентификация и активность',localStorage.getItem('iaac') + '\nКоличество: ' + localStorage.getItem('iaac-input')],

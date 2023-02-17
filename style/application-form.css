@@ -1,48 +1,12 @@
-.center-form {
-  position: relative;
-  display: flex;
-  margin: auto;
-  grid-template-rows: 500px 100px 300px;
-}
-
-.card-form {
-  width: 500px;
-  height: 750px;
-  background-color: rgb(48, 130, 180, 0.85);
-  margin: 20px;
-  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.25);
-  border-radius: 14px;
-}
-
-.li-text-form {
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 39px;
-  letter-spacing: 0.05em;
-  color: #FFFFFF;
-  font-family: arial;
-  line-height: 50px;
-  text-align: center;
-}
-
-.view3d {
-  height: 95vh;
-  width: 100vh;
-  margin: 10px;
-  border-radius: 14px;
-}
-
 .li-components {
-  height: 89vh;
-  width: 725px;
   background: #3082B4;
   border-radius: 14px;
-  margin: 10px;
   overflow: auto;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.25);
 }
 
 .ul-center {
-  padding: 5px;
+  padding: 10px;
   position: relative;
   display: flex;
   align-content: center;
@@ -52,7 +16,6 @@
 
 .li-element {
   display: flex;
-  width: 700px;
   min-height: 50px;
   background-color: rgb(53, 140, 194);
   filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.25));
@@ -61,27 +24,37 @@
   padding: 15px 0px 15px 15px;
   margin: 5px 0px 10px 0px;
   color: #FFFFFF;
+  justify-content: space-between;
 }
 
 .text-element {
   display: flex;
   flex-direction: column;
 }
+
 .text-li {
   display: flex;
-  margin: 0 10px;
   font-size: 18px;
   line-height: 28px;
+  margin: 0 10px 0 0;
+}
+
+.text-caption-li {
+  margin: 0 5px 0 0;
+}
+
+.container-li{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .button-change {
   height: 24px;
   width: auto;
   padding: 0;
-  position: absolute;
-  right: 10px;
-  top: 12px;
-  bottom: 0;
+  position: relative;
+  margin: 0 10px 10px;
 }
 
 .box-3d {
@@ -89,22 +62,40 @@
   display: flex;
   background: #3082B4;
   border-radius: 14px;
-  width: 95vh;
-  height: 95vh;
+  width: 625px;
+  height: 725px;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  margin: 10px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.25);
 }
 
-.button-3d {
-  position: absolute;
-  bottom: 50px;
-  left: 45%;
-
-}
-
-model-viewer {
-  width: 95vh;
-  height: 95vh;
+.model-3d {
+  width: 100%;
+  height: 100%;
   margin: 0;
   border-radius: 14px;
+}
+
+.card-сomponents {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 725px;
+  height: 725px;
+  margin: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .box-3d{
+    width: 90%;
+    height: 50%;
+  }
+
+  .card-сomponents {
+    width: 90%;
+    height: 100%;
+  }
 }

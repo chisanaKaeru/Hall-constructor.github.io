@@ -1,4 +1,4 @@
-.popup{
+.popup-shadow{
   position: fixed;
   width: 100%;
   height: 100%;
@@ -9,8 +9,18 @@
   z-index: 1;
 }
 
-.popup.active-popup{
+.popup-shadow.active-popup{
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.popup {
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .popup-body{
@@ -18,14 +28,13 @@
   display: flex;
   justify-content: center;
   align-content: center;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   margin: auto;
   align-items: center;
-  width: 350px;
-  height: 375px;
   border-radius: 14px;
   background: #3082B4;
+  padding: 15px;
 }
 
 input{
@@ -49,14 +58,12 @@ input:focus{
 
 .button-close{
   outline: none;
-  position: absolute;
-  right: 10px;
-  top: 10px;
+  position: relative;
   border: 0px;
   border-radius: 12px;
   background-color: #f0f5f6;
   width: 35px;
-  height: 35px;
+  min-height: 35px;
   text-align: center;
   font-size: 26px;
   cursor: pointer;
@@ -70,8 +77,19 @@ input:focus{
   justify-items: center;
 }
 
-.position-button {
-  position: absolute;
-  top: -125px;
-  right: -200px;
+.text-align-center {
+  text-align: center;
+}
+
+.popup-caption {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.error {
+  border: 3px solid #ff0000;
+  transition: 0.2s;
 }
