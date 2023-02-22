@@ -2,7 +2,7 @@
   transform: translateX(0);
 }
 
-.nav-open i {
+.nav-open .icon-arrow {
   transform: translateX(0);
   transform: rotate(-180deg);
   transition: transform 0.5s;
@@ -19,7 +19,7 @@
   overflow: hidden;
 }
 
-i {
+.icon-arrow {
   transition: transform 0.2s;
 }
 
@@ -116,5 +116,10 @@ i {
 
   .nav-open .nav-links-container {
     box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.25);
+  }
+
+  .nav {
+    width: 100%;
+    transform: translateX(-360px);
   }
 }

@@ -94,6 +94,8 @@ document.getElementById('form').addEventListener('submit', function(event) {
 
     emailjs.send(serviceID,templateID, params).then(() => {
       alert('Сообщение отправлено!');
+      localStorage.clear();
+      location.href = "index.html";
     }, (err) => {
         alert(JSON.stringify(err));
       });

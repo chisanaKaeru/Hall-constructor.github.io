@@ -27,7 +27,6 @@
   position: relative;
   display: flex;
   justify-content: center;
-  align-content: center;
   flex-direction: column;
   flex-wrap: wrap;
   margin: auto;
@@ -79,6 +78,7 @@ input:focus{
 
 .text-align-center {
   text-align: center;
+  margin: 5px;
 }
 
 .popup-caption {
@@ -92,4 +92,11 @@ input:focus{
 .error {
   border: 3px solid #ff0000;
   transition: 0.2s;
+}
+
+@media screen and (max-width:600px) {
+  .popup-body {
+    overflow: auto;
+    width: 375px;
+  }
 }
