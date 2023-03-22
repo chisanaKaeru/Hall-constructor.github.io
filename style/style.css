@@ -9,12 +9,11 @@ html,body{
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px transparent;
-  border-radius: 14px;
+  background: #1172af;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -42,13 +41,32 @@ input[type=number] {
   background-image: url('/image/background/cow.jpg');
 }
 
+.logo {
+  width: 250px;
+  margin: 15px;
+  filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.50));
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  display: inline-flex;
+  height: 90%;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
 .card-center {
   position: relative;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    height: 100%;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .list-center {
@@ -56,7 +74,6 @@ input[type=number] {
   display: flex;
   align-items: center;
   flex-direction: column;
-  height: 100%;
 }
 
 .align-content {
@@ -118,18 +135,25 @@ input[type=number] {
   order:1;
 }
 
-@media screen and (min-width: 600px) {
-  .list-center{
-    justify-content: center;
-  }
+.caption {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 10px 15%;
+}
 
-  .card-center {
-    align-content: center;
+@media screen and (min-width: 1408px) {
+  .main{
+    justify-content: center;
   }
 }
 
 @media screen and (max-width:600px) {
 
+  .card-center {
+    align-content: center;
+  }
   .container-help-list {
     margin: 15px;
     justify-content: flex-end;

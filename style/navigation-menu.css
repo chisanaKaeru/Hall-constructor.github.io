@@ -112,6 +112,7 @@
 
   .nav-open .nav-close {
     width: 75px;
+    margin-left: auto;
   }
 
   .nav-open .nav-links-container {
@@ -119,7 +120,7 @@
   }
 
   .nav {
+    transform: translateX(-85%);
     width: 100%;
-    transform: translateX(-360px);
   }
 }

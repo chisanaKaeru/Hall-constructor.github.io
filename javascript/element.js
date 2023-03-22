@@ -12,7 +12,7 @@ function li() {
 function text_title(text_title){
   let p = document.createElement("p");
   p.setAttribute("class", "text-title text-caption-li");
-  let text = document.createTextNode(text_title+":");
+  let text = document.createTextNode(text_title);
   p.appendChild(text);
   return p;
 }
@@ -54,7 +54,7 @@ function createElement(){
 
   function parlor(){
     let Li = li();
-    let textTitle = text_title("Доильный зал");
+    let textTitle = text_title("Доильный зал:");
     let textBody = text_body("milking-parlor");
     let divBody = div_body("text-element");
     let divBodyLi = div_body("container-li");
@@ -67,7 +67,7 @@ function createElement(){
 
   function pit(){
     let Li = li();
-    let textTitle = text_title("Яма");
+    let textTitle = text_title("Яма:");
     let divBody = div_body("text-element");
     let divBodyLi = div_body("container-li");
     for (let index = 1; index <= 6; index++) {
@@ -86,7 +86,7 @@ function createElement(){
 
   function pump(){
     let Li = li();
-    let textTitle = text_title("Установка вакуума");
+    let textTitle = text_title("Установка вакуума:");
     let textBody = text_li("Фирма насоса: ", "vacuum-pump");
     let divBody = div_body("text-element");
     let divBodyLi = div_body("container-li");
@@ -105,7 +105,7 @@ function createElement(){
 
   function pipeline(){
     let Li = li();
-    let textTitle = text_title("Молокопровод");
+    let textTitle = text_title("Молокопровод:");
     let textBody = text_body("milk-pipeline");
     let divBody = div_body("text-element");
     let divBodyLi = div_body("container-li");
@@ -118,11 +118,12 @@ function createElement(){
 
   function system(){
     let Li = li();
-    let textTitle = text_title("Система доения");
+    let textTitle = text_title("Система доения:");
     let textBody = text_body("milking-system");
+    let textBody_ = text_title("Динамическое");
     let divBody = div_body("text-element");
     let divBodyLi = div_body("container-li");
-    divBody.appendChild(textBody);
+    divBody.append(textBody, textBody_);
     divBodyLi.append(textTitle, divBody);
     let link = button_change("milking-system.html");
     Li.append(divBodyLi, link);
@@ -131,7 +132,7 @@ function createElement(){
 
   function iaac(){
     let Li = li();
-    let textTitle = text_title("Индентификация и активность");
+    let textTitle = text_title("Индентификация и активность:");
 
     let option = text_li("Версия ошейника: ", "iaac");
     let input = text_li("Количество: ", "iaac-input");
@@ -146,7 +147,7 @@ function createElement(){
 
   function part(){
     let Li = li();
-    let textTitle = text_title("Подвесная часть");
+    let textTitle = text_title("Подвесная часть:");
     let textBody = text_body("hanging-part");
     let divBody = div_body("text-element");
     let divBodyLi = div_body("container-li");
@@ -159,7 +160,7 @@ function createElement(){
 
   function pad(){
     let Li = li();
-    let textTitle = text_title("Гигиена и содержание животных");
+    let textTitle = text_title("Гигиена и содержание животных:");
     let divBody = div_body("text-element");
     let divBodyLi = div_body("container-li");
     for (let index = 1; index <= 6; index++) {
@@ -176,7 +177,7 @@ function createElement(){
 
   function equipment(){
     let Li = li();
-    let textTitle = text_title("Дополнительное оборудование");
+    let textTitle = text_title("Дополнительное оборудование:");
     let divBody = div_body("text-element");
     let divBodyLi = div_body("container-li");
     for (let index = 1; index <= 6; index++) {

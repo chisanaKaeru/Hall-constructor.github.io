@@ -16,64 +16,81 @@
     <title>Конструктор доильного зала</title>
   </head>
   <body class="background-image" onload="setCheckedPage(), setCheckedInputPad()">
-    <div class="card-center">
-      <div class="flex">
-        <input class="card-input" type="checkbox" name="washing-pad" value="Промежуточная дезинфекция" id="washing1" onclick="CheckboxButton(this)" />
-        <label for="washing1" class="card">
-          <img src="image/YDE.jpg" alt="Промежуточная дезинфекция" class="card-image" />
-          <span class="card-body">
-            <p class="text-title">Промежуточная дезинфекция</p>
-            <p class="text-body text-body-card-width">Текст.</p>
-          </span>
-        </label>
-
-        <input class="card-input" type="checkbox" name="washing-pad" value="Ванная для промывки копыт" id="washing2" onclick="CheckboxButton(this)" />
-        <label for="washing2" class="card">
-          <img src="image/YDE.jpg" alt="Ванная для промывки копыт" class="card-image" />
-          <span class="card-body">
-            <p class="text-title">Ванная для промывки копыт</p>
-            <p class="text-body text-body-card-width">Текст.</p>
-          </span>
-        </label>
-
-        <input class="card-input" type="checkbox" name="washing-pad" value="Щетка-чесалка" id="washing3" onclick="CheckboxButton(this)" />
-        <label for="washing3" class="card">
-          <img src="image/YDE.jpg" alt="Щетка-чесалка" class="card-image" />
-          <span class="card-body">
-            <p class="text-title">Щетка-чесалка</p>
-            <p class="text-body text-body-card-width">Текст.</p>
-          </span>
-        </label>
-
-        <input class="card-input break" type="checkbox" name="washing-pad" value="Поилка" id="washing4" onclick="CheckboxButton(this)" />
-        <label for="washing4" class="card new-string">
-          <img src="image/YDE.jpg" alt="Поилка" class="card-image" />
-          <span class="card-body">
-            <p class="text-title">Поилка</p>
-            <p class="text-body text-body-card-width">Текст.</p>
-          </span>
-        </label>
-
-        <input class="card-input break" type="checkbox" name="washing-pad" value="Скрепер" id="washing5" onclick="CheckboxButton(this)" />
-        <label for="washing5" class="card">
-          <img src="image/YDE.jpg" alt="Скрепер" class="card-image" />
-          <span class="card-body">
-            <p class="text-title">Скрепер</p>
-            <p class="text-body text-body-card-width">Текст.</p>
-          </span>
-        </label>
-
-        <input class="card-input break" type="checkbox" name="washing-pad" value="Скруббер" id="washing6" onclick="CheckboxButton(this)" />
-        <label for="washing6" class="card">
-          <img src="image/YDE.jpg" alt="Скруббер" class="card-image" />
-          <span class="card-body">
-            <p class="text-title">Скруббер</p>
-            <p class="text-body text-body-card-width">Текст.</p>
-          </span>
-        </label>
+    <div class="header">
+      <img src="image/Logo/logo.svg" alt="Полиэфир АГРО" class="logo" />
+    </div>
+    <div class="main">
+      <div class="caption">
+        <p class="text-caption text-caption-center">Вы можете дополнить Ваш зал гигиейной для животных</p>
       </div>
-      <div class="button-center">
-        <a href="optional-equipment.html" class="button text-body">Дальше</a>
+      <div class="card-center">
+        <div class="flex">
+          <input class="card-input" type="checkbox" name="washing-pad" value="Промежуточная дезинфекция" id="washing1" onclick="CheckboxButton(this)" />
+          <label for="washing1" class="card">
+            <img src="image/WashingPad/IntermediateDisinfection.jpg" alt="Промежуточная дезинфекция" class="card-image" />
+            <span class="card-body">
+              <p class="text-title">Промежуточная дезинфекция</p>
+              <p class="text-body text-body-card-width">
+                Позволяет избежать перекрестного заражения коров и распространения инфекций благодаря чему повышаеться качество молока и улучшение здоровья молочного стада.
+              </p>
+            </span>
+          </label>
+
+          <input class="card-input" type="checkbox" name="washing-pad" value="Ванная для промывки копыт" id="washing2" onclick="CheckboxButton(this)" />
+          <label for="washing2" class="card">
+            <img src="image/WashingPad/HoofWashingBath.jpg" alt="Ванная для промывки копыт" class="card-image" />
+            <span class="card-body">
+              <p class="text-title">Ванная для промывки копыт</p>
+              <p class="text-body text-body-card-width">
+                Ванна гидродинамическая (устройство автоматической мойки) предназначена для лечения и дезинфекции копыт, повышения комфортных условий содержания и здоровья коров.
+              </p>
+            </span>
+          </label>
+
+          <input class="card-input" type="checkbox" name="washing-pad" value="Щетка-чесалка" id="washing3" onclick="CheckboxButton(this)" />
+          <label for="washing3" class="card">
+            <img src="image/WashingPad/CombingBrush.jpg" alt="Щетка-чесалка" class="card-image" />
+            <span class="card-body">
+              <p class="text-title">Щетка-чесалка</p>
+              <p class="text-body text-body-card-width">
+                Щетка-чесалка - эффективное средство гигиены животных. Освобождает кожу от насекомых, массирует мышцы, улучшает подкожное кровообращение, стимулирует обмен веществ. На щетке для коров
+                установлен датчик, благодаря которому установка включается только при приближении животного.
+              </p>
+            </span>
+          </label>
+
+          <input class="card-input break" type="checkbox" name="washing-pad" value="Поилка" id="washing4" onclick="CheckboxButton(this)" />
+          <label for="washing4" class="card new-string">
+            <img src="image/WashingPad/Drinker.jpg" alt="Поилка" class="card-image" />
+            <span class="card-body">
+              <p class="text-title">Поилка</p>
+              <p class="text-body text-body-card-width">
+                Поилки для коров предназначены для группового поения КРС при беспривязном содержании (обеспечение теплой водой при минусовой температуре в коровнике).
+              </p>
+            </span>
+          </label>
+
+          <input class="card-input break" type="checkbox" name="washing-pad" value="Скрепер" id="washing5" onclick="CheckboxButton(this)" />
+          <label for="washing5" class="card">
+            <img src="image/WashingPad/Scraper.png" alt="Скрепер" class="card-image" />
+            <span class="card-body">
+              <p class="text-title">Скрепер</p>
+              <p class="text-body text-body-card-width">Предназначе для удаления навоза, стоков и выдилений коровы.</p>
+            </span>
+          </label>
+
+          <input class="card-input break" type="checkbox" name="washing-pad" value="Скруббер" id="washing6" onclick="CheckboxButton(this)" />
+          <label for="washing6" class="card">
+            <img src="image/WashingPad/Scrubber.jpg" alt="Скруббер" class="card-image" />
+            <span class="card-body">
+              <p class="text-title">Скруббер</p>
+              <p class="text-body text-body-card-width">Предназнач для чистки вымени коровы перед подключением доильного аппарата</p>
+            </span>
+          </label>
+        </div>
+        <div class="button-center">
+          <a href="optional-equipment.html" class="button text-body">Дальше</a>
+        </div>
       </div>
     </div>
 

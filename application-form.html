@@ -25,33 +25,41 @@
     <title>Конструктор доильного зала</title>
   </head>
   <body class="background-image" onload="setCheckedPage(), createElement()">
-    <div class="card-center">
-      <div class="box-3d">
-        <model-viewer class="model-3d" src="Chicken.glb" camera-controls></model-viewer>
-      </div>
-      <div class="card-сomponents">
-        <div class="li-components">
-          <ul class="ul-center" id="list-element"></ul>
-        </div>
-        <button class="button-application-form text-body" onclick="togglePopup()">Оставить заявку</button>
-      </div>
+    <div class="header">
+      <img src="image/Logo/logo.svg" alt="Полиэфир АГРО" class="logo" />
     </div>
-
-    <div class="popup-shadow" id="popup">
-      <div class="popup">
-        <div class="popup-caption">
-          <h1 class="text-caption text-align-center">Заявка</h1>
-          <div class="button-close" onclick="togglePopup()">&#10006;</div>
+    <div class="main">
+      <div class="caption">
+        <p class="text-caption text-caption-center">Просмтор 3D зала, а также просмотр список выбраных компонентов</p>
+      </div>
+      <div class="card-center">
+        <div class="box-3d">
+          <model-viewer class="model-3d" src="Chicken.glb" camera-controls></model-viewer>
         </div>
-        <div class="popup-body">
-          <form class="js-form form-center" id="form" novalidate>
-            <input type="text" class="js-input" name="name" id="name" placeholder="ФИО" />
-            <input type="text" class="js-input" name="name_organization" id="name_organization" placeholder="Наименование организации" />
-            <input type="email" class="js-input js-input-email" name="email" id="email" placeholder="Электроная почта" />
-            <input type="tel" class="js-input js-input-phone phone" name="phone" id="phone" placeholder="Контактный телефон" />
-            <button type="submit" id="button" class="button-popup text-body">Отправить заявку</button>
-          </form>
-          <button class="button-popup text-body" onclick="generate()">Скачать документ</button>
+        <div class="card-сomponents">
+          <div class="li-components">
+            <ul class="ul-center" id="list-element"></ul>
+          </div>
+          <button class="button-application-form text-body" onclick="togglePopup()">Оставить заявку</button>
+        </div>
+      </div>
+
+      <div class="popup-shadow" id="popup">
+        <div class="popup">
+          <div class="popup-caption">
+            <h1 class="text-caption text-align-center">Заявка</h1>
+            <div class="button-close" onclick="togglePopup()">&#10006;</div>
+          </div>
+          <div class="popup-body">
+            <form class="js-form form-center" id="form" novalidate>
+              <input type="text" class="js-input" name="name" id="name" placeholder="ФИО" />
+              <input type="text" class="js-input" name="name_organization" id="name_organization" placeholder="Наименование организации" />
+              <input type="email" class="js-input js-input-email" name="email" id="email" placeholder="Электроная почта" />
+              <input type="tel" class="js-input js-input-phone phone" name="phone" id="phone" placeholder="Контактный телефон" />
+              <button type="submit" id="button" class="button-popup text-body">Отправить заявку</button>
+            </form>
+            <button class="button-popup text-body" onclick="generate()">Скачать документ</button>
+          </div>
         </div>
       </div>
     </div>

@@ -20,11 +20,14 @@ function inputNumberIAAS(object)  {
 function changeIAAC()  {
   let object = document.getElementById("iaac");
   if (object.value == "Версия 1")  {
-    document.getElementById("img-iaac").setAttribute("src", "image/vacuum-pump.jpg");
+    document.getElementById("img-iaac").setAttribute("src", "image/IAS/IAS.jpg");
+    document.getElementById("text-choice").textContent = "Бюджетный вариант, базовый набор функций за разумные деньги";
   } else if (object.value == "Версия 3")  {
     document.getElementById("img-iaac").setAttribute("src", "http://www.rosphoto.com/images/u/articles/1510/7_5.jpg");
+    document.getElementById("text-choice").textContent = "Высокая надежность и безотказность, простота в использовании";
   } else if (object.value == "Версия 2") {
     document.getElementById("img-iaac").setAttribute("src", "https://www.interfax.ru/ftproot/photos/photostory/2022/04/29/week/week7_1100.jpg");
+    document.getElementById("text-choice").textContent = "Все что нужно для эффективного менеджмента стада";
   }
   localStorage.setItem(object.id, object.value);
 }
@@ -200,10 +203,3 @@ function verifyData(e) {
     }
   }
 }
-
-/*
-function clearStorage() {
-  localStorage.clear();
-  location.reload();
-}
-*/

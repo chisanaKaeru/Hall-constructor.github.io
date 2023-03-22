@@ -16,26 +16,38 @@
     <title>Конструктор доильного зала</title>
   </head>
   <body class="background-image" onload="setCheckedPage(), setData('milking-system')">
-    <div class="card-center">
-      <input class="card-input" type="radio" name="milking-system" value="Попарное" id="system1" onclick="RadioButton(this)" />
-      <label for="system1" class="card">
-        <img src="image/YDE.jpg" alt="Попарное" class="card-image" />
-        <span class="card-body">
-          <p class="text-title">Попарное</p>
-          <p class="text-body text-body-card-width">Текст.</p>
-        </span>
-      </label>
+    <div class="header">
+      <img src="image/Logo/logo.svg" alt="Полиэфир АГРО" class="logo" />
+    </div>
+    <div class="main">
+      <div class="caption">
+        <p class="text-caption text-caption-center">Выберите тип доения</p>
+      </div>
+      <div class="card-center">
+        <input class="card-input" type="radio" name="milking-system" value="Попарное" id="system" onclick="RadioButton(this)" />
+        <label for="system" class="card">
+          <img src="image/MilkingSystem/Pairwise.jpg" alt="Попарное" class="card-image" />
+          <span class="card-body">
+            <p class="text-title">Попарное</p>
+            <p class="text-body text-body-card-width">
+              Аппарат доильный в ведро (попарного доения) используется в стационарных и передвижных доильных установках на молочных фермах, а также в фермерских и подсобных хозяйствах. Попарное доение
+              является более щадящим для вымени коровы, по сравнению с синхронным.
+            </p>
+          </span>
+        </label>
 
-      <input class="card-input" type="radio" name="milking-system" value="Динамическое" id="system2" onclick="RadioButton(this)" />
-      <label for="system2" class="card">
-        <img src="image/YDE.jpg" alt="Динамическое" class="card-image" />
-        <span class="card-body">
-          <p class="text-title">Динамическое</p>
-          <p class="text-body text-body-card-width">Текст.</p>
-        </span>
-      </label>
-      <div class="button-center">
-        <a href="identification-and-activity-system.html" class="button text-body">Дальше</a>
+        <label class="card" id="sys">
+          <img src="image/MilkingSystem/Dynamic.jpg" alt="Динамическое" class="card-image" />
+          <span class="card-body">
+            <p class="text-title">Динамическое</p>
+            <p class="text-body text-body-card-width">
+              При динамическом доении не коровы подстраиваются под оборудование, а оборудование приспосабливает свою работу под потребности и возможности животных.
+            </p>
+          </span>
+        </label>
+        <div class="button-center">
+          <a href="identification-and-activity-system.html" class="button text-body">Дальше</a>
+        </div>
       </div>
     </div>
 

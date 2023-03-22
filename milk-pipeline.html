@@ -15,36 +15,38 @@
     <title>Конструктор доильного зала</title>
   </head>
   <body class="background-image" onload="setCheckedPage(), setData('milk-pipeline')">
-    <div class="card-center">
-      <input class="card-input" type="radio" name="milk-pipeline" value="Нижний молокопровод" id="pipeline1" onclick="RadioButton(this)" />
-      <label for="pipeline1" class="card">
-        <img src="image/YDE.jpg" alt="Нижний молокопровод" class="card-image" />
-        <span class="card-body">
-          <p class="text-title">Нижний молокопровод</p>
-          <p class="text-body text-width">Текст.</p>
-        </span>
-      </label>
+    <div class="header">
+      <img src="image/Logo/logo.svg" alt="Полиэфир АГРО" class="logo" />
+    </div>
+    <div class="main">
+      <div class="caption">
+        <p class="text-caption text-caption-center">Выберите расположение молокопровода</p>
+      </div>
+      <div class="card-center">
+        <input class="card-input" type="radio" name="milk-pipeline" value="Нижний молокопровод" id="pipeline1" onclick="RadioButton(this)" />
+        <label for="pipeline1" class="card-radio">
+          <span class="card-body">
+            <p class="text-title">Нижний молокопровод</p>
+          </span>
+        </label>
 
-      <input class="card-input" type="radio" name="milk-pipeline" value="Средний молокопровод" id="pipeline3" onclick="RadioButton(this)" />
-      <label for="pipeline3" class="card">
-        <img src="image/YDE.jpg" alt="Средний молокопровод" class="card-image" />
-        <span class="card-body">
-          <p class="text-title">Средний молокопровод</p>
-          <p class="text-body text-width">Текст.</p>
-        </span>
-      </label>
+        <input class="card-input" type="radio" name="milk-pipeline" value="Средний молокопровод" id="pipeline3" onclick="RadioButton(this)" />
+        <label for="pipeline3" class="card-radio">
+          <span class="card-body">
+            <p class="text-title">Средний молокопровод</p>
+          </span>
+        </label>
 
-      <input class="card-input" type="radio" name="milk-pipeline" value="Верхний молокопровод" id="pipeline2" onclick="RadioButton(this)" />
-      <label for="pipeline2" class="card">
-        <img src="image/YDE.jpg" alt="Верхний молокопровод" class="card-image" />
-        <span class="card-body">
-          <p class="text-title">Верхний молокопровод</p>
-          <p class="text-body text-width">Текст.</p>
-        </span>
-      </label>
+        <input class="card-input" type="radio" name="milk-pipeline" value="Верхний молокопровод" id="pipeline2" onclick="RadioButton(this)" />
+        <label for="pipeline2" class="card-radio">
+          <span class="card-body">
+            <p class="text-title">Верхний молокопровод</p>
+          </span>
+        </label>
 
-      <div class="button-center">
-        <a href="milking-system.html" class="button text-body">Дальше</a>
+        <div class="button-center">
+          <a href="milking-system.html" class="button text-body">Дальше</a>
+        </div>
       </div>
     </div>
 

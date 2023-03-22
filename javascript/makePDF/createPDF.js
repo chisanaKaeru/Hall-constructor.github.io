@@ -182,7 +182,7 @@ var docInfo = {
           ['Яма',pit()],
           ['Вакуумный насос',pump()],
           ['Молокопровод',localStorage.getItem('milk-pipeline')],
-          ['Система доения',localStorage.getItem('milking-system')],
+          ['Система доения',localStorage.getItem('milking-system') + '\nДинамическое'],
           ['Идентификация и активность',localStorage.getItem('iaac') + '\nКоличество: ' + localStorage.getItem('iaac-input')],
           ['Подвесная часть',localStorage.getItem('hanging-part')],
           ['Гигиена и содержание животных',pad()],

@@ -19,8 +19,8 @@ function addPit() {
       liText.appendChild(h3);
 
       let optionTextPlaceholde = document.createTextNode("Выберите цех");
-      let optionTextOne = document.createTextNode("Цех раздоя");
-      let optionTextTwo = document.createTextNode("Цех производства молока");
+      let optionTextOne = document.createTextNode("Цех раздоя (1 сторона)");
+      let optionTextTwo = document.createTextNode("Цех производства молока (2 стороны)");
 
       let select = document.createElement("select");
       select.setAttribute("class", "select")

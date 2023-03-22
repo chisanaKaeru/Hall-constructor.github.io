@@ -19,52 +19,69 @@
     <title>Конструктор доильного зала</title>
   </head>
   <body class="background-image" onload="setCheckedPage(), setData('vacuum-pump'), setCheckedInputPump()">
-    <div class="card-center">
-      <input class="card-input" type="radio" name="vacuum-pump" value="Полиэфир" id="pump1" onclick="RadioButton(this)" />
-      <label for="pump1" class="card">
-        <img src="image/YDE.jpg" alt="Полиэфир" class="card-image" />
-        <span class="card-body">
-          <p class="text-title">Полиэфир</p>
-          <p class="text-body text-body-card-width">Текст.</p>
-        </span>
-      </label>
-
-      <input class="card-input" type="radio" name="vacuum-pump" value="GEA" id="pump2" onclick="RadioButton(this)" />
-      <label for="pump2" class="card">
-        <img src="image/YDP.jpg" alt="GEA" class="card-image" />
-        <span class="card-body">
-          <p class="text-title">GEA</p>
-          <p class="text-body text-body-card-width">Тектс.</p>
-        </span>
-      </label>
-
-      <input class="card-input" type="radio" name="vacuum-pump" value="CTA" id="pump3" onclick="RadioButton(this)" />
-      <label for="pump3" class="card">
-        <img src="image/Tandem.jpg" alt="CTA" class="card-image" />
-        <span class="card-body">
-          <p class="text-title">CTA</p>
-          <p class="text-body text-body-card-width">Текст.</p>
-        </span>
-      </label>
-
-      <div class="pump-checkbox">
-        <input class="card-input break" type="checkbox" name="vacuum-pump-checkbox" value="Запасной насос" id="pump-checkbox1" onclick="CheckboxButton(this)" />
-        <label for="pump-checkbox1" class="card-checkbox">
-          <span class="card-body">
-            <p class="text-title">Запасной насос</p>
-          </span>
-        </label>
-
-        <input class="card-input break" type="checkbox" name="vacuum-pump-checkbox" value="Резервный насос" id="pump-checkbox2" onclick="CheckboxButton(this)" />
-        <label for="pump-checkbox2" class="card-checkbox">
-          <span class="card-body">
-            <p class="text-title">Резервный насос</p>
-          </span>
-        </label>
+    <div class="header">
+      <img src="image/Logo/logo.svg" alt="Полиэфир АГРО" class="logo" />
+    </div>
+    <div class="main">
+      <div class="caption">
+        <p class="text-caption text-caption-center">Выберите одну из установок вакуума</p>
       </div>
+      <div class="card-center">
+        <input class="card-input" type="radio" name="vacuum-pump" value="Полиэфир" id="pump1" onclick="RadioButton(this)" />
+        <label for="pump1" class="card">
+          <img src="image/VacuumPump/PolyefirAGRO.jpg" alt="Полиэфир АГРО" class="card-image" />
+          <span class="card-body">
+            <p class="text-title">Полиэфир АГРО</p>
+            <ul class="text-ul-body-card">
+              <li class="text-body">Высокая надежность</li>
+              <li class="text-body">Отечественное производство</li>
+              <li class="text-body">Невысокая стоимость</li>
+            </ul>
+          </span>
+        </label>
 
-      <div class="button-center">
-        <a href="milk-pipeline.html" class="button text-body">Дальше</a>
+        <input class="card-input" type="radio" name="vacuum-pump" value="GEA" id="pump2" onclick="RadioButton(this)" />
+        <label for="pump2" class="card">
+          <img src="image/VacuumPump/GEA.jpg" alt="GEA" class="card-image" />
+          <span class="card-body">
+            <p class="text-title">GEA</p>
+            <ul class="text-ul-body-card">
+              <li class="text-body">Немецкое качество</li>
+              <li class="text-body">Долговечность</li>
+            </ul>
+          </span>
+        </label>
+
+        <input class="card-input" type="radio" name="vacuum-pump" value="CTA" id="pump3" onclick="RadioButton(this)" />
+        <label for="pump3" class="card">
+          <img src="image/VacuumPump/CTA.jpg" alt="CTA" class="card-image" />
+          <span class="card-body">
+            <p class="text-title">CTA</p>
+            <ul class="text-ul-body-card">
+              <li class="text-body">Высокая производительность за разумные деньги</li>
+            </ul>
+          </span>
+        </label>
+
+        <div class="pump-checkbox">
+          <input class="card-input break" type="checkbox" name="vacuum-pump-checkbox" value="Запасной насос" id="pump-checkbox1" onclick="CheckboxButton(this)" />
+          <label for="pump-checkbox1" class="card-checkbox">
+            <span class="card-body">
+              <p class="text-title">Запасной насос</p>
+            </span>
+          </label>
+
+          <input class="card-input break" type="checkbox" name="vacuum-pump-checkbox" value="Резервная станция" id="pump-checkbox2" onclick="CheckboxButton(this)" />
+          <label for="pump-checkbox2" class="card-checkbox">
+            <span class="card-body">
+              <p class="text-title">Резервная станция</p>
+            </span>
+          </label>
+        </div>
+
+        <div class="button-center">
+          <a href="milk-pipeline.html" class="button text-body">Дальше</a>
+        </div>
       </div>
     </div>
 

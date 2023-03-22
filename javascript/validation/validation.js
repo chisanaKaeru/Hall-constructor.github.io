@@ -85,7 +85,7 @@ document.getElementById('form').addEventListener('submit', function(event) {
       pit: pit(),
       pump: pump(),
       milk_pipeline: localStorage.getItem('milk-pipeline'),
-      milking_system: localStorage.getItem('milking-system'),
+      milking_system: localStorage.getItem('milking-system') + '\nДинамическое',
       iaac: localStorage.getItem('iaac') + '\nКоличество: ' + localStorage.getItem('iaac-input'),
       hanging_part: localStorage.getItem('hanging-part'),
       pad: pad(),

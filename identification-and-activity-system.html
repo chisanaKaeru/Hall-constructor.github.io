@@ -15,26 +15,30 @@
     <title>Конструктор доильного зала</title>
   </head>
   <body class="background-image" onload="setCheckedPage(), setDataIAAC(), changeIAAC()">
-    <div class="card-center align-content">
-      <div class="card-select">
-        <div class="card-img-select">
-          <img src="image/vacuum-pump.jpg" class="img-select" id="img-iaac" />
-        </div>
-        <div class="card-body-select">
-          <select class="select-box" id="iaac" onclick="changeIAAC()">
-            <option value="Версия 1">Версия 1</option>
-            <option value="Версия 2">Версия 2</option>
-            <option value="Версия 3">Версия 3</option>
-          </select>
-          <input type="number" placeholder="Кол-во ошейников" class="input-text" id="iaac-input" onchange="inputNumberIAAS(this)" />
-          <p class="text-body background-text-select">
-            Предназначена для получения технологического вакуума, используемого для доения коров. Установка вакуумная состоит из основных составных частей, представленных ниже.
-          </p>
-        </div>
+    <div class="header">
+      <img src="image/Logo/logo.svg" alt="Полиэфир АГРО" class="logo" />
+    </div>
+    <div class="main">
+      <div class="caption">
+        <p class="text-caption text-caption-center">Система идентификации</p>
       </div>
+      <div class="card-center align-content">
+        <div class="card-select">
+          <div class="card-img-select"><img src="image/IAS/IAS.jpg" class="img-select" id="img-iaac" /></div>
+          <div class="card-body-select">
+            <select class="select-box" id="iaac" onclick="changeIAAC()">
+              <option value="Версия 1">Радиочастотная</option>
+              <option value="Версия 2">Инфракрасная</option>
+              <option value="Версия 3">Ифракрасная+ активность и руминация</option>
+            </select>
+            <input type="number" placeholder="Кол-во ошейников" class="input-text" id="iaac-input" onchange="inputNumberIAAS(this)" />
+            <p class="text-body background-text-select" id="text-choice">Бюджетный вариант, базовый набор функций за разумные деньги</p>
+          </div>
+        </div>
 
-      <div class="button-center">
-        <a href="hanging-part.html" class="button text-body">Дальше</a>
+        <div class="button-center">
+          <a href="hanging-part.html" class="button text-body">Дальше</a>
+        </div>
       </div>
     </div>
 

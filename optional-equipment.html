@@ -16,55 +16,68 @@
     <title>Конструктор доильного зала</title>
   </head>
   <body class="background-image" onload="setCheckedPage(), setCheckedInpuEequipment()">
-    <div class="card-center">
-      <div class="flex">
-        <input class="card-input" type="checkbox" name="optional-equipment" value="Молочный насос" id="equipment1" onclick="CheckboxButton(this)" />
-        <label for="equipment1" class="card">
-          <img src="image/YDE.jpg" alt="Молочный насос" class="card-image" />
-          <span class="card-body">
-            <p class="text-title">Молочный насос</p>
-            <p class="text-body text-body-card-width">Текст.</p>
-          </span>
-        </label>
-
-        <input class="card-input" type="checkbox" name="optional-equipment" value="Осушитель" id="equipment2" onclick="CheckboxButton(this)" />
-        <label for="equipment2" class="card">
-          <img src="image/YDE.jpg" alt="Осушитель" class="card-image" />
-          <span class="card-body">
-            <p class="text-title">Осушитель</p>
-            <p class="text-body text-body-card-width">Текст.</p>
-          </span>
-        </label>
-
-        <input class="card-input" type="checkbox" name="optional-equipment" value="Установка водоподготовки" id="equipment3" onclick="CheckboxButton(this)" />
-        <label for="equipment3" class="card">
-          <img src="image/YDE.jpg" alt="Установка водоподготовки" class="card-image" />
-          <span class="card-body">
-            <p class="text-title">Установка водоподготовки</p>
-            <p class="text-body text-body-card-width">Текст.</p>
-          </span>
-        </label>
-
-        <input class="card-input" type="checkbox" name="optional-equipment" value="Мойка высокого давления" id="equipment4" onclick="CheckboxButton(this)" />
-        <label for="equipment4" class="card new-string">
-          <img src="image/YDE.jpg" alt="Мойка высокого давления" class="card-image" />
-          <span class="card-body">
-            <p class="text-title">Мойка высокого давления</p>
-            <p class="text-body text-body-card-width">Текст.</p>
-          </span>
-        </label>
-
-        <input class="card-input" type="checkbox" name="optional-equipment" value="Расходники (масла, моющие)" id="equipment5" onclick="CheckboxButton(this)" />
-        <label for="equipment5" class="card">
-          <img src="image/YDE.jpg" alt="Расходники (масла, моющие)" class="card-image" />
-          <span class="card-body">
-            <p class="text-title">Расходники (масла, моющие)</p>
-            <p class="text-body text-body-card-width">Текст.</p>
-          </span>
-        </label>
+    <div class="header">
+      <img src="image/Logo/logo.svg" alt="Полиэфир АГРО" class="logo" />
+    </div>
+    <div class="main">
+      <div class="caption">
+        <p class="text-caption text-caption-center">Вы можете дополнить Ваш зал дополнительным оборудованием</p>
       </div>
-      <div class="button-center">
-        <a href="application-form.html" class="button text-body">Посмотреть 3D</a>
+      <div class="card-center">
+        <div class="flex">
+          <input class="card-input" type="checkbox" name="optional-equipment" value="Молочный насос" id="equipment1" onclick="CheckboxButton(this)" />
+          <label for="equipment1" class="card">
+            <img src="image/OptionalEquipment/MilkPump.jpg" alt="Молочный насос" class="card-image" />
+            <span class="card-body">
+              <p class="text-title">Молочный насос</p>
+              <p class="text-body text-body-card-width">
+                Молочные насосы используются в доильных установках для перекачивания молока, воды, дезинфицирующих растворов и моющих средств. Молочные насосы должны обеспечивать равномерную подачу и
+                перекачивание продукта в щадящем режиме.
+              </p>
+            </span>
+          </label>
+
+          <input class="card-input" type="checkbox" name="optional-equipment" value="Осушитель" id="equipment2" onclick="CheckboxButton(this)" />
+          <label for="equipment2" class="card">
+            <img src="image/OptionalEquipment/Dehumidifier.jpg" alt="Осушитель" class="card-image" />
+            <span class="card-body">
+              <p class="text-title">Осушитель</p>
+              <p class="text-body text-body-card-width">Осушитель предназначе для наиболее эффективный способ борьбы с влажностью, т.е. удаляет влагу из воздуха, не меняя температуру в помещении</p>
+            </span>
+          </label>
+
+          <input class="card-input" type="checkbox" name="optional-equipment" value="Установка водоподготовки" id="equipment3" onclick="CheckboxButton(this)" />
+          <label for="equipment3" class="card">
+            <img src="image/OptionalEquipment/WaterTreatmentPlant.jpg" alt="Установка водоподготовки" class="card-image" />
+            <span class="card-body">
+              <p class="text-title">Установка водоподготовки</p>
+              <p class="text-body text-body-card-width">
+                Водоподготовка улучшает качество воды из природных источников посредством освобождения её от солей, металлов, примесей и снижению концентрации взвешенных веществ, запахов, цветности.
+              </p>
+            </span>
+          </label>
+
+          <input class="card-input" type="checkbox" name="optional-equipment" value="Мойка высокого давления" id="equipment4" onclick="CheckboxButton(this)" />
+          <label for="equipment4" class="card new-string">
+            <img src="image/OptionalEquipment/HighPressureWasher.jpg" alt="Мойка высокого давления" class="card-image" />
+            <span class="card-body">
+              <p class="text-title">Мойка высокого давления</p>
+              <p class="text-body text-body-card-width">Предназначенный для очистки поверхностей мощной струёй воды от различного рода загрязнений.</p>
+            </span>
+          </label>
+
+          <input class="card-input" type="checkbox" name="optional-equipment" value="Расходники (масла, моющие)" id="equipment5" onclick="CheckboxButton(this)" />
+          <label for="equipment5" class="card">
+            <img src="image/OptionalEquipment/Consumables.jpg" alt="Расходники (масла, моющие)" class="card-image" />
+            <span class="card-body">
+              <p class="text-title">Расходники (масла, моющие)</p>
+              <p class="text-body text-body-card-width">Предназначены для замены уже использоаных продуктов сырья.</p>
+            </span>
+          </label>
+        </div>
+        <div class="button-center">
+          <a href="application-form.html" class="button text-body">Посмотреть 3D</a>
+        </div>
       </div>
     </div>
 
